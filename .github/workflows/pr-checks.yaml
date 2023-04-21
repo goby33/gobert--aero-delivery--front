@@ -1,0 +1,34 @@
+name: ✅ PR Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  branch-naming:
+    name: 🏷️ Check Branch Naming
+    if: ${{ !contains('dependabot', github.head_ref) }}
+    uses: goby33/gobert--aero-delivery--workflows
+    secrets: inherit
+
+  branch-up-to-date:
+    name: 🆕 Check Branch Up to Date
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-branch-up-to-date.yaml
+    secrets: inherit
+
+  changelog:
+    name: 📓 Check Changelog
+    if: ${{ !contains('dependabot', github.head_ref) }}
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-changelog.yaml
+    secrets: inherit
+
+  commit:
+    name: 📍 Check Commit
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-commit.yaml
+    secrets: inherit
+
+  update-labels:
+    name: 🏷️ Update labels of PR
+    if: ${{ github.event.action == 'opened' }}
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-update-labels.yaml
+    secrets: inherit
