@@ -1,0 +1,34 @@
+name: ✅ PR Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  branch-naming:
+    name: 🏷️ Check Branch Naming
+    if: ${{ !contains('dependabot', github.head_ref) }}
+    uses: adeo/iso--stock-it-easy--workflows/.github/workflows/pr-checks-branch-naming.yaml@v2
+    secrets: inherit
+
+  branch-up-to-date:
+    name: 🆕 Check Branch Up to Date
+    uses: adeo/iso--stock-it-easy--workflows/.github/workflows/pr-checks-branch-up-to-date.yaml@v2
+    secrets: inherit
+
+  changelog:
+    name: 📓 Check Changelog
+    if: ${{ !contains('dependabot', github.head_ref) }}
+    uses: adeo/iso--stock-it-easy--workflows/.github/workflows/pr-checks-changelog.yaml@v2
+    secrets: inherit
+
+  commit:
+    name: 📍 Check Commit
+    uses: adeo/iso--stock-it-easy--workflows/.github/workflows/pr-checks-commit.yaml@v2
+    secrets: inherit
+
+  update-labels:
+    name: 🏷️ Update labels of PR
+    if: ${{ github.event.action == 'opened' }}
+    uses: adeo/iso--stock-it-easy--workflows/.github/workflows/pr-update-labels.yaml@v2
+    secrets: inherit
