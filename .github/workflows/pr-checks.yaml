@@ -8,7 +8,7 @@ jobs:
   branch-naming:
     name: 🏷️ Check Branch Naming
     if: ${{ !contains('dependabot', github.head_ref) }}
-    uses: goby33/gobert--aero-delivery--workflows
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-branch-naming.yaml
     secrets: inherit
 
   branch-up-to-date:
