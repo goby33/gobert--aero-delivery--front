@@ -1,9 +1,7 @@
 import 'package:aero_delivery/presentation/ui/add_airport_from/add_airport_from_page.dart';
 import 'package:aero_delivery/presentation/ui/add_airport_resume/add_airport_resume.dart';
 import 'package:aero_delivery/presentation/ui/add_airport_to/add_airport_to_page.dart';
-import 'package:aero_delivery/presentation/ui/home/home_page.dart';
 import 'package:aero_delivery/presentation/ui/login/auth.dart';
-import 'package:aero_delivery/presentation/ui/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
