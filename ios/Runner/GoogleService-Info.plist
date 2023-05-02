@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>118857884470-7ii6otghfb80cc4mi3sms9i9rrugfube.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.118857884470-7ii6otghfb80cc4mi3sms9i9rrugfube</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDKtHXmcs9Ztau5WySvWDCOrtkJze4jqqs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>118857884470</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>cyber.project.aeroDelivery</string>
+	<key>PROJECT_ID</key>
+	<string>aero-delivery</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aero-delivery.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:118857884470:ios:193ff40ea82e884dc70997</string>
+</dict>
+</plist>

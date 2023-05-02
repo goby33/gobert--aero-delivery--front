@@ -1,7 +1,9 @@
 import 'package:aero_delivery/presentation/ui/add_airport_from/add_airport_from_page.dart';
 import 'package:aero_delivery/presentation/ui/add_airport_resume/add_airport_resume.dart';
 import 'package:aero_delivery/presentation/ui/add_airport_to/add_airport_to_page.dart';
-import 'package:aero_delivery/presentation/ui/login/auth.dart';
+import 'package:aero_delivery/presentation/ui/home/home_page.dart';
+import 'package:aero_delivery/presentation/ui/login/auth_page.dart';
+import 'package:aero_delivery/presentation/ui/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,7 +12,17 @@ final GoRouter appRouter = GoRouter(
   routes: <GoRoute>[
     GoRoute(
       path: '/',
-      builder: (context, state) => const Auth(),
+      builder: (context, state) => const SplashPage(),
+      routes: [
+        GoRoute(
+          path: 'auth',
+          builder: (context, state) => const AuthPage(),
+        ),
+        GoRoute(
+          path: 'home',
+          builder: (context, state) => const HomePage(),
+        ),
+      ],
     ),
     GoRoute(
         path: '/add',
