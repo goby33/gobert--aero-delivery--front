@@ -25,7 +25,6 @@ mixin _$CreateUserState {
     required TResult Function(DateTime dateTime, String message) failed,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? noRegister,
@@ -45,7 +44,6 @@ mixin _$CreateUserState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(CreateUserStateNoRegister value) noRegister,
@@ -55,7 +53,6 @@ mixin _$CreateUserState {
     required TResult Function(CreateUserStateFailed value) failed,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CreateUserStateNoRegister value)? noRegister,
@@ -89,9 +86,9 @@ class _$CreateUserStateCopyWithImpl<$Res, $Val extends CreateUserState>
     implements $CreateUserStateCopyWith<$Res> {
   _$CreateUserStateCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 }
 

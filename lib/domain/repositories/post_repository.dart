@@ -1,3 +1,0 @@
-mixin PostRepository {
-  int test();
-}

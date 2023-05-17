@@ -1,5 +1,5 @@
-import 'package:aero_delivery/presentation/ui/login/widgets/create_user.dart';
-import 'package:aero_delivery/presentation/ui/login/widgets/sign-in.dart';
+import 'package:aero_delivery/presentation/ui/auth/widgets/create_user.dart';
+import 'package:aero_delivery/presentation/ui/auth/widgets/sign-in.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatelessWidget {

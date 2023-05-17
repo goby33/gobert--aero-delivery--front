@@ -1,3 +1,7 @@
+import 'package:aero_delivery/presentation/ui/home/add/add_page.dart';
+import 'package:aero_delivery/presentation/ui/home/messenger/messenger_page.dart';
+import 'package:aero_delivery/presentation/ui/home/profile/profile_page.dart';
+import 'package:aero_delivery/presentation/ui/home/search/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -9,38 +13,72 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _pageIndex = 0;
+
+  final pages = [
+    const SearchPage(),
+    const AddPage(),
+    const MessengerPage(),
+    const ProfilePage()
+  ];
+
+  final titlesPage = ["Search", "Add", "Messenger", "Profile"];
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _pageIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color(0xFF618985),
         automaticallyImplyLeading: false,
-        title: const Text('Home'),
+        title:  Text(titlesPage[_pageIndex]),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            context.push('/add');
-          },
-          child: const Text('Add package'),
-        ),
+      body: IndexedStack(
+        index: _pageIndex,
+        children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _pageIndex,
+        onTap: _onItemTapped,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.search, color: Color(0xFFF79F79)),
+            label: 'Search',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_location_alt, color: Color(0xFFF79F79)),
+            label: 'add',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.messenger, color: Color(0xFFF79F79)),
+            label: 'messages',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+              color: Color(0xFFF79F79),
+            ),
+            label: 'Profile',
+          ),
         ],
-        currentIndex: 0,
-        selectedItemColor: Colors.amber[800],
-        onTap: (index) {
-          if (index == 1) {
-            context.push('/profile');
-          }
-        },
-      )
-
+      ),
     );
   }
 }
