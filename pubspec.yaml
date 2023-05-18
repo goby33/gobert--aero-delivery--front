@@ -45,7 +45,7 @@ dependencies:
   # Firebase
   firebase_core: ^2.10.0
   firebase_auth: ^4.4.2
-  firebase_storage: ^11.1.1
+  firebase_storage: ^11.2.1
   cloud_firestore: ^4.5.2
   firebase_core_platform_interface: ^4.6.0
   retrofit: ^4.0.1
