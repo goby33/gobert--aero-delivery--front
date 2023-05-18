@@ -1,6 +1,6 @@
 name: Update label
 
-on: workflow_call
+on: pull_request
 
 jobs:
   add-label:

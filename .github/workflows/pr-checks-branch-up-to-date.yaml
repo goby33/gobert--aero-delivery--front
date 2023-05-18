@@ -1,6 +1,6 @@
 name: Branch Up to date
 
-on: workflow_call
+on: pull_request
 
 jobs:
   branch-up-to-date:

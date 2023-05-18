@@ -1,6 +1,6 @@
 name: Branch Naming
 
-on: workflow_call
+on: pull_request
 
 jobs:
   branch-naming:

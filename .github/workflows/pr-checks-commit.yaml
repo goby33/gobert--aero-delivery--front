@@ -1,6 +1,6 @@
 name: Commit name check
 
-on: workflow_call
+on: pull_request
 
 jobs:
   commit:
