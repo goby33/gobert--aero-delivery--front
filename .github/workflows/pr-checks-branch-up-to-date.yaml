@@ -1,16 +1,13 @@
 name: Branch Up to date
 
-on: workflow_call
+on: pull_request
 
 jobs:
   branch-up-to-date:
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: ubuntu-20.04
     name: 🆕 Check Branch Up to Date
     steps:
       - uses: actions/checkout@v3.2.0
-        with:
-          token: ${{ secrets.SVC_GITHUB_TOKEN }}
-
       - name: ✅ Check up to date
         id: checkuptodate
         if: github.base_ref == 'main'

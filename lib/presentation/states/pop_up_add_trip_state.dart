@@ -14,17 +14,19 @@ class PopUpAddTripState with _$PopUpAddTripState {
       {required DateTime dateTime,
       required String message}) = PopUpAddTripStateFailed;
 
+  factory PopUpAddTripState.addAirportFromReady({required Trip trip}) =
+      PopUpAddTripStateAddAirportFromReady;
+  factory PopUpAddTripState.addAirportToReady({required Trip trip}) =
+      PopUpAddTripStateAddAirportToReady;
+  factory PopUpAddTripState.addDateOfDepartureReady({required Trip trip}) =
+      PopUpAddTripStateAddDateOfDepartureReady;
+  factory PopUpAddTripState.addDateOfArrivalReady({required Trip trip}) =
+      PopUpAddTripStateAddDateOfArrivalReady;
+  factory PopUpAddTripState.addFreeWeightReady({required Trip trip}) =
+      PopUpAddTripStateAddFreeWeightReady;
+  factory PopUpAddTripState.resumeReady({required Trip trip}) =
+      PopUpAddTripStateResumeReady;
 
-factory PopUpAddTripState.addAirportFromReady({required Trip trip}) = PopUpAddTripStateAddAirportFromReady;
-factory PopUpAddTripState.addAirportToReady({required Trip trip}) = PopUpAddTripStateAddAirportToReady;
-factory PopUpAddTripState.addDateOfDepartureReady({required Trip trip}) = PopUpAddTripStateAddDateOfDepartureReady;
-factory PopUpAddTripState.addDateOfArrivalReady({required Trip trip}) = PopUpAddTripStateAddDateOfArrivalReady;
-factory PopUpAddTripState.addFreeWeightReady({required Trip trip}) = PopUpAddTripStateAddFreeWeightReady;
-  factory PopUpAddTripState.resumeReady({required Trip trip}) = PopUpAddTripStateResumeReady;
-
-
-factory PopUpAddTripState.addTripReady({required Trip trip}) = PopUpAddTripStateAddTripReady;
-
-
+  factory PopUpAddTripState.addTripReady({required Trip trip}) =
+      PopUpAddTripStateAddTripReady;
 }
-

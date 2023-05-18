@@ -10,9 +10,7 @@ class AddAirportFromPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => PopUpAddTripCubit(
-        ciriumRepository: context.read(),
-      ),
+      create: (context) => PopUpAddTripCubit(),
       child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
         listener: (context, state) => state.maybeMap(
           addAirportFromReady: (value) => context.push('/add/paris'),
@@ -26,7 +24,11 @@ class AddAirportFromPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const Text("What's your airport of arrived ?", style: TextStyle(fontSize: 30, fontFamily: 'Nunito', color: Color(0xFFF79F79))),
+                  const Text("What's your airport of arrived ?",
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontFamily: 'Nunito',
+                          color: Color(0xFFF79F79))),
                   const TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),

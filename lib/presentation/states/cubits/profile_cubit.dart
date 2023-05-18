@@ -17,5 +17,4 @@ class ProfileCubit extends Cubit<ProfileState> {
       ProfileStateNoSignIn();
     }
   }
-
 }

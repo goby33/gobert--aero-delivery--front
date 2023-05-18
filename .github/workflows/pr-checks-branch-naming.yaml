@@ -1,16 +1,14 @@
 name: Branch Naming
 
-on: workflow_call
+on: pull_request
 
 jobs:
   branch-naming:
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: ubuntu-20.04
     if: ${{ !contains('dependabot', github.head_ref) }}
     name: 🏷️ Check Branch Naming
     steps:
       - uses: actions/checkout@v3.2.0
-        with:
-          token: ${{ secrets.SVC_GITHUB_TOKEN }}
 
       - name: ✅ Check branch name respects naming conventions
         id: branchnamecheck

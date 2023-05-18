@@ -15,11 +15,10 @@ class ProfileState with _$ProfileState {
 
   factory ProfileState.failed(
       {required DateTime dateTime,
-        required String message}) = ProfileStateFailed;
-
+      required String message}) = ProfileStateFailed;
 
   User? get user => maybeMap(
-    signIn: (value) => value.user,
-    orElse: () => null,
-  );
+        signIn: (value) => value.user,
+        orElse: () => null,
+      );
 }

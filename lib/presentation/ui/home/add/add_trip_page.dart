@@ -10,9 +10,7 @@ class AddTripPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => PopUpAddTripCubit(
-        ciriumRepository: context.read(),
-      ),
+      create: (context) => PopUpAddTripCubit(),
       child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
         listener: (context, state) => state.maybeMap(
           addAirportFromReady: (value) => context.push('/add/paris'),
@@ -39,8 +37,9 @@ class AddTripPage extends StatelessWidget {
                   Column(
                     children: [
                       TextField(
-                        onChanged: (value) =>
-                            context.read<PopUpAddTripCubit>().searchAirport(value),
+                        onChanged: (value) => context
+                            .read<PopUpAddTripCubit>()
+                            .searchAirport(value),
                         decoration: const InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: 'Airport',
@@ -48,9 +47,9 @@ class AddTripPage extends StatelessWidget {
                       ),
                       Container(
                         decoration: const BoxDecoration(
-                          color: Color(0xFFd8dbe2),
-                          borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))
-                        ),
+                            color: Color(0xFFd8dbe2),
+                            borderRadius: BorderRadius.vertical(
+                                bottom: Radius.circular(20))),
                         height: 200,
                         child: ListView.builder(
                             itemCount: test.length,
@@ -64,7 +63,8 @@ class AddTripPage extends StatelessWidget {
                                   print(test[index]);
                                 },
                               );
-                            }),),
+                            }),
+                      ),
                     ],
                   ),
                   ElevatedButton(
