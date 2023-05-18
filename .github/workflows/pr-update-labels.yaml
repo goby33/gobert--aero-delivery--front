@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   add-label:
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: ubuntu-20.04
     name: 🏷️ Update labels of PR
     steps:
       - run: |

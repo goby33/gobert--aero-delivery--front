@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   branch-naming:
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: ubuntu-20.04
     if: ${{ !contains('dependabot', github.head_ref) }}
     name: 🏷️ Check Branch Naming
     steps:
