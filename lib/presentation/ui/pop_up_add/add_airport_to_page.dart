@@ -12,8 +12,7 @@ class AddAirportToPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: BlocProvider(
-        create: (context) => PopUpAddTripCubit(
-        ),
+        create: (context) => PopUpAddTripCubit(),
         child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
           listener: (context, state) => state.maybeMap(
             addAirportFromReady: (value) => context.push('/add/paris'),
@@ -27,7 +26,11 @@ class AddAirportToPage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Text("What's your airport of Arrived ?", style: TextStyle(fontSize: 30, fontFamily: 'Nunito', color: Color(0xFFF79F79))),
+                    const Text("What's your airport of Arrived ?",
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontFamily: 'Nunito',
+                            color: Color(0xFFF79F79))),
                     const TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -36,7 +39,9 @@ class AddAirportToPage extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        context.read<PopUpAddTripCubit>().addAirportFrom("toto");
+                        context
+                            .read<PopUpAddTripCubit>()
+                            .addAirportFrom("toto");
                       },
                       child: const Text('Continue'),
                     ),

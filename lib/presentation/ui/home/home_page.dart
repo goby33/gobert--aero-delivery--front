@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: const Color(0xFF618985),
         automaticallyImplyLeading: false,
-        title:  Text(titlesPage[_pageIndex]),
+        title: Text(titlesPage[_pageIndex]),
       ),
       body: IndexedStack(
         index: _pageIndex,

@@ -4,7 +4,4 @@ import 'package:aero_delivery/domain/repositories/google_place_repository_impl.d
 class GooglePlaceRepositoryImpl with GooglePlaceRepository {
   final GooglePlaceApi _googlePlaceApi;
   GooglePlaceRepositoryImpl(this._googlePlaceApi);
-
 }
-
-

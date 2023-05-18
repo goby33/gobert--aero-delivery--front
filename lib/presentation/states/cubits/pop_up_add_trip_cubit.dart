@@ -2,9 +2,7 @@ import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
-
-  PopUpAddTripCubit()
-      : super(PopUpAddTripStateLoading());
+  PopUpAddTripCubit() : super(PopUpAddTripStateLoading());
 
   // CALL API
 
@@ -13,9 +11,9 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     if (query.isNotEmpty && query.length >= 4) {
       print(query);
       emit(PopUpAddTripStateLoading());
-
     }
   }
+
   // Add airport from
   Future<void> addAirportFrom(String airportName) async {
     emit(PopUpAddTripStateLoading());

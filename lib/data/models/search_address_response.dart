@@ -40,14 +40,14 @@ class Results {
 
   Results(
       {this.formattedAddress,
-        this.geometry,
-        this.icon,
-        this.iconBackgroundColor,
-        this.iconMaskBaseUri,
-        this.name,
-        this.placeId,
-        this.reference,
-        this.types});
+      this.geometry,
+      this.icon,
+      this.iconBackgroundColor,
+      this.iconMaskBaseUri,
+      this.name,
+      this.placeId,
+      this.reference,
+      this.types});
 
   Results.fromJson(Map<String, dynamic> json) {
     formattedAddress = json['formatted_address'];

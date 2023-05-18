@@ -25,5 +25,3 @@ final repositories = [
 ];
 
 final blocs = <BlocProvider>[];
-
-

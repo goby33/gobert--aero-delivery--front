@@ -1,2 +1,1 @@
-mixin GooglePlaceRepository {
-}
+mixin GooglePlaceRepository {}
