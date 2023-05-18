@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'cirium_api.dart';
+part of 'google_place_api.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,12 +8,12 @@ part of 'cirium_api.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _CiriumApi implements CiriumApi {
-  _CiriumApi(
+class _GooglePlaceApi implements GooglePlaceApi {
+  _GooglePlaceApi(
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'http://localhost:3001';
+    baseUrl ??= 'https://maps.googleapis.com/maps/api/place/';
   }
 
   final Dio _dio;
@@ -21,25 +21,33 @@ class _CiriumApi implements CiriumApi {
   String? baseUrl;
 
   @override
-  Future<CiriumResponseSearch> getPipo() async {
+  Future<SearchAddressResponse> searchPlace(
+    int query,
+    int key,
+    int type,
+  ) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'query': query,
+      r'key': key,
+      r'type': type,
+    };
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<CiriumResponseSearch>(Options(
+        _setStreamType<SearchAddressResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/flight/',
+              '/textsearch/json',
               queryParameters: queryParameters,
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = CiriumResponseSearch.fromJson(_result.data!);
+    final value = SearchAddressResponse.fromJson(_result.data!);
     return value;
   }
 

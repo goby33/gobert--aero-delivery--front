@@ -8,6 +8,16 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
   PopUpAddTripCubit({required this.ciriumRepository})
       : super(PopUpAddTripStateLoading());
 
+  // CALL API
+
+  Future<void> searchAirport(String query) async {
+    print(query);
+    if (query.isNotEmpty && query.length >= 4) {
+      print(query);
+      emit(PopUpAddTripStateLoading());
+
+    }
+  }
   // Add airport from
   Future<void> addAirportFrom(String airportName) async {
     emit(PopUpAddTripStateLoading());

@@ -1,4 +1,4 @@
-import 'package:aero_delivery/presentation/ui/home/add/add_page.dart';
+import 'package:aero_delivery/presentation/ui/home/add/add_trip_page.dart';
 import 'package:aero_delivery/presentation/ui/home/messenger/messenger_page.dart';
 import 'package:aero_delivery/presentation/ui/home/profile/profile_page.dart';
 import 'package:aero_delivery/presentation/ui/home/search/search_page.dart';
@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
 
   final pages = [
     const SearchPage(),
-    const AddPage(),
+    const AddTripPage(),
     const MessengerPage(),
     const ProfilePage()
   ];

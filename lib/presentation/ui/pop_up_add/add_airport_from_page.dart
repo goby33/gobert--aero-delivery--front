@@ -9,27 +9,42 @@ class AddAirportFromPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.close),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-        automaticallyImplyLeading: false,
-        backgroundColor: const Color(0xFF618985),
-        title: const Text('Add a package to send'),
+    return BlocProvider(
+      create: (context) => PopUpAddTripCubit(
+        ciriumRepository: context.read(),
       ),
-      backgroundColor: const Color(0XFFEDF4ED),
-      body: Center(
-        child: Text(
-          'AddAirportFromPage',
-          style: Theme.of(context).textTheme.headline4,
-        )
-      )
+      child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
+        listener: (context, state) => state.maybeMap(
+          addAirportFromReady: (value) => context.push('/add/paris'),
+          orElse: () => print('ppp'),
+        ),
+        child: BlocBuilder<PopUpAddTripCubit, PopUpAddTripState>(
+          builder: (context, state) {
+            //button to add a package
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text("What's your airport of arrived ?", style: TextStyle(fontSize: 30, fontFamily: 'Nunito', color: Color(0xFFF79F79))),
+                  const TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Airport',
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<PopUpAddTripCubit>().addAirportFrom("toto");
+                    },
+                    child: const Text('Continue'),
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }
