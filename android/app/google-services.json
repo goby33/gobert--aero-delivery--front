@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "118857884470",
+    "project_id": "aero-delivery",
+    "storage_bucket": "aero-delivery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118857884470:android:dc37cf63efc8dff1c70997",
+        "android_client_info": {
+          "package_name": "cyber.project.aero_delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118857884470-ngof1il0d1ijdamfe3c970otd4poo65n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsf5tLrQwWJKhxzKHbbfJ-ZVO0RXcInrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118857884470-ngof1il0d1ijdamfe3c970otd4poo65n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

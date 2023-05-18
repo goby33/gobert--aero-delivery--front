@@ -1,9 +1,9 @@
-import 'package:aero_delivery/presentation/ui/login/widgets/register.dart';
-import 'package:aero_delivery/presentation/ui/login/widgets/sign-in.dart';
+import 'package:aero_delivery/presentation/ui/auth/widgets/create_user.dart';
+import 'package:aero_delivery/presentation/ui/auth/widgets/sign-in.dart';
 import 'package:flutter/material.dart';
 
-class Auth extends StatelessWidget {
-  const Auth({Key? key}) : super(key: key);
+class AuthPage extends StatelessWidget {
+  const AuthPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class Auth extends StatelessWidget {
                     ),
                   ),
                   onPressed: () => _showPopUp(
-                      buildContext: context, child: const Register()),
+                      buildContext: context, child: const CreateUser()),
                   child: const SizedBox(
                     width: 100.0,
                     height: 42.0,
