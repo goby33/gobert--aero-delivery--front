@@ -8,27 +8,27 @@ jobs:
   branch-naming:
     name: 🏷️ Check Branch Naming
     if: ${{ !contains('dependabot', github.head_ref) }}
-    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-branch-naming.yaml
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-branch-naming.yaml@v1
     secrets: inherit
 
   branch-up-to-date:
     name: 🆕 Check Branch Up to Date
-    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-branch-up-to-date.yaml
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-branch-up-to-date.yaml@v1
     secrets: inherit
 
   changelog:
     name: 📓 Check Changelog
     if: ${{ !contains('dependabot', github.head_ref) }}
-    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-changelog.yaml
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-changelog.yaml@v1
     secrets: inherit
 
   commit:
     name: 📍 Check Commit
-    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-commit.yaml
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-checks-commit.yaml@v1
     secrets: inherit
 
   update-labels:
     name: 🏷️ Update labels of PR
     if: ${{ github.event.action == 'opened' }}
-    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-update-labels.yaml
+    uses: goby33/gobert--aero-delivery--workflows/.github/workflows/pr-update-labels.yaml@v1
     secrets: inherit
