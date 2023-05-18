@@ -13,7 +13,6 @@ class AddAirportToPage extends StatelessWidget {
       appBar: AppBar(),
       body: BlocProvider(
         create: (context) => PopUpAddTripCubit(
-          ciriumRepository: context.read(),
         ),
         child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
           listener: (context, state) => state.maybeMap(

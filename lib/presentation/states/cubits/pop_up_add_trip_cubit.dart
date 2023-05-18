@@ -1,11 +1,9 @@
-import 'package:aero_delivery/domain/repositories/cirium_repository.dart';
 import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
-  final CiriumRepository ciriumRepository;
 
-  PopUpAddTripCubit({required this.ciriumRepository})
+  PopUpAddTripCubit()
       : super(PopUpAddTripStateLoading());
 
   // CALL API
@@ -21,7 +19,6 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
   // Add airport from
   Future<void> addAirportFrom(String airportName) async {
     emit(PopUpAddTripStateLoading());
-    final response = ciriumRepository.getPipo();
     emit(
       PopUpAddTripStateAddAirportFromReady(
         trip: Trip(
@@ -38,25 +35,21 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
   // Add airport To
   Future<void> addAirportTo(String airportName) async {
     emit(PopUpAddTripStateLoading());
-    final response = ciriumRepository.getPipo();
   }
 
   // Add date of departure
   Future<void> addDateOfDeparture(String dateOfDeparture) async {
     emit(PopUpAddTripStateLoading());
-    final response = ciriumRepository.getPipo();
   }
 
   // add date of arrival
   Future<void> addDateOfArrival(String dateOfArrival) async {
     emit(PopUpAddTripStateLoading());
-    final response = ciriumRepository.getPipo();
   }
 
   // add free weight
   Future<void> addFreeWeight(String freeWeight) async {
     emit(PopUpAddTripStateLoading());
-    final response = ciriumRepository.getPipo();
   }
 }
 

@@ -11,7 +11,6 @@ class AddTripPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => PopUpAddTripCubit(
-        ciriumRepository: context.read(),
       ),
       child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
         listener: (context, state) => state.maybeMap(
