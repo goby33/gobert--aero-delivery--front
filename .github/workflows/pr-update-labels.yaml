@@ -1,0 +1,32 @@
+name: Update label
+
+on: workflow_call
+
+jobs:
+  add-label:
+    runs-on: [self-hosted, Linux, standard]
+    name: 🏷️ Update labels of PR
+    steps:
+      - run: |
+          if [[ "${{ github.head_ref }}" == chore/* ]]; then
+            LABEL="chore :construction_worker_man:"
+          else
+            if [[ "${{ github.head_ref }}" ==  feat/translation ]]; then
+              LABEL="translation :pencil2:"
+            else
+              if [[ "${{ github.head_ref }}" ==  feat/* ]]; then
+                LABEL="enhancement :rocket:"
+              else
+                if [[ "${{ github.head_ref }}" == fix/* ]]; then
+                  LABEL="bug :bug:"
+                else
+                  LABEL="other"
+                fi
+              fi
+            fi
+          fi
+          gh pr edit $ISSUE --add-label "$LABEL"
+          gh pr comment $ISSUE --body "Label $LABEL has been added to this pull request"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.pull_request.html_url }}
