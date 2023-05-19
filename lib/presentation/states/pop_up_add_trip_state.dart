@@ -2,8 +2,6 @@ import 'package:aero_delivery/domain/entities/search_address_responses.dart';
 import 'package:aero_delivery/domain/entities/trip.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'cubits/pop_up_add_trip_cubit.dart';
-
 part 'pop_up_add_trip_state.freezed.dart';
 
 @Freezed(makeCollectionsUnmodifiable: false)

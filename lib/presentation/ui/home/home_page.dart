@@ -1,9 +1,8 @@
-import 'package:aero_delivery/presentation/ui/home/add/add_trip_page.dart';
+import 'package:aero_delivery/presentation/ui/home/add/airport_from_page.dart';
 import 'package:aero_delivery/presentation/ui/home/messenger/messenger_page.dart';
 import 'package:aero_delivery/presentation/ui/home/profile/profile_page.dart';
 import 'package:aero_delivery/presentation/ui/home/search/search_page.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   final pages = [
     const SearchPage(),
-    const AddTripPage(),
+    const AirportFromPage(),
     const MessengerPage(),
     const ProfilePage()
   ];
