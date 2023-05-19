@@ -10,7 +10,9 @@ class AddAirportFromPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => PopUpAddTripCubit(),
+      create: (context) => PopUpAddTripCubit(
+        googlePlaceRepository: context.read(),
+      ),
       child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
         listener: (context, state) => state.maybeMap(
           addAirportFromReady: (value) => context.push('/add/paris'),

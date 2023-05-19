@@ -12,7 +12,9 @@ class AddAirportToPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: BlocProvider(
-        create: (context) => PopUpAddTripCubit(),
+        create: (context) => PopUpAddTripCubit(
+          googlePlaceRepository: context.read(),
+        ),
         child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
           listener: (context, state) => state.maybeMap(
             addAirportFromReady: (value) => context.push('/add/paris'),
