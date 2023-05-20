@@ -424,6 +424,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+
   intl:
     dependency: transitive
     description:
@@ -432,6 +433,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.18.1"
+
   io:
     dependency: transitive
     description:
