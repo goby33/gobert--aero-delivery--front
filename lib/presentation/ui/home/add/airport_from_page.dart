@@ -40,19 +40,12 @@ class AirportFromPage extends StatelessWidget {
                       children: [
                         TextFieldAddTrip(
                           onChanged: (value) {
-                            context
-                                .read<PopUpAddTripCubit>()
-                                .searchAirport(value);
+                            context.read<PopUpAddTripCubit>().searchAirport(value);
                           },
-                          onClear: () => context
-                              .read<PopUpAddTripCubit>()
-                              .clearAirportFrom(),
-                          hideText: (state
-                              is PopUpAddTripStateAddAirportFromSelected),
+                          onClear: () => context.read<PopUpAddTripCubit>().clearAirportFrom(),
+                          hideText: (state is PopUpAddTripStateAddAirportFromSelected),
                           value:
-                              (state is PopUpAddTripStateAddAirportFromSelected)
-                                  ? state.trip?.airportFrom ?? ""
-                                  : null,
+                              (state is PopUpAddTripStateAddAirportFromSelected) ? state.trip?.airportFrom ?? "" : null,
                         ),
                         if (state is PopUpAddTripStateLoading)
                           const Padding(
@@ -63,20 +56,15 @@ class AirportFromPage extends StatelessWidget {
                           ResultSearchAddTrip(
                             resultSearch: state.resultSearch,
                             onPressed: (value) {
-                              context
-                                  .read<PopUpAddTripCubit>()
-                                  .addAirportFrom(value);
+                              context.read<PopUpAddTripCubit>().addAirportFrom(value);
                             },
                           )
                       ],
                     ),
                   ),
                   ButtonAddTrip(
-                    isEnable:
-                        (state is PopUpAddTripStateAddAirportFromSelected),
-                    onPressed: () => context
-                        .read<PopUpAddTripCubit>()
-                        .addAirportFrom(state.trip?.airportFrom ?? ""),
+                    isEnable: (state is PopUpAddTripStateAddAirportFromSelected),
+                    onPressed: () => context.read<PopUpAddTripCubit>().addAirportFrom(state.trip?.airportFrom ?? ""),
                     text: "Add this airport",
                   ),
                 ],

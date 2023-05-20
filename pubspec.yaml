@@ -51,6 +51,7 @@ dependencies:
   retrofit: ^4.0.1
   retrofit_generator: ^7.0.0
   dio: ^5.1.2
+  table_calendar: ^3.0.9
 
 dev_dependencies:
   flutter_test:
