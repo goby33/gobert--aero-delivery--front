@@ -15,8 +15,8 @@ class SplashPage extends StatelessWidget {
       ),
       child: BlocListener<SplashCubit, SplashState>(
         listener: (context, state) => state.maybeMap(
-          noConnected: (value) => context.push('/auth'),
-          connected: (value) => context.push('/home'),
+          noConnected: (value) => context.go('/auth'),
+          connected: (value) => context.go('/home'),
           orElse: () => print('ppp'),
         ),
         child: BlocBuilder<SplashCubit, SplashState>(

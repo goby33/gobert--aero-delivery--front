@@ -3,13 +3,23 @@ import 'package:flutter/material.dart';
 
 List<ScaffoldWithNavBarTabItem> tabs = [
   const ScaffoldWithNavBarTabItem(
-    initialLocation: '/a',
+    initialLocation: '/home',
     icon: Icon(Icons.home),
-    label: 'Section A',
+    label: 'Home',
   ),
   const ScaffoldWithNavBarTabItem(
-    initialLocation: '/b',
+    initialLocation: '/add_trip',
     icon: Icon(Icons.settings),
-    label: 'Section B',
+    label: 'Publish',
   ),
+  const ScaffoldWithNavBarTabItem(
+    initialLocation: '/messages',
+    icon: Icon(Icons.supervised_user_circle),
+    label: 'Messages',
+  ),
+  const ScaffoldWithNavBarTabItem(
+    initialLocation: '/profile',
+    icon: Icon(Icons.supervised_user_circle),
+    label: 'Profile',
+  )
 ];

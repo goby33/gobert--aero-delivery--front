@@ -64,7 +64,7 @@ class AirportFromPage extends StatelessWidget {
                   ),
                   ButtonAddTrip(
                     isEnable: (state is PopUpAddTripStateAddAirportFromSelected),
-                    onPressed: () => context.read<PopUpAddTripCubit>().addAirportFrom(state.trip?.airportFrom ?? ""),
+                    onPressed: () => context.go('/add_trip/date_from'),
                     text: "Add this airport",
                   ),
                 ],

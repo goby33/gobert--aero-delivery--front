@@ -6,10 +6,9 @@ class ScaffoldWithBottomNavBar extends StatefulWidget {
   final Widget child;
   const ScaffoldWithBottomNavBar({Key? key, required this.child}) : super(key: key);
 
+
   @override
-  _ScaffoldWithBottomNavBarState createState() {
-    return _ScaffoldWithBottomNavBarState();
-  }
+  State<ScaffoldWithBottomNavBar> createState() => _ScaffoldWithBottomNavBarState();
 }
 
 class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
@@ -45,7 +44,10 @@ class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
     return Scaffold(
       body: widget.child,
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: const Color(0xFFEDF4ED),
         currentIndex: _currentIndex,
+        backgroundColor: const Color(0xFF618985),
         items: tabs,
         onTap: (index) => _onItemTapped(context, index),
       ),
