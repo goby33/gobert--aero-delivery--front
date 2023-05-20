@@ -1,24 +1,33 @@
+import 'package:aero_delivery/domain/entities/trip.dart';
+import 'package:aero_delivery/domain/repositories/google_place_repository.dart';
 import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
-  PopUpAddTripCubit() : super(PopUpAddTripStateLoading());
+  GooglePlaceRepository googlePlaceRepository;
+
+  PopUpAddTripCubit({required this.googlePlaceRepository})
+      : super(PopUpAddTripStateStart(trip: null));
 
   // CALL API
 
   Future<void> searchAirport(String query) async {
-    print(query);
     if (query.isNotEmpty && query.length >= 4) {
-      print(query);
-      emit(PopUpAddTripStateLoading());
+      emit(PopUpAddTripStateLoading(trip: state.trip));
+      final response = await googlePlaceRepository.searchPlace(query);
+      emit(PopUpAddTripStateAirportResultSearch(
+        trip: state.trip,
+        dateTime: DateTime.now(),
+        resultSearch: response,
+      ));
     }
   }
 
-  // Add airport from
+  // airport from
   Future<void> addAirportFrom(String airportName) async {
-    emit(PopUpAddTripStateLoading());
+    emit(PopUpAddTripStateLoading(trip: state.trip));
     emit(
-      PopUpAddTripStateAddAirportFromReady(
+      PopUpAddTripStateAddAirportFromSelected(
         trip: Trip(
           airportFrom: airportName,
           airportTo: null,
@@ -30,40 +39,28 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     );
   }
 
+  // clear airport from
+  Future<void> clearAirportFrom() async {
+    emit(PopUpAddTripStateStart(trip: state.trip));
+  }
+
   // Add airport To
   Future<void> addAirportTo(String airportName) async {
-    emit(PopUpAddTripStateLoading());
+    emit(PopUpAddTripStateLoading(trip: state.trip));
   }
 
   // Add date of departure
   Future<void> addDateOfDeparture(String dateOfDeparture) async {
-    emit(PopUpAddTripStateLoading());
+    emit(PopUpAddTripStateLoading(trip: state.trip));
   }
 
   // add date of arrival
   Future<void> addDateOfArrival(String dateOfArrival) async {
-    emit(PopUpAddTripStateLoading());
+    emit(PopUpAddTripStateLoading(trip: state.trip));
   }
 
   // add free weight
   Future<void> addFreeWeight(String freeWeight) async {
-    emit(PopUpAddTripStateLoading());
+    emit(PopUpAddTripStateLoading(trip: state.trip));
   }
-}
-
-//object to save the informations
-class Trip {
-  String? airportFrom;
-  String? airportTo;
-  String? dateOfDeparture;
-  String? dateOfArrival;
-  String? freeWeight;
-
-  Trip({
-    required this.airportFrom,
-    required this.airportTo,
-    required this.dateOfDeparture,
-    required this.dateOfArrival,
-    required this.freeWeight,
-  });
 }

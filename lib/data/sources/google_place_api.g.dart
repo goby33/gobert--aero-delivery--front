@@ -21,10 +21,10 @@ class _GooglePlaceApi implements GooglePlaceApi {
   String? baseUrl;
 
   @override
-  Future<SearchAddressResponse> searchPlace(
-    int query,
-    int key,
-    int type,
+  Future<SearchAddressResponseModel> searchPlace(
+    String query,
+    String key,
+    String type,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -35,7 +35,7 @@ class _GooglePlaceApi implements GooglePlaceApi {
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<SearchAddressResponse>(Options(
+        _setStreamType<SearchAddressResponseModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -47,7 +47,7 @@ class _GooglePlaceApi implements GooglePlaceApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = SearchAddressResponse.fromJson(_result.data!);
+    final value = SearchAddressResponseModel.fromJson(_result.data!);
     return value;
   }
 

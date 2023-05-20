@@ -1,11 +1,12 @@
-class SearchAddressResponse {
+class SearchAddressResponseModel {
   List<String>? htmlAttributions;
   List<Results>? results;
   String? status;
 
-  SearchAddressResponse({this.htmlAttributions, this.results, this.status});
+  SearchAddressResponseModel(
+      {this.htmlAttributions, this.results, this.status});
 
-  SearchAddressResponse.fromJson(Map<String, dynamic> json) {
+  SearchAddressResponseModel.fromJson(Map<String, dynamic> json) {
     htmlAttributions = json['html_attributions'].cast<String>();
     if (json['results'] != null) {
       results = <Results>[];

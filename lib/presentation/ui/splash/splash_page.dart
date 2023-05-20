@@ -1,4 +1,3 @@
-import 'package:aero_delivery/data/repositories/auth_repository_impl.dart';
 import 'package:aero_delivery/presentation/states/cubits/splash_cubit.dart';
 import 'package:aero_delivery/presentation/states/splash_state.dart';
 import 'package:flutter/material.dart';
