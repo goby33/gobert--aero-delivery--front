@@ -20,6 +20,7 @@ mixin _$PopUpAddTripState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -43,6 +44,7 @@ mixin _$PopUpAddTripState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -65,6 +67,7 @@ mixin _$PopUpAddTripState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -88,6 +91,7 @@ mixin _$PopUpAddTripState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -119,6 +123,7 @@ mixin _$PopUpAddTripState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -150,6 +155,7 @@ mixin _$PopUpAddTripState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -303,6 +309,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -329,6 +336,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -354,6 +362,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -383,6 +392,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -417,6 +427,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -451,6 +462,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -497,6 +509,280 @@ abstract class PopUpAddTripStateStart extends PopUpAddTripState {
   @JsonKey(ignore: true)
   _$$PopUpAddTripStateStartCopyWith<_$PopUpAddTripStateStart> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PopUpAddTripStateSuccessCopyWith<$Res>
+    implements $PopUpAddTripStateCopyWith<$Res> {
+  factory _$$PopUpAddTripStateSuccessCopyWith(_$PopUpAddTripStateSuccess value,
+          $Res Function(_$PopUpAddTripStateSuccess) then) =
+      __$$PopUpAddTripStateSuccessCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Trip? trip});
+
+  @override
+  $TripCopyWith<$Res>? get trip;
+}
+
+/// @nodoc
+class __$$PopUpAddTripStateSuccessCopyWithImpl<$Res>
+    extends _$PopUpAddTripStateCopyWithImpl<$Res, _$PopUpAddTripStateSuccess>
+    implements _$$PopUpAddTripStateSuccessCopyWith<$Res> {
+  __$$PopUpAddTripStateSuccessCopyWithImpl(_$PopUpAddTripStateSuccess _value,
+      $Res Function(_$PopUpAddTripStateSuccess) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? trip = freezed,
+  }) {
+    return _then(_$PopUpAddTripStateSuccess(
+      trip: freezed == trip
+          ? _value.trip
+          : trip // ignore: cast_nullable_to_non_nullable
+              as Trip?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PopUpAddTripStateSuccess extends PopUpAddTripStateSuccess {
+  _$PopUpAddTripStateSuccess({required this.trip}) : super._();
+
+  @override
+  final Trip? trip;
+
+  @override
+  String toString() {
+    return 'PopUpAddTripState.success(trip: $trip)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PopUpAddTripStateSuccess &&
+            (identical(other.trip, trip) || other.trip == trip));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, trip);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PopUpAddTripStateSuccessCopyWith<_$PopUpAddTripStateSuccess>
+      get copyWith =>
+          __$$PopUpAddTripStateSuccessCopyWithImpl<_$PopUpAddTripStateSuccess>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
+    required TResult Function(Trip? trip) loading,
+    required TResult Function(DateTime dateTime, Trip? trip, String message)
+        failed,
+    required TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)
+        airportResultSearch,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureReady,
+    required TResult Function(Trip? trip) addDateOfArrivalReady,
+    required TResult Function(Trip? trip) addFreeWeightReady,
+    required TResult Function(Trip? trip) resumeReady,
+    required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
+  }) {
+    return success(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
+    TResult? Function(Trip? trip)? loading,
+    TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult? Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalReady,
+    TResult? Function(Trip? trip)? addFreeWeightReady,
+    TResult? Function(Trip? trip)? resumeReady,
+    TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
+  }) {
+    return success?.call(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
+    TResult Function(Trip? trip)? loading,
+    TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureReady,
+    TResult Function(Trip? trip)? addDateOfArrivalReady,
+    TResult Function(Trip? trip)? addFreeWeightReady,
+    TResult Function(Trip? trip)? resumeReady,
+    TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(trip);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
+    required TResult Function(PopUpAddTripStateLoading value) loading,
+    required TResult Function(PopUpAddTripStateFailed value) failed,
+    required TResult Function(PopUpAddTripStateAirportResultSearch value)
+        airportResultSearch,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
+        addDateOfDepartureReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
+        addDateOfArrivalReady,
+    required TResult Function(PopUpAddTripStateAddFreeWeightReady value)
+        addFreeWeightReady,
+    required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
+    required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
+    TResult? Function(PopUpAddTripStateLoading value)? loading,
+    TResult? Function(PopUpAddTripStateFailed value)? failed,
+    TResult? Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult? Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
+    TResult Function(PopUpAddTripStateLoading value)? loading,
+    TResult Function(PopUpAddTripStateFailed value)? failed,
+    TResult Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PopUpAddTripStateSuccess extends PopUpAddTripState {
+  factory PopUpAddTripStateSuccess({required final Trip? trip}) =
+      _$PopUpAddTripStateSuccess;
+  PopUpAddTripStateSuccess._() : super._();
+
+  @override
+  Trip? get trip;
+  @override
+  @JsonKey(ignore: true)
+  _$$PopUpAddTripStateSuccessCopyWith<_$PopUpAddTripStateSuccess>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -571,6 +857,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -597,6 +884,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -622,6 +910,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -651,6 +940,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -685,6 +975,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -719,6 +1010,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -857,6 +1149,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -883,6 +1176,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -908,6 +1202,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -937,6 +1232,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -971,6 +1267,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -1005,6 +1302,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -1157,6 +1455,7 @@ class _$PopUpAddTripStateAirportResultSearch
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -1183,6 +1482,7 @@ class _$PopUpAddTripStateAirportResultSearch
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -1208,6 +1508,7 @@ class _$PopUpAddTripStateAirportResultSearch
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -1237,6 +1538,7 @@ class _$PopUpAddTripStateAirportResultSearch
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -1271,6 +1573,7 @@ class _$PopUpAddTripStateAirportResultSearch
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -1305,6 +1608,7 @@ class _$PopUpAddTripStateAirportResultSearch
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -1435,6 +1739,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -1461,6 +1766,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -1486,6 +1792,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -1515,6 +1822,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -1549,6 +1857,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -1583,6 +1892,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -1710,6 +2020,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -1736,6 +2047,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -1761,6 +2073,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -1790,6 +2103,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -1824,6 +2138,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -1858,6 +2173,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -1986,6 +2302,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -2012,6 +2329,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -2037,6 +2355,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -2066,6 +2385,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -2100,6 +2420,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -2134,6 +2455,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -2261,6 +2583,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -2287,6 +2610,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -2312,6 +2636,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -2341,6 +2666,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -2375,6 +2701,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -2409,6 +2736,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -2535,6 +2863,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -2561,6 +2890,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -2586,6 +2916,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -2615,6 +2946,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -2649,6 +2981,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -2683,6 +3016,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -2809,6 +3143,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -2835,6 +3170,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -2860,6 +3196,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -2889,6 +3226,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -2923,6 +3261,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -2957,6 +3296,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -3080,6 +3420,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -3106,6 +3447,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -3131,6 +3473,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -3160,6 +3503,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -3194,6 +3538,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -3228,6 +3573,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -3350,6 +3696,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -3376,6 +3723,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -3401,6 +3749,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -3430,6 +3779,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -3464,6 +3814,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -3498,6 +3849,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -3622,6 +3974,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -3648,6 +4001,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -3673,6 +4027,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -3702,6 +4057,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -3736,6 +4092,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -3770,6 +4127,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -3896,6 +4254,7 @@ class _$PopUpAddTripStateAddAirportFromReady
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -3922,6 +4281,7 @@ class _$PopUpAddTripStateAddAirportFromReady
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -3947,6 +4307,7 @@ class _$PopUpAddTripStateAddAirportFromReady
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -3976,6 +4337,7 @@ class _$PopUpAddTripStateAddAirportFromReady
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -4010,6 +4372,7 @@ class _$PopUpAddTripStateAddAirportFromReady
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -4044,6 +4407,7 @@ class _$PopUpAddTripStateAddAirportFromReady
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -4169,6 +4533,7 @@ class _$PopUpAddTripStateAddAirportToSelected
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -4195,6 +4560,7 @@ class _$PopUpAddTripStateAddAirportToSelected
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -4220,6 +4586,7 @@ class _$PopUpAddTripStateAddAirportToSelected
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -4249,6 +4616,7 @@ class _$PopUpAddTripStateAddAirportToSelected
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -4283,6 +4651,7 @@ class _$PopUpAddTripStateAddAirportToSelected
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -4317,6 +4686,7 @@ class _$PopUpAddTripStateAddAirportToSelected
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
@@ -4442,6 +4812,7 @@ class _$PopUpAddTripStateAddAirportToReady
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) success,
     required TResult Function(Trip? trip) loading,
     required TResult Function(DateTime dateTime, Trip? trip, String message)
         failed,
@@ -4468,6 +4839,7 @@ class _$PopUpAddTripStateAddAirportToReady
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? success,
     TResult? Function(Trip? trip)? loading,
     TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult? Function(Trip? trip, DateTime dateTime,
@@ -4493,6 +4865,7 @@ class _$PopUpAddTripStateAddAirportToReady
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? success,
     TResult Function(Trip? trip)? loading,
     TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
     TResult Function(Trip? trip, DateTime dateTime,
@@ -4522,6 +4895,7 @@ class _$PopUpAddTripStateAddAirportToReady
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateSuccess value) success,
     required TResult Function(PopUpAddTripStateLoading value) loading,
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
@@ -4556,6 +4930,7 @@ class _$PopUpAddTripStateAddAirportToReady
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateSuccess value)? success,
     TResult? Function(PopUpAddTripStateLoading value)? loading,
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
@@ -4590,6 +4965,7 @@ class _$PopUpAddTripStateAddAirportToReady
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateSuccess value)? success,
     TResult Function(PopUpAddTripStateLoading value)? loading,
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?

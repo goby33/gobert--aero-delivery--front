@@ -13,6 +13,11 @@ class PopUpAddTripState with _$PopUpAddTripState {
     required Trip? trip,
   }) = PopUpAddTripStateStart;
 
+  // success finish
+  factory PopUpAddTripState.success({
+    required Trip? trip,
+  }) = PopUpAddTripStateSuccess;
+
   factory PopUpAddTripState.loading({
     required Trip? trip,
   }) = PopUpAddTripStateLoading;

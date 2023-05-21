@@ -43,14 +43,18 @@ class _TextFieldAddTripState extends State<TextFieldAddTrip> {
       readOnly: widget.hideText,
       onChanged: (value) => widget.onChanged(value),
       decoration: InputDecoration(
-        border: const OutlineInputBorder(),
-        labelText: 'Airport',
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Color(0xFF618985), width: 2.0),
+        ),
+        enabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Color(0xFF618985), width: 2.0),
+        ),
         suffixIcon: IconButton(
           onPressed: () {
             _searchAirportController.text = "";
             widget.onClear();
           },
-          icon: const Icon(Icons.clear),
+          icon: const Icon(Icons.clear, color: Color(0xFF618985)),
         ),
       ),
     );

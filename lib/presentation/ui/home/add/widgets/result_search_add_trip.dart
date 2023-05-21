@@ -45,7 +45,10 @@ class _ResultSearchAddTripState extends State<ResultSearchAddTrip> {
             bottom: 8.0),
         child: Text("sorry, no result"),
       )
-          : ListView.builder(
+          : ListView.separated(
+        separatorBuilder: (context, index) => const Divider(
+          color: Colors.black,
+        ),
         itemCount: widget.resultSearch.length,
         itemBuilder: (context, index) => ListTile(
           onTap: () async {

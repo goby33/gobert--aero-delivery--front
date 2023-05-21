@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Avatar extends StatelessWidget {
   final String? path;
 
-  Avatar({Key? key, required this.path}) : super(key: key);
+  const Avatar({Key? key, required this.path}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

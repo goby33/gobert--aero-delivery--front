@@ -4,6 +4,8 @@ import 'package:aero_delivery/presentation/ui/home/profile/profile_page.dart';
 import 'package:aero_delivery/presentation/ui/home/search/search_page.dart';
 import 'package:flutter/material.dart';
 
+import 'bottom_nav_bar/tabs.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -51,32 +53,12 @@ class _HomePageState extends State<HomePage> {
         children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xFFEDF4ED),
+        selectedItemColor: const Color(0xFFF79F79),
         type: BottomNavigationBarType.fixed,
         currentIndex: _pageIndex,
         onTap: _onItemTapped,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search, color: Color(0xFFF79F79)),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add_location_alt, color: Color(0xFFF79F79)),
-            label: 'add',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.messenger, color: Color(0xFFF79F79)),
-            label: 'messages',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Color(0xFFF79F79),
-            ),
-            label: 'Profile',
-          ),
-        ],
+        items: tabs,
       ),
     );
   }

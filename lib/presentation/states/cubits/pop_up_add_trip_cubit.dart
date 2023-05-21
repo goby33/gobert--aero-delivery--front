@@ -1,3 +1,4 @@
+import 'package:aero_delivery/config/api_response.dart';
 import 'package:aero_delivery/domain/entities/trip.dart';
 import 'package:aero_delivery/domain/repositories/cloud_firestore_repository.dart';
 import 'package:aero_delivery/domain/repositories/google_place_repository.dart';
@@ -188,14 +189,15 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
   // SAVE THE TRIP
   Future<void> saveTrip() async {
     emit(PopUpAddTripStateLoading(trip: state.trip));
-    /*final response = await cloudFirestoreRepository.saveTrip(state.trip!);
-    if (response) {
+    final response = await cloudFirestoreRepository.createTrip( trip: state.trip!);
+    if (response is SuccessResponse) {
       emit(PopUpAddTripStateSuccess(trip: state.trip));
     } else {
       emit(PopUpAddTripStateFailed(
         trip: state.trip,
-        message: 'Failed to save trip',
+        message: 'Failed to save the trip',
+        dateTime: DateTime.now(),
       ));
-    }*/
+    }
   }
 }

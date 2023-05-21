@@ -18,6 +18,12 @@ class MyApp extends StatelessWidget {
             return MaterialApp.router(
               title: 'Pipo',
               theme: ThemeData(
+                primaryColor: const Color(0xFFF79F79),
+                elevatedButtonTheme: ElevatedButtonThemeData(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFFF1D263B),
+                  ),
+                ),
                 primarySwatch: Colors.blue,
               ),
               routerConfig: appRouter,
