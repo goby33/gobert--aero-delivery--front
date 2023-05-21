@@ -4,7 +4,6 @@ import 'package:aero_delivery/presentation/ui/home/add/widgets/button_add_trip.d
 import 'package:aero_delivery/presentation/ui/home/add/widgets/result_search_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/textField_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/title_add_trip.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -14,16 +13,7 @@ class AirportFromPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => PopUpAddTripCubit(
-        googlePlaceRepository: context.read(),
-      ),
-      child: BlocListener<PopUpAddTripCubit, PopUpAddTripState>(
-        listener: (context, state) => state.maybeMap(
-          addAirportFromReady: (value) => context.push('/add/paris'),
-          orElse: () => debugPrintDone,
-        ),
-        child: BlocBuilder<PopUpAddTripCubit, PopUpAddTripState>(
+    return BlocBuilder<PopUpAddTripCubit, PopUpAddTripState>(
           builder: (context, state) {
             //button to add a package
             return Padding(
@@ -56,7 +46,7 @@ class AirportFromPage extends StatelessWidget {
                           ResultSearchAddTrip(
                             resultSearch: state.resultSearch,
                             onPressed: (value) {
-                              context.read<PopUpAddTripCubit>().addAirportFrom(value);
+                              context.read<PopUpAddTripCubit>().addAirportFromSelected(value);
                             },
                           )
                       ],
@@ -64,15 +54,13 @@ class AirportFromPage extends StatelessWidget {
                   ),
                   ButtonAddTrip(
                     isEnable: (state is PopUpAddTripStateAddAirportFromSelected),
-                    onPressed: () => context.go('/add_trip/date_from'),
+                    onPressed: () { context.read<PopUpAddTripCubit>().addAirportFromReady();context.push('/add_trip/date_from');},
                     text: "Add this airport",
                   ),
                 ],
               ),
             );
           },
-        ),
-      ),
     );
   }
 }

@@ -7,8 +7,8 @@ class Trip with _$Trip {
   const factory Trip({
     required String? airportFrom,
     required String? airportTo,
-    required String? dateOfDeparture,
-    required String? dateOfArrival,
+    required DateTime? dateOfDeparture,
+    required DateTime? dateOfArrival,
     required String? freeWeight,
   }) = _Trip;
 }

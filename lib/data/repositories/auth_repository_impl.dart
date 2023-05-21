@@ -1,10 +1,10 @@
 import 'package:aero_delivery/config/api_response.dart';
-import 'package:aero_delivery/data/sources/auth_firebase_impl.dart';
+import 'package:aero_delivery/data/sources/auth_firebase_api.dart';
 import 'package:aero_delivery/domain/repositories/auth_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthRepositoryImpl with AuthRepository {
-  final AuthFirebaseImpl _authFirebase;
+  final AuthFirebaseApi _authFirebase;
   static User? _user;
 
   AuthRepositoryImpl(this._authFirebase);

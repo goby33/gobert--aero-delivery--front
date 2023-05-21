@@ -18,8 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Trip {
   String? get airportFrom => throw _privateConstructorUsedError;
   String? get airportTo => throw _privateConstructorUsedError;
-  String? get dateOfDeparture => throw _privateConstructorUsedError;
-  String? get dateOfArrival => throw _privateConstructorUsedError;
+  DateTime? get dateOfDeparture => throw _privateConstructorUsedError;
+  DateTime? get dateOfArrival => throw _privateConstructorUsedError;
   String? get freeWeight => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -34,8 +34,8 @@ abstract class $TripCopyWith<$Res> {
   $Res call(
       {String? airportFrom,
       String? airportTo,
-      String? dateOfDeparture,
-      String? dateOfArrival,
+      DateTime? dateOfDeparture,
+      DateTime? dateOfArrival,
       String? freeWeight});
 }
 
@@ -70,11 +70,11 @@ class _$TripCopyWithImpl<$Res, $Val extends Trip>
       dateOfDeparture: freezed == dateOfDeparture
           ? _value.dateOfDeparture
           : dateOfDeparture // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       dateOfArrival: freezed == dateOfArrival
           ? _value.dateOfArrival
           : dateOfArrival // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       freeWeight: freezed == freeWeight
           ? _value.freeWeight
           : freeWeight // ignore: cast_nullable_to_non_nullable
@@ -92,8 +92,8 @@ abstract class _$$_TripCopyWith<$Res> implements $TripCopyWith<$Res> {
   $Res call(
       {String? airportFrom,
       String? airportTo,
-      String? dateOfDeparture,
-      String? dateOfArrival,
+      DateTime? dateOfDeparture,
+      DateTime? dateOfArrival,
       String? freeWeight});
 }
 
@@ -124,11 +124,11 @@ class __$$_TripCopyWithImpl<$Res> extends _$TripCopyWithImpl<$Res, _$_Trip>
       dateOfDeparture: freezed == dateOfDeparture
           ? _value.dateOfDeparture
           : dateOfDeparture // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       dateOfArrival: freezed == dateOfArrival
           ? _value.dateOfArrival
           : dateOfArrival // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       freeWeight: freezed == freeWeight
           ? _value.freeWeight
           : freeWeight // ignore: cast_nullable_to_non_nullable
@@ -152,9 +152,9 @@ class _$_Trip implements _Trip {
   @override
   final String? airportTo;
   @override
-  final String? dateOfDeparture;
+  final DateTime? dateOfDeparture;
   @override
-  final String? dateOfArrival;
+  final DateTime? dateOfArrival;
   @override
   final String? freeWeight;
 
@@ -195,8 +195,8 @@ abstract class _Trip implements Trip {
   const factory _Trip(
       {required final String? airportFrom,
       required final String? airportTo,
-      required final String? dateOfDeparture,
-      required final String? dateOfArrival,
+      required final DateTime? dateOfDeparture,
+      required final DateTime? dateOfArrival,
       required final String? freeWeight}) = _$_Trip;
 
   @override
@@ -204,9 +204,9 @@ abstract class _Trip implements Trip {
   @override
   String? get airportTo;
   @override
-  String? get dateOfDeparture;
+  DateTime? get dateOfDeparture;
   @override
-  String? get dateOfArrival;
+  DateTime? get dateOfArrival;
   @override
   String? get freeWeight;
   @override

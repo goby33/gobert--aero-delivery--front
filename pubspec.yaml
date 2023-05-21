@@ -46,7 +46,7 @@ dependencies:
   firebase_core: ^2.13.0
   firebase_auth: ^4.6.1
   firebase_storage: ^11.2.1
-  cloud_firestore: ^4.5.2
+  cloud_firestore: ^4.7.1
   firebase_core_platform_interface: ^4.8.0
   retrofit: ^4.0.1
   retrofit_generator: ^7.0.0
@@ -80,6 +80,9 @@ flutter:
   assets:
     - assets/images/background-small.jpg
     - assets/images/background-original.jpg
+    - assets/images/package_200.png
+    - assets/images/package_400.png
+    - assets/images/package_600.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

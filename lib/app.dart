@@ -11,16 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
       providers: repositories,
-      child: Builder(
-        builder: (context) {
-          return MaterialApp.router(
-            title: 'Pipo',
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-            ),
-            routerConfig: appRouter,
-          );
-        },
+      child: MultiBlocProvider(
+        providers: blocs,
+        child: Builder(
+          builder: (context) {
+            return MaterialApp.router(
+              title: 'Pipo',
+              theme: ThemeData(
+                primarySwatch: Colors.blue,
+              ),
+              routerConfig: appRouter,
+            );
+          },
+        ),
       ),
     );
   }

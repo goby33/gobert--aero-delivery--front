@@ -26,14 +26,18 @@ mixin _$PopUpAddTripState {
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,14 +48,18 @@ mixin _$PopUpAddTripState {
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,14 +70,18 @@ mixin _$PopUpAddTripState {
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,12 +92,12 @@ mixin _$PopUpAddTripState {
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -94,6 +106,14 @@ mixin _$PopUpAddTripState {
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -103,12 +123,12 @@ mixin _$PopUpAddTripState {
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -117,6 +137,14 @@ mixin _$PopUpAddTripState {
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -126,12 +154,12 @@ mixin _$PopUpAddTripState {
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -140,6 +168,14 @@ mixin _$PopUpAddTripState {
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -273,14 +309,18 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return start(trip);
   }
@@ -294,14 +334,18 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return start?.call(trip);
   }
@@ -315,14 +359,18 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (start != null) {
@@ -339,12 +387,12 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -353,6 +401,14 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return start(this);
   }
@@ -365,12 +421,12 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -379,6 +435,14 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return start?.call(this);
   }
@@ -391,12 +455,12 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -405,6 +469,14 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (start != null) {
@@ -505,14 +577,18 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return loading(trip);
   }
@@ -526,14 +602,18 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return loading?.call(trip);
   }
@@ -547,14 +627,18 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -571,12 +655,12 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -585,6 +669,14 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return loading(this);
   }
@@ -597,12 +689,12 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -611,6 +703,14 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return loading?.call(this);
   }
@@ -623,12 +723,12 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -637,6 +737,14 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -755,14 +863,18 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return failed(dateTime, trip, message);
   }
@@ -776,14 +888,18 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return failed?.call(dateTime, trip, message);
   }
@@ -797,14 +913,18 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -821,12 +941,12 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -835,6 +955,14 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return failed(this);
   }
@@ -847,12 +975,12 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -861,6 +989,14 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return failed?.call(this);
   }
@@ -873,12 +1009,12 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -887,6 +1023,14 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -1019,14 +1163,18 @@ class _$PopUpAddTripStateAirportResultSearch
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return airportResultSearch(trip, dateTime, resultSearch);
   }
@@ -1040,14 +1188,18 @@ class _$PopUpAddTripStateAirportResultSearch
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return airportResultSearch?.call(trip, dateTime, resultSearch);
   }
@@ -1061,14 +1213,18 @@ class _$PopUpAddTripStateAirportResultSearch
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (airportResultSearch != null) {
@@ -1085,12 +1241,12 @@ class _$PopUpAddTripStateAirportResultSearch
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -1099,6 +1255,14 @@ class _$PopUpAddTripStateAirportResultSearch
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return airportResultSearch(this);
   }
@@ -1111,12 +1275,12 @@ class _$PopUpAddTripStateAirportResultSearch
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -1125,6 +1289,14 @@ class _$PopUpAddTripStateAirportResultSearch
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return airportResultSearch?.call(this);
   }
@@ -1137,12 +1309,12 @@ class _$PopUpAddTripStateAirportResultSearch
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -1151,6 +1323,14 @@ class _$PopUpAddTripStateAirportResultSearch
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (airportResultSearch != null) {
@@ -1180,12 +1360,12 @@ abstract class PopUpAddTripStateAirportResultSearch extends PopUpAddTripState {
 }
 
 /// @nodoc
-abstract class _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<$Res>
+abstract class _$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWith<$Res>
     implements $PopUpAddTripStateCopyWith<$Res> {
-  factory _$$PopUpAddTripStateAddAirportFromSelectedCopyWith(
-          _$PopUpAddTripStateAddAirportFromSelected value,
-          $Res Function(_$PopUpAddTripStateAddAirportFromSelected) then) =
-      __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl<$Res>;
+  factory _$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWith(
+          _$PopUpAddTripStateAddDateOfArrivalSelected value,
+          $Res Function(_$PopUpAddTripStateAddDateOfArrivalSelected) then) =
+      __$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Trip? trip});
@@ -1195,13 +1375,13 @@ abstract class _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl<$Res>
+class __$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWithImpl<$Res>
     extends _$PopUpAddTripStateCopyWithImpl<$Res,
-        _$PopUpAddTripStateAddAirportFromSelected>
-    implements _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<$Res> {
-  __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl(
-      _$PopUpAddTripStateAddAirportFromSelected _value,
-      $Res Function(_$PopUpAddTripStateAddAirportFromSelected) _then)
+        _$PopUpAddTripStateAddDateOfArrivalSelected>
+    implements _$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWith<$Res> {
+  __$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWithImpl(
+      _$PopUpAddTripStateAddDateOfArrivalSelected _value,
+      $Res Function(_$PopUpAddTripStateAddDateOfArrivalSelected) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1209,7 +1389,7 @@ class __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl<$Res>
   $Res call({
     Object? trip = freezed,
   }) {
-    return _then(_$PopUpAddTripStateAddAirportFromSelected(
+    return _then(_$PopUpAddTripStateAddDateOfArrivalSelected(
       trip: freezed == trip
           ? _value.trip
           : trip // ignore: cast_nullable_to_non_nullable
@@ -1220,23 +1400,23 @@ class __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PopUpAddTripStateAddAirportFromSelected
-    extends PopUpAddTripStateAddAirportFromSelected {
-  _$PopUpAddTripStateAddAirportFromSelected({required this.trip}) : super._();
+class _$PopUpAddTripStateAddDateOfArrivalSelected
+    extends PopUpAddTripStateAddDateOfArrivalSelected {
+  _$PopUpAddTripStateAddDateOfArrivalSelected({required this.trip}) : super._();
 
   @override
   final Trip? trip;
 
   @override
   String toString() {
-    return 'PopUpAddTripState.addAirportFromSelected(trip: $trip)';
+    return 'PopUpAddTripState.addDateOfArrivalSelected(trip: $trip)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PopUpAddTripStateAddAirportFromSelected &&
+            other is _$PopUpAddTripStateAddDateOfArrivalSelected &&
             (identical(other.trip, trip) || other.trip == trip));
   }
 
@@ -1246,10 +1426,10 @@ class _$PopUpAddTripStateAddAirportFromSelected
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<
-          _$PopUpAddTripStateAddAirportFromSelected>
-      get copyWith => __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl<
-          _$PopUpAddTripStateAddAirportFromSelected>(this, _$identity);
+  _$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWith<
+          _$PopUpAddTripStateAddDateOfArrivalSelected>
+      get copyWith => __$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWithImpl<
+          _$PopUpAddTripStateAddDateOfArrivalSelected>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1261,16 +1441,20 @@ class _$PopUpAddTripStateAddAirportFromSelected
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
-    return addAirportFromSelected(trip);
+    return addDateOfArrivalSelected(trip);
   }
 
   @override
@@ -1282,16 +1466,20 @@ class _$PopUpAddTripStateAddAirportFromSelected
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
-    return addAirportFromSelected?.call(trip);
+    return addDateOfArrivalSelected?.call(trip);
   }
 
   @override
@@ -1303,18 +1491,22 @@ class _$PopUpAddTripStateAddAirportFromSelected
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
-    if (addAirportFromSelected != null) {
-      return addAirportFromSelected(trip);
+    if (addDateOfArrivalSelected != null) {
+      return addDateOfArrivalSelected(trip);
     }
     return orElse();
   }
@@ -1327,12 +1519,12 @@ class _$PopUpAddTripStateAddAirportFromSelected
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -1341,8 +1533,16 @@ class _$PopUpAddTripStateAddAirportFromSelected
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
-    return addAirportFromSelected(this);
+    return addDateOfArrivalSelected(this);
   }
 
   @override
@@ -1353,12 +1553,12 @@ class _$PopUpAddTripStateAddAirportFromSelected
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -1367,8 +1567,16 @@ class _$PopUpAddTripStateAddAirportFromSelected
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
-    return addAirportFromSelected?.call(this);
+    return addDateOfArrivalSelected?.call(this);
   }
 
   @override
@@ -1379,12 +1587,12 @@ class _$PopUpAddTripStateAddAirportFromSelected
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -1393,37 +1601,46 @@ class _$PopUpAddTripStateAddAirportFromSelected
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
-    if (addAirportFromSelected != null) {
-      return addAirportFromSelected(this);
+    if (addDateOfArrivalSelected != null) {
+      return addDateOfArrivalSelected(this);
     }
     return orElse();
   }
 }
 
-abstract class PopUpAddTripStateAddAirportFromSelected
+abstract class PopUpAddTripStateAddDateOfArrivalSelected
     extends PopUpAddTripState {
-  factory PopUpAddTripStateAddAirportFromSelected({required final Trip? trip}) =
-      _$PopUpAddTripStateAddAirportFromSelected;
-  PopUpAddTripStateAddAirportFromSelected._() : super._();
+  factory PopUpAddTripStateAddDateOfArrivalSelected(
+          {required final Trip? trip}) =
+      _$PopUpAddTripStateAddDateOfArrivalSelected;
+  PopUpAddTripStateAddDateOfArrivalSelected._() : super._();
 
   @override
   Trip? get trip;
   @override
   @JsonKey(ignore: true)
-  _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<
-          _$PopUpAddTripStateAddAirportFromSelected>
+  _$$PopUpAddTripStateAddDateOfArrivalSelectedCopyWith<
+          _$PopUpAddTripStateAddDateOfArrivalSelected>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PopUpAddTripStateAddAirportFromReadyCopyWith<$Res>
+abstract class _$$PopUpAddTripStateAddFreeWeightSelectedCopyWith<$Res>
     implements $PopUpAddTripStateCopyWith<$Res> {
-  factory _$$PopUpAddTripStateAddAirportFromReadyCopyWith(
-          _$PopUpAddTripStateAddAirportFromReady value,
-          $Res Function(_$PopUpAddTripStateAddAirportFromReady) then) =
-      __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl<$Res>;
+  factory _$$PopUpAddTripStateAddFreeWeightSelectedCopyWith(
+          _$PopUpAddTripStateAddFreeWeightSelected value,
+          $Res Function(_$PopUpAddTripStateAddFreeWeightSelected) then) =
+      __$$PopUpAddTripStateAddFreeWeightSelectedCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Trip? trip});
@@ -1433,13 +1650,13 @@ abstract class _$$PopUpAddTripStateAddAirportFromReadyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl<$Res>
+class __$$PopUpAddTripStateAddFreeWeightSelectedCopyWithImpl<$Res>
     extends _$PopUpAddTripStateCopyWithImpl<$Res,
-        _$PopUpAddTripStateAddAirportFromReady>
-    implements _$$PopUpAddTripStateAddAirportFromReadyCopyWith<$Res> {
-  __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl(
-      _$PopUpAddTripStateAddAirportFromReady _value,
-      $Res Function(_$PopUpAddTripStateAddAirportFromReady) _then)
+        _$PopUpAddTripStateAddFreeWeightSelected>
+    implements _$$PopUpAddTripStateAddFreeWeightSelectedCopyWith<$Res> {
+  __$$PopUpAddTripStateAddFreeWeightSelectedCopyWithImpl(
+      _$PopUpAddTripStateAddFreeWeightSelected _value,
+      $Res Function(_$PopUpAddTripStateAddFreeWeightSelected) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1447,7 +1664,7 @@ class __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl<$Res>
   $Res call({
     Object? trip = freezed,
   }) {
-    return _then(_$PopUpAddTripStateAddAirportFromReady(
+    return _then(_$PopUpAddTripStateAddFreeWeightSelected(
       trip: freezed == trip
           ? _value.trip
           : trip // ignore: cast_nullable_to_non_nullable
@@ -1458,23 +1675,23 @@ class __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PopUpAddTripStateAddAirportFromReady
-    extends PopUpAddTripStateAddAirportFromReady {
-  _$PopUpAddTripStateAddAirportFromReady({required this.trip}) : super._();
+class _$PopUpAddTripStateAddFreeWeightSelected
+    extends PopUpAddTripStateAddFreeWeightSelected {
+  _$PopUpAddTripStateAddFreeWeightSelected({required this.trip}) : super._();
 
   @override
   final Trip? trip;
 
   @override
   String toString() {
-    return 'PopUpAddTripState.addAirportFromReady(trip: $trip)';
+    return 'PopUpAddTripState.addFreeWeightSelected(trip: $trip)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PopUpAddTripStateAddAirportFromReady &&
+            other is _$PopUpAddTripStateAddFreeWeightSelected &&
             (identical(other.trip, trip) || other.trip == trip));
   }
 
@@ -1484,10 +1701,10 @@ class _$PopUpAddTripStateAddAirportFromReady
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PopUpAddTripStateAddAirportFromReadyCopyWith<
-          _$PopUpAddTripStateAddAirportFromReady>
-      get copyWith => __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl<
-          _$PopUpAddTripStateAddAirportFromReady>(this, _$identity);
+  _$$PopUpAddTripStateAddFreeWeightSelectedCopyWith<
+          _$PopUpAddTripStateAddFreeWeightSelected>
+      get copyWith => __$$PopUpAddTripStateAddFreeWeightSelectedCopyWithImpl<
+          _$PopUpAddTripStateAddFreeWeightSelected>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1499,16 +1716,20 @@ class _$PopUpAddTripStateAddAirportFromReady
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
-    return addAirportFromReady(trip);
+    return addFreeWeightSelected(trip);
   }
 
   @override
@@ -1520,16 +1741,20 @@ class _$PopUpAddTripStateAddAirportFromReady
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
-    return addAirportFromReady?.call(trip);
+    return addFreeWeightSelected?.call(trip);
   }
 
   @override
@@ -1541,18 +1766,22 @@ class _$PopUpAddTripStateAddAirportFromReady
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
-    if (addAirportFromReady != null) {
-      return addAirportFromReady(trip);
+    if (addFreeWeightSelected != null) {
+      return addFreeWeightSelected(trip);
     }
     return orElse();
   }
@@ -1565,12 +1794,12 @@ class _$PopUpAddTripStateAddAirportFromReady
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -1579,8 +1808,16 @@ class _$PopUpAddTripStateAddAirportFromReady
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
-    return addAirportFromReady(this);
+    return addFreeWeightSelected(this);
   }
 
   @override
@@ -1591,12 +1828,12 @@ class _$PopUpAddTripStateAddAirportFromReady
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -1605,8 +1842,16 @@ class _$PopUpAddTripStateAddAirportFromReady
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
-    return addAirportFromReady?.call(this);
+    return addFreeWeightSelected?.call(this);
   }
 
   @override
@@ -1617,12 +1862,12 @@ class _$PopUpAddTripStateAddAirportFromReady
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -1631,36 +1876,45 @@ class _$PopUpAddTripStateAddAirportFromReady
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
-    if (addAirportFromReady != null) {
-      return addAirportFromReady(this);
+    if (addFreeWeightSelected != null) {
+      return addFreeWeightSelected(this);
     }
     return orElse();
   }
 }
 
-abstract class PopUpAddTripStateAddAirportFromReady extends PopUpAddTripState {
-  factory PopUpAddTripStateAddAirportFromReady({required final Trip? trip}) =
-      _$PopUpAddTripStateAddAirportFromReady;
-  PopUpAddTripStateAddAirportFromReady._() : super._();
+abstract class PopUpAddTripStateAddFreeWeightSelected
+    extends PopUpAddTripState {
+  factory PopUpAddTripStateAddFreeWeightSelected({required final Trip? trip}) =
+      _$PopUpAddTripStateAddFreeWeightSelected;
+  PopUpAddTripStateAddFreeWeightSelected._() : super._();
 
   @override
   Trip? get trip;
   @override
   @JsonKey(ignore: true)
-  _$$PopUpAddTripStateAddAirportFromReadyCopyWith<
-          _$PopUpAddTripStateAddAirportFromReady>
+  _$$PopUpAddTripStateAddFreeWeightSelectedCopyWith<
+          _$PopUpAddTripStateAddFreeWeightSelected>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PopUpAddTripStateAddAirportToReadyCopyWith<$Res>
+abstract class _$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWith<$Res>
     implements $PopUpAddTripStateCopyWith<$Res> {
-  factory _$$PopUpAddTripStateAddAirportToReadyCopyWith(
-          _$PopUpAddTripStateAddAirportToReady value,
-          $Res Function(_$PopUpAddTripStateAddAirportToReady) then) =
-      __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl<$Res>;
+  factory _$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWith(
+          _$PopUpAddTripStateAddDateOfDepartureSelected value,
+          $Res Function(_$PopUpAddTripStateAddDateOfDepartureSelected) then) =
+      __$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Trip? trip});
@@ -1670,13 +1924,13 @@ abstract class _$$PopUpAddTripStateAddAirportToReadyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl<$Res>
+class __$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWithImpl<$Res>
     extends _$PopUpAddTripStateCopyWithImpl<$Res,
-        _$PopUpAddTripStateAddAirportToReady>
-    implements _$$PopUpAddTripStateAddAirportToReadyCopyWith<$Res> {
-  __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl(
-      _$PopUpAddTripStateAddAirportToReady _value,
-      $Res Function(_$PopUpAddTripStateAddAirportToReady) _then)
+        _$PopUpAddTripStateAddDateOfDepartureSelected>
+    implements _$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWith<$Res> {
+  __$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWithImpl(
+      _$PopUpAddTripStateAddDateOfDepartureSelected _value,
+      $Res Function(_$PopUpAddTripStateAddDateOfDepartureSelected) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1684,7 +1938,7 @@ class __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl<$Res>
   $Res call({
     Object? trip = freezed,
   }) {
-    return _then(_$PopUpAddTripStateAddAirportToReady(
+    return _then(_$PopUpAddTripStateAddDateOfDepartureSelected(
       trip: freezed == trip
           ? _value.trip
           : trip // ignore: cast_nullable_to_non_nullable
@@ -1695,23 +1949,24 @@ class __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PopUpAddTripStateAddAirportToReady
-    extends PopUpAddTripStateAddAirportToReady {
-  _$PopUpAddTripStateAddAirportToReady({required this.trip}) : super._();
+class _$PopUpAddTripStateAddDateOfDepartureSelected
+    extends PopUpAddTripStateAddDateOfDepartureSelected {
+  _$PopUpAddTripStateAddDateOfDepartureSelected({required this.trip})
+      : super._();
 
   @override
   final Trip? trip;
 
   @override
   String toString() {
-    return 'PopUpAddTripState.addAirportToReady(trip: $trip)';
+    return 'PopUpAddTripState.addDateOfDepartureSelected(trip: $trip)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PopUpAddTripStateAddAirportToReady &&
+            other is _$PopUpAddTripStateAddDateOfDepartureSelected &&
             (identical(other.trip, trip) || other.trip == trip));
   }
 
@@ -1721,10 +1976,11 @@ class _$PopUpAddTripStateAddAirportToReady
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PopUpAddTripStateAddAirportToReadyCopyWith<
-          _$PopUpAddTripStateAddAirportToReady>
-      get copyWith => __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl<
-          _$PopUpAddTripStateAddAirportToReady>(this, _$identity);
+  _$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWith<
+          _$PopUpAddTripStateAddDateOfDepartureSelected>
+      get copyWith =>
+          __$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWithImpl<
+              _$PopUpAddTripStateAddDateOfDepartureSelected>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1736,16 +1992,20 @@ class _$PopUpAddTripStateAddAirportToReady
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
-    return addAirportToReady(trip);
+    return addDateOfDepartureSelected(trip);
   }
 
   @override
@@ -1757,16 +2017,20 @@ class _$PopUpAddTripStateAddAirportToReady
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
-    return addAirportToReady?.call(trip);
+    return addDateOfDepartureSelected?.call(trip);
   }
 
   @override
@@ -1778,18 +2042,22 @@ class _$PopUpAddTripStateAddAirportToReady
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
-    if (addAirportToReady != null) {
-      return addAirportToReady(trip);
+    if (addDateOfDepartureSelected != null) {
+      return addDateOfDepartureSelected(trip);
     }
     return orElse();
   }
@@ -1802,12 +2070,12 @@ class _$PopUpAddTripStateAddAirportToReady
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -1816,8 +2084,16 @@ class _$PopUpAddTripStateAddAirportToReady
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
-    return addAirportToReady(this);
+    return addDateOfDepartureSelected(this);
   }
 
   @override
@@ -1828,12 +2104,12 @@ class _$PopUpAddTripStateAddAirportToReady
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -1842,8 +2118,16 @@ class _$PopUpAddTripStateAddAirportToReady
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
-    return addAirportToReady?.call(this);
+    return addDateOfDepartureSelected?.call(this);
   }
 
   @override
@@ -1854,12 +2138,12 @@ class _$PopUpAddTripStateAddAirportToReady
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -1868,26 +2152,36 @@ class _$PopUpAddTripStateAddAirportToReady
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
-    if (addAirportToReady != null) {
-      return addAirportToReady(this);
+    if (addDateOfDepartureSelected != null) {
+      return addDateOfDepartureSelected(this);
     }
     return orElse();
   }
 }
 
-abstract class PopUpAddTripStateAddAirportToReady extends PopUpAddTripState {
-  factory PopUpAddTripStateAddAirportToReady({required final Trip? trip}) =
-      _$PopUpAddTripStateAddAirportToReady;
-  PopUpAddTripStateAddAirportToReady._() : super._();
+abstract class PopUpAddTripStateAddDateOfDepartureSelected
+    extends PopUpAddTripState {
+  factory PopUpAddTripStateAddDateOfDepartureSelected(
+          {required final Trip? trip}) =
+      _$PopUpAddTripStateAddDateOfDepartureSelected;
+  PopUpAddTripStateAddDateOfDepartureSelected._() : super._();
 
   @override
   Trip? get trip;
   @override
   @JsonKey(ignore: true)
-  _$$PopUpAddTripStateAddAirportToReadyCopyWith<
-          _$PopUpAddTripStateAddAirportToReady>
+  _$$PopUpAddTripStateAddDateOfDepartureSelectedCopyWith<
+          _$PopUpAddTripStateAddDateOfDepartureSelected>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1973,14 +2267,18 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return addDateOfDepartureReady(trip);
   }
@@ -1994,14 +2292,18 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return addDateOfDepartureReady?.call(trip);
   }
@@ -2015,14 +2317,18 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (addDateOfDepartureReady != null) {
@@ -2039,12 +2345,12 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -2053,6 +2359,14 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return addDateOfDepartureReady(this);
   }
@@ -2065,12 +2379,12 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -2079,6 +2393,14 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return addDateOfDepartureReady?.call(this);
   }
@@ -2091,12 +2413,12 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -2105,6 +2427,14 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (addDateOfDepartureReady != null) {
@@ -2211,14 +2541,18 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return addDateOfArrivalReady(trip);
   }
@@ -2232,14 +2566,18 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return addDateOfArrivalReady?.call(trip);
   }
@@ -2253,14 +2591,18 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (addDateOfArrivalReady != null) {
@@ -2277,12 +2619,12 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -2291,6 +2633,14 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return addDateOfArrivalReady(this);
   }
@@ -2303,12 +2653,12 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -2317,6 +2667,14 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return addDateOfArrivalReady?.call(this);
   }
@@ -2329,12 +2687,12 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -2343,6 +2701,14 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (addDateOfArrivalReady != null) {
@@ -2449,14 +2815,18 @@ class _$PopUpAddTripStateAddFreeWeightReady
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return addFreeWeightReady(trip);
   }
@@ -2470,14 +2840,18 @@ class _$PopUpAddTripStateAddFreeWeightReady
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return addFreeWeightReady?.call(trip);
   }
@@ -2491,14 +2865,18 @@ class _$PopUpAddTripStateAddFreeWeightReady
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (addFreeWeightReady != null) {
@@ -2515,12 +2893,12 @@ class _$PopUpAddTripStateAddFreeWeightReady
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -2529,6 +2907,14 @@ class _$PopUpAddTripStateAddFreeWeightReady
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return addFreeWeightReady(this);
   }
@@ -2541,12 +2927,12 @@ class _$PopUpAddTripStateAddFreeWeightReady
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -2555,6 +2941,14 @@ class _$PopUpAddTripStateAddFreeWeightReady
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return addFreeWeightReady?.call(this);
   }
@@ -2567,12 +2961,12 @@ class _$PopUpAddTripStateAddFreeWeightReady
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -2581,6 +2975,14 @@ class _$PopUpAddTripStateAddFreeWeightReady
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (addFreeWeightReady != null) {
@@ -2684,14 +3086,18 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return resumeReady(trip);
   }
@@ -2705,14 +3111,18 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return resumeReady?.call(trip);
   }
@@ -2726,14 +3136,18 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (resumeReady != null) {
@@ -2750,12 +3164,12 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -2764,6 +3178,14 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return resumeReady(this);
   }
@@ -2776,12 +3198,12 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -2790,6 +3212,14 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return resumeReady?.call(this);
   }
@@ -2802,12 +3232,12 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -2816,6 +3246,14 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (resumeReady != null) {
@@ -2918,14 +3356,18 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
     required TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)
         airportResultSearch,
-    required TResult Function(Trip? trip) addAirportFromSelected,
-    required TResult Function(Trip? trip) addAirportFromReady,
-    required TResult Function(Trip? trip) addAirportToReady,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
     required TResult Function(Trip? trip) addDateOfDepartureReady,
     required TResult Function(Trip? trip) addDateOfArrivalReady,
     required TResult Function(Trip? trip) addFreeWeightReady,
     required TResult Function(Trip? trip) resumeReady,
     required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
   }) {
     return addTripReady(trip);
   }
@@ -2939,14 +3381,18 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
     TResult? Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult? Function(Trip? trip)? addAirportFromSelected,
-    TResult? Function(Trip? trip)? addAirportFromReady,
-    TResult? Function(Trip? trip)? addAirportToReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
     TResult? Function(Trip? trip)? addDateOfDepartureReady,
     TResult? Function(Trip? trip)? addDateOfArrivalReady,
     TResult? Function(Trip? trip)? addFreeWeightReady,
     TResult? Function(Trip? trip)? resumeReady,
     TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
   }) {
     return addTripReady?.call(trip);
   }
@@ -2960,14 +3406,18 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
     TResult Function(Trip? trip, DateTime dateTime,
             List<SearchAddressResponses> resultSearch)?
         airportResultSearch,
-    TResult Function(Trip? trip)? addAirportFromSelected,
-    TResult Function(Trip? trip)? addAirportFromReady,
-    TResult Function(Trip? trip)? addAirportToReady,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
     TResult Function(Trip? trip)? addDateOfDepartureReady,
     TResult Function(Trip? trip)? addDateOfArrivalReady,
     TResult Function(Trip? trip)? addFreeWeightReady,
     TResult Function(Trip? trip)? resumeReady,
     TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
     required TResult orElse(),
   }) {
     if (addTripReady != null) {
@@ -2984,12 +3434,12 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
     required TResult Function(PopUpAddTripStateFailed value) failed,
     required TResult Function(PopUpAddTripStateAirportResultSearch value)
         airportResultSearch,
-    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
-        addAirportFromSelected,
-    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
-        addAirportFromReady,
-    required TResult Function(PopUpAddTripStateAddAirportToReady value)
-        addAirportToReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
     required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
         addDateOfDepartureReady,
     required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
@@ -2998,6 +3448,14 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
         addFreeWeightReady,
     required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
     required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
   }) {
     return addTripReady(this);
   }
@@ -3010,12 +3468,12 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
     TResult? Function(PopUpAddTripStateFailed value)? failed,
     TResult? Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -3024,6 +3482,14 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
         addFreeWeightReady,
     TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
   }) {
     return addTripReady?.call(this);
   }
@@ -3036,12 +3502,12 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
     TResult Function(PopUpAddTripStateFailed value)? failed,
     TResult Function(PopUpAddTripStateAirportResultSearch value)?
         airportResultSearch,
-    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
-        addAirportFromSelected,
-    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
-        addAirportFromReady,
-    TResult Function(PopUpAddTripStateAddAirportToReady value)?
-        addAirportToReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
     TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
         addDateOfDepartureReady,
     TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
@@ -3050,6 +3516,14 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
         addFreeWeightReady,
     TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
     TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
     required TResult orElse(),
   }) {
     if (addTripReady != null) {
@@ -3069,5 +3543,1098 @@ abstract class PopUpAddTripStateAddTripReady extends PopUpAddTripState {
   @override
   @JsonKey(ignore: true)
   _$$PopUpAddTripStateAddTripReadyCopyWith<_$PopUpAddTripStateAddTripReady>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<$Res>
+    implements $PopUpAddTripStateCopyWith<$Res> {
+  factory _$$PopUpAddTripStateAddAirportFromSelectedCopyWith(
+          _$PopUpAddTripStateAddAirportFromSelected value,
+          $Res Function(_$PopUpAddTripStateAddAirportFromSelected) then) =
+      __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Trip? trip});
+
+  @override
+  $TripCopyWith<$Res>? get trip;
+}
+
+/// @nodoc
+class __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl<$Res>
+    extends _$PopUpAddTripStateCopyWithImpl<$Res,
+        _$PopUpAddTripStateAddAirportFromSelected>
+    implements _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<$Res> {
+  __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl(
+      _$PopUpAddTripStateAddAirportFromSelected _value,
+      $Res Function(_$PopUpAddTripStateAddAirportFromSelected) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? trip = freezed,
+  }) {
+    return _then(_$PopUpAddTripStateAddAirportFromSelected(
+      trip: freezed == trip
+          ? _value.trip
+          : trip // ignore: cast_nullable_to_non_nullable
+              as Trip?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PopUpAddTripStateAddAirportFromSelected
+    extends PopUpAddTripStateAddAirportFromSelected {
+  _$PopUpAddTripStateAddAirportFromSelected({required this.trip}) : super._();
+
+  @override
+  final Trip? trip;
+
+  @override
+  String toString() {
+    return 'PopUpAddTripState.addAirportFromSelected(trip: $trip)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PopUpAddTripStateAddAirportFromSelected &&
+            (identical(other.trip, trip) || other.trip == trip));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, trip);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<
+          _$PopUpAddTripStateAddAirportFromSelected>
+      get copyWith => __$$PopUpAddTripStateAddAirportFromSelectedCopyWithImpl<
+          _$PopUpAddTripStateAddAirportFromSelected>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) loading,
+    required TResult Function(DateTime dateTime, Trip? trip, String message)
+        failed,
+    required TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)
+        airportResultSearch,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureReady,
+    required TResult Function(Trip? trip) addDateOfArrivalReady,
+    required TResult Function(Trip? trip) addFreeWeightReady,
+    required TResult Function(Trip? trip) resumeReady,
+    required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
+  }) {
+    return addAirportFromSelected(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? loading,
+    TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult? Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalReady,
+    TResult? Function(Trip? trip)? addFreeWeightReady,
+    TResult? Function(Trip? trip)? resumeReady,
+    TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
+  }) {
+    return addAirportFromSelected?.call(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? loading,
+    TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureReady,
+    TResult Function(Trip? trip)? addDateOfArrivalReady,
+    TResult Function(Trip? trip)? addFreeWeightReady,
+    TResult Function(Trip? trip)? resumeReady,
+    TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (addAirportFromSelected != null) {
+      return addAirportFromSelected(trip);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateLoading value) loading,
+    required TResult Function(PopUpAddTripStateFailed value) failed,
+    required TResult Function(PopUpAddTripStateAirportResultSearch value)
+        airportResultSearch,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
+        addDateOfDepartureReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
+        addDateOfArrivalReady,
+    required TResult Function(PopUpAddTripStateAddFreeWeightReady value)
+        addFreeWeightReady,
+    required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
+    required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
+  }) {
+    return addAirportFromSelected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateLoading value)? loading,
+    TResult? Function(PopUpAddTripStateFailed value)? failed,
+    TResult? Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult? Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+  }) {
+    return addAirportFromSelected?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateLoading value)? loading,
+    TResult Function(PopUpAddTripStateFailed value)? failed,
+    TResult Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (addAirportFromSelected != null) {
+      return addAirportFromSelected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PopUpAddTripStateAddAirportFromSelected
+    extends PopUpAddTripState {
+  factory PopUpAddTripStateAddAirportFromSelected({required final Trip? trip}) =
+      _$PopUpAddTripStateAddAirportFromSelected;
+  PopUpAddTripStateAddAirportFromSelected._() : super._();
+
+  @override
+  Trip? get trip;
+  @override
+  @JsonKey(ignore: true)
+  _$$PopUpAddTripStateAddAirportFromSelectedCopyWith<
+          _$PopUpAddTripStateAddAirportFromSelected>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PopUpAddTripStateAddAirportFromReadyCopyWith<$Res>
+    implements $PopUpAddTripStateCopyWith<$Res> {
+  factory _$$PopUpAddTripStateAddAirportFromReadyCopyWith(
+          _$PopUpAddTripStateAddAirportFromReady value,
+          $Res Function(_$PopUpAddTripStateAddAirportFromReady) then) =
+      __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Trip? trip});
+
+  @override
+  $TripCopyWith<$Res>? get trip;
+}
+
+/// @nodoc
+class __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl<$Res>
+    extends _$PopUpAddTripStateCopyWithImpl<$Res,
+        _$PopUpAddTripStateAddAirportFromReady>
+    implements _$$PopUpAddTripStateAddAirportFromReadyCopyWith<$Res> {
+  __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl(
+      _$PopUpAddTripStateAddAirportFromReady _value,
+      $Res Function(_$PopUpAddTripStateAddAirportFromReady) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? trip = freezed,
+  }) {
+    return _then(_$PopUpAddTripStateAddAirportFromReady(
+      trip: freezed == trip
+          ? _value.trip
+          : trip // ignore: cast_nullable_to_non_nullable
+              as Trip?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PopUpAddTripStateAddAirportFromReady
+    extends PopUpAddTripStateAddAirportFromReady {
+  _$PopUpAddTripStateAddAirportFromReady({required this.trip}) : super._();
+
+  @override
+  final Trip? trip;
+
+  @override
+  String toString() {
+    return 'PopUpAddTripState.addAirportFromReady(trip: $trip)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PopUpAddTripStateAddAirportFromReady &&
+            (identical(other.trip, trip) || other.trip == trip));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, trip);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PopUpAddTripStateAddAirportFromReadyCopyWith<
+          _$PopUpAddTripStateAddAirportFromReady>
+      get copyWith => __$$PopUpAddTripStateAddAirportFromReadyCopyWithImpl<
+          _$PopUpAddTripStateAddAirportFromReady>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) loading,
+    required TResult Function(DateTime dateTime, Trip? trip, String message)
+        failed,
+    required TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)
+        airportResultSearch,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureReady,
+    required TResult Function(Trip? trip) addDateOfArrivalReady,
+    required TResult Function(Trip? trip) addFreeWeightReady,
+    required TResult Function(Trip? trip) resumeReady,
+    required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
+  }) {
+    return addAirportFromReady(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? loading,
+    TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult? Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalReady,
+    TResult? Function(Trip? trip)? addFreeWeightReady,
+    TResult? Function(Trip? trip)? resumeReady,
+    TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
+  }) {
+    return addAirportFromReady?.call(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? loading,
+    TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureReady,
+    TResult Function(Trip? trip)? addDateOfArrivalReady,
+    TResult Function(Trip? trip)? addFreeWeightReady,
+    TResult Function(Trip? trip)? resumeReady,
+    TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (addAirportFromReady != null) {
+      return addAirportFromReady(trip);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateLoading value) loading,
+    required TResult Function(PopUpAddTripStateFailed value) failed,
+    required TResult Function(PopUpAddTripStateAirportResultSearch value)
+        airportResultSearch,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
+        addDateOfDepartureReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
+        addDateOfArrivalReady,
+    required TResult Function(PopUpAddTripStateAddFreeWeightReady value)
+        addFreeWeightReady,
+    required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
+    required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
+  }) {
+    return addAirportFromReady(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateLoading value)? loading,
+    TResult? Function(PopUpAddTripStateFailed value)? failed,
+    TResult? Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult? Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+  }) {
+    return addAirportFromReady?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateLoading value)? loading,
+    TResult Function(PopUpAddTripStateFailed value)? failed,
+    TResult Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (addAirportFromReady != null) {
+      return addAirportFromReady(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PopUpAddTripStateAddAirportFromReady extends PopUpAddTripState {
+  factory PopUpAddTripStateAddAirportFromReady({required final Trip? trip}) =
+      _$PopUpAddTripStateAddAirportFromReady;
+  PopUpAddTripStateAddAirportFromReady._() : super._();
+
+  @override
+  Trip? get trip;
+  @override
+  @JsonKey(ignore: true)
+  _$$PopUpAddTripStateAddAirportFromReadyCopyWith<
+          _$PopUpAddTripStateAddAirportFromReady>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PopUpAddTripStateAddAirportToSelectedCopyWith<$Res>
+    implements $PopUpAddTripStateCopyWith<$Res> {
+  factory _$$PopUpAddTripStateAddAirportToSelectedCopyWith(
+          _$PopUpAddTripStateAddAirportToSelected value,
+          $Res Function(_$PopUpAddTripStateAddAirportToSelected) then) =
+      __$$PopUpAddTripStateAddAirportToSelectedCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Trip? trip});
+
+  @override
+  $TripCopyWith<$Res>? get trip;
+}
+
+/// @nodoc
+class __$$PopUpAddTripStateAddAirportToSelectedCopyWithImpl<$Res>
+    extends _$PopUpAddTripStateCopyWithImpl<$Res,
+        _$PopUpAddTripStateAddAirportToSelected>
+    implements _$$PopUpAddTripStateAddAirportToSelectedCopyWith<$Res> {
+  __$$PopUpAddTripStateAddAirportToSelectedCopyWithImpl(
+      _$PopUpAddTripStateAddAirportToSelected _value,
+      $Res Function(_$PopUpAddTripStateAddAirportToSelected) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? trip = freezed,
+  }) {
+    return _then(_$PopUpAddTripStateAddAirportToSelected(
+      trip: freezed == trip
+          ? _value.trip
+          : trip // ignore: cast_nullable_to_non_nullable
+              as Trip?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PopUpAddTripStateAddAirportToSelected
+    extends PopUpAddTripStateAddAirportToSelected {
+  _$PopUpAddTripStateAddAirportToSelected({required this.trip}) : super._();
+
+  @override
+  final Trip? trip;
+
+  @override
+  String toString() {
+    return 'PopUpAddTripState.addAirportToSelected(trip: $trip)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PopUpAddTripStateAddAirportToSelected &&
+            (identical(other.trip, trip) || other.trip == trip));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, trip);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PopUpAddTripStateAddAirportToSelectedCopyWith<
+          _$PopUpAddTripStateAddAirportToSelected>
+      get copyWith => __$$PopUpAddTripStateAddAirportToSelectedCopyWithImpl<
+          _$PopUpAddTripStateAddAirportToSelected>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) loading,
+    required TResult Function(DateTime dateTime, Trip? trip, String message)
+        failed,
+    required TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)
+        airportResultSearch,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureReady,
+    required TResult Function(Trip? trip) addDateOfArrivalReady,
+    required TResult Function(Trip? trip) addFreeWeightReady,
+    required TResult Function(Trip? trip) resumeReady,
+    required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
+  }) {
+    return addAirportToSelected(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? loading,
+    TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult? Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalReady,
+    TResult? Function(Trip? trip)? addFreeWeightReady,
+    TResult? Function(Trip? trip)? resumeReady,
+    TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
+  }) {
+    return addAirportToSelected?.call(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? loading,
+    TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureReady,
+    TResult Function(Trip? trip)? addDateOfArrivalReady,
+    TResult Function(Trip? trip)? addFreeWeightReady,
+    TResult Function(Trip? trip)? resumeReady,
+    TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (addAirportToSelected != null) {
+      return addAirportToSelected(trip);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateLoading value) loading,
+    required TResult Function(PopUpAddTripStateFailed value) failed,
+    required TResult Function(PopUpAddTripStateAirportResultSearch value)
+        airportResultSearch,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
+        addDateOfDepartureReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
+        addDateOfArrivalReady,
+    required TResult Function(PopUpAddTripStateAddFreeWeightReady value)
+        addFreeWeightReady,
+    required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
+    required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
+  }) {
+    return addAirportToSelected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateLoading value)? loading,
+    TResult? Function(PopUpAddTripStateFailed value)? failed,
+    TResult? Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult? Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+  }) {
+    return addAirportToSelected?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateLoading value)? loading,
+    TResult Function(PopUpAddTripStateFailed value)? failed,
+    TResult Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (addAirportToSelected != null) {
+      return addAirportToSelected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PopUpAddTripStateAddAirportToSelected extends PopUpAddTripState {
+  factory PopUpAddTripStateAddAirportToSelected({required final Trip? trip}) =
+      _$PopUpAddTripStateAddAirportToSelected;
+  PopUpAddTripStateAddAirportToSelected._() : super._();
+
+  @override
+  Trip? get trip;
+  @override
+  @JsonKey(ignore: true)
+  _$$PopUpAddTripStateAddAirportToSelectedCopyWith<
+          _$PopUpAddTripStateAddAirportToSelected>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PopUpAddTripStateAddAirportToReadyCopyWith<$Res>
+    implements $PopUpAddTripStateCopyWith<$Res> {
+  factory _$$PopUpAddTripStateAddAirportToReadyCopyWith(
+          _$PopUpAddTripStateAddAirportToReady value,
+          $Res Function(_$PopUpAddTripStateAddAirportToReady) then) =
+      __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Trip? trip});
+
+  @override
+  $TripCopyWith<$Res>? get trip;
+}
+
+/// @nodoc
+class __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl<$Res>
+    extends _$PopUpAddTripStateCopyWithImpl<$Res,
+        _$PopUpAddTripStateAddAirportToReady>
+    implements _$$PopUpAddTripStateAddAirportToReadyCopyWith<$Res> {
+  __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl(
+      _$PopUpAddTripStateAddAirportToReady _value,
+      $Res Function(_$PopUpAddTripStateAddAirportToReady) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? trip = freezed,
+  }) {
+    return _then(_$PopUpAddTripStateAddAirportToReady(
+      trip: freezed == trip
+          ? _value.trip
+          : trip // ignore: cast_nullable_to_non_nullable
+              as Trip?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PopUpAddTripStateAddAirportToReady
+    extends PopUpAddTripStateAddAirportToReady {
+  _$PopUpAddTripStateAddAirportToReady({required this.trip}) : super._();
+
+  @override
+  final Trip? trip;
+
+  @override
+  String toString() {
+    return 'PopUpAddTripState.addAirportToReady(trip: $trip)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PopUpAddTripStateAddAirportToReady &&
+            (identical(other.trip, trip) || other.trip == trip));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, trip);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PopUpAddTripStateAddAirportToReadyCopyWith<
+          _$PopUpAddTripStateAddAirportToReady>
+      get copyWith => __$$PopUpAddTripStateAddAirportToReadyCopyWithImpl<
+          _$PopUpAddTripStateAddAirportToReady>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Trip? trip) start,
+    required TResult Function(Trip? trip) loading,
+    required TResult Function(DateTime dateTime, Trip? trip, String message)
+        failed,
+    required TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)
+        airportResultSearch,
+    required TResult Function(Trip? trip) addDateOfArrivalSelected,
+    required TResult Function(Trip? trip) addFreeWeightSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureSelected,
+    required TResult Function(Trip? trip) addDateOfDepartureReady,
+    required TResult Function(Trip? trip) addDateOfArrivalReady,
+    required TResult Function(Trip? trip) addFreeWeightReady,
+    required TResult Function(Trip? trip) resumeReady,
+    required TResult Function(Trip? trip) addTripReady,
+    required TResult Function(Trip? trip) addAirportFromSelected,
+    required TResult Function(Trip? trip) addAirportFromReady,
+    required TResult Function(Trip? trip) addAirportToSelected,
+    required TResult Function(Trip? trip) addAirportToReady,
+  }) {
+    return addAirportToReady(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Trip? trip)? start,
+    TResult? Function(Trip? trip)? loading,
+    TResult? Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult? Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult? Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult? Function(Trip? trip)? addFreeWeightSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult? Function(Trip? trip)? addDateOfDepartureReady,
+    TResult? Function(Trip? trip)? addDateOfArrivalReady,
+    TResult? Function(Trip? trip)? addFreeWeightReady,
+    TResult? Function(Trip? trip)? resumeReady,
+    TResult? Function(Trip? trip)? addTripReady,
+    TResult? Function(Trip? trip)? addAirportFromSelected,
+    TResult? Function(Trip? trip)? addAirportFromReady,
+    TResult? Function(Trip? trip)? addAirportToSelected,
+    TResult? Function(Trip? trip)? addAirportToReady,
+  }) {
+    return addAirportToReady?.call(trip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Trip? trip)? start,
+    TResult Function(Trip? trip)? loading,
+    TResult Function(DateTime dateTime, Trip? trip, String message)? failed,
+    TResult Function(Trip? trip, DateTime dateTime,
+            List<SearchAddressResponses> resultSearch)?
+        airportResultSearch,
+    TResult Function(Trip? trip)? addDateOfArrivalSelected,
+    TResult Function(Trip? trip)? addFreeWeightSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureSelected,
+    TResult Function(Trip? trip)? addDateOfDepartureReady,
+    TResult Function(Trip? trip)? addDateOfArrivalReady,
+    TResult Function(Trip? trip)? addFreeWeightReady,
+    TResult Function(Trip? trip)? resumeReady,
+    TResult Function(Trip? trip)? addTripReady,
+    TResult Function(Trip? trip)? addAirportFromSelected,
+    TResult Function(Trip? trip)? addAirportFromReady,
+    TResult Function(Trip? trip)? addAirportToSelected,
+    TResult Function(Trip? trip)? addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (addAirportToReady != null) {
+      return addAirportToReady(trip);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PopUpAddTripStateStart value) start,
+    required TResult Function(PopUpAddTripStateLoading value) loading,
+    required TResult Function(PopUpAddTripStateFailed value) failed,
+    required TResult Function(PopUpAddTripStateAirportResultSearch value)
+        airportResultSearch,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)
+        addDateOfArrivalSelected,
+    required TResult Function(PopUpAddTripStateAddFreeWeightSelected value)
+        addFreeWeightSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)
+        addDateOfDepartureSelected,
+    required TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)
+        addDateOfDepartureReady,
+    required TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)
+        addDateOfArrivalReady,
+    required TResult Function(PopUpAddTripStateAddFreeWeightReady value)
+        addFreeWeightReady,
+    required TResult Function(PopUpAddTripStateResumeReady value) resumeReady,
+    required TResult Function(PopUpAddTripStateAddTripReady value) addTripReady,
+    required TResult Function(PopUpAddTripStateAddAirportFromSelected value)
+        addAirportFromSelected,
+    required TResult Function(PopUpAddTripStateAddAirportFromReady value)
+        addAirportFromReady,
+    required TResult Function(PopUpAddTripStateAddAirportToSelected value)
+        addAirportToSelected,
+    required TResult Function(PopUpAddTripStateAddAirportToReady value)
+        addAirportToReady,
+  }) {
+    return addAirportToReady(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PopUpAddTripStateStart value)? start,
+    TResult? Function(PopUpAddTripStateLoading value)? loading,
+    TResult? Function(PopUpAddTripStateFailed value)? failed,
+    TResult? Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult? Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult? Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult? Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult? Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult? Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult? Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult? Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult? Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult? Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult? Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+  }) {
+    return addAirportToReady?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PopUpAddTripStateStart value)? start,
+    TResult Function(PopUpAddTripStateLoading value)? loading,
+    TResult Function(PopUpAddTripStateFailed value)? failed,
+    TResult Function(PopUpAddTripStateAirportResultSearch value)?
+        airportResultSearch,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalSelected value)?
+        addDateOfArrivalSelected,
+    TResult Function(PopUpAddTripStateAddFreeWeightSelected value)?
+        addFreeWeightSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureSelected value)?
+        addDateOfDepartureSelected,
+    TResult Function(PopUpAddTripStateAddDateOfDepartureReady value)?
+        addDateOfDepartureReady,
+    TResult Function(PopUpAddTripStateAddDateOfArrivalReady value)?
+        addDateOfArrivalReady,
+    TResult Function(PopUpAddTripStateAddFreeWeightReady value)?
+        addFreeWeightReady,
+    TResult Function(PopUpAddTripStateResumeReady value)? resumeReady,
+    TResult Function(PopUpAddTripStateAddTripReady value)? addTripReady,
+    TResult Function(PopUpAddTripStateAddAirportFromSelected value)?
+        addAirportFromSelected,
+    TResult Function(PopUpAddTripStateAddAirportFromReady value)?
+        addAirportFromReady,
+    TResult Function(PopUpAddTripStateAddAirportToSelected value)?
+        addAirportToSelected,
+    TResult Function(PopUpAddTripStateAddAirportToReady value)?
+        addAirportToReady,
+    required TResult orElse(),
+  }) {
+    if (addAirportToReady != null) {
+      return addAirportToReady(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PopUpAddTripStateAddAirportToReady extends PopUpAddTripState {
+  factory PopUpAddTripStateAddAirportToReady({required final Trip? trip}) =
+      _$PopUpAddTripStateAddAirportToReady;
+  PopUpAddTripStateAddAirportToReady._() : super._();
+
+  @override
+  Trip? get trip;
+  @override
+  @JsonKey(ignore: true)
+  _$$PopUpAddTripStateAddAirportToReadyCopyWith<
+          _$PopUpAddTripStateAddAirportToReady>
       get copyWith => throw _privateConstructorUsedError;
 }

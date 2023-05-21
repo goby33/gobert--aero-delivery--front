@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
-abstract class AuthFirebaseImpl {
-  factory AuthFirebaseImpl(FirebaseAuth firebaseAuth) = _AuthFirebase;
+abstract class AuthFirebaseApi {
+  factory AuthFirebaseApi(FirebaseAuth firebaseAuth) = _AuthFirebase;
 
   Future<User?> createUserEmail({
     required String email,
@@ -16,7 +16,7 @@ abstract class AuthFirebaseImpl {
   Future<User?> getCurrentUser();
 }
 
-class _AuthFirebase implements AuthFirebaseImpl {
+class _AuthFirebase implements AuthFirebaseApi {
   final FirebaseAuth _firebaseAuthApi;
 
   _AuthFirebase(this._firebaseAuthApi);

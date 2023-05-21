@@ -1,7 +1,11 @@
 import 'package:aero_delivery/presentation/ui/auth/auth_page.dart';
 import 'package:aero_delivery/presentation/ui/bottom_nav_bar/scaffold_with_bottom_nav_bar.dart';
 import 'package:aero_delivery/presentation/ui/home/add/airport_from_page.dart';
+import 'package:aero_delivery/presentation/ui/home/add/airport_to_page.dart';
+import 'package:aero_delivery/presentation/ui/home/add/choose_free_weight_page.dart';
 import 'package:aero_delivery/presentation/ui/home/add/date_from_page.dart';
+import 'package:aero_delivery/presentation/ui/home/add/date_to_page.dart';
+import 'package:aero_delivery/presentation/ui/home/add/resume_trip_page.dart';
 import 'package:aero_delivery/presentation/ui/home/home_page.dart';
 import 'package:aero_delivery/presentation/ui/home/messenger/messenger_page.dart';
 import 'package:aero_delivery/presentation/ui/home/profile/profile_page.dart';
@@ -27,7 +31,31 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: '/add_trip/date_from',
-      builder: (context, state) =>  DateFromPage(),
+      builder: (context, state) =>  const DateFromPage(),
+      routes: [
+        GoRoute(
+          path: 'airport_to',
+          builder: (context, state) => const AirportToPage(),
+          routes: [
+            GoRoute(
+              path: 'date_to',
+              builder: (context, state) =>  DateToPage(),
+              routes: [
+                GoRoute(
+                  path: 'weight_free',
+                  builder: (context, state) =>  const ChooseFreeWeightPage(),
+                  routes: [
+                    GoRoute(
+                      path: 'resume',
+                      builder: (context, state) =>  ResumeTripPage(),
+                    ),
+                  ]
+                ),
+              ]
+            ),
+          ]
+        ),
+      ]
     ),
 
     ShellRoute(

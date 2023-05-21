@@ -29,22 +29,31 @@ class PopUpAddTripState with _$PopUpAddTripState {
     required List<SearchAddressResponses> resultSearch,
   }) = PopUpAddTripStateAirportResultSearch;
 
-  // Airport selected
-  factory PopUpAddTripState.addAirportFromSelected({
-    required Trip? trip,
-  }) = PopUpAddTripStateAddAirportFromSelected;
 
-  factory PopUpAddTripState.addAirportFromReady({
-    required Trip? trip,
-  }) = PopUpAddTripStateAddAirportFromReady;
 
-  factory PopUpAddTripState.addAirportToReady({
+
+
+  factory PopUpAddTripState.addDateOfArrivalSelected({
     required Trip? trip,
-  }) = PopUpAddTripStateAddAirportToReady;
+  }) = PopUpAddTripStateAddDateOfArrivalSelected;
+
+  //PopUpAddTripStateAddFreeWeightSelected
+  factory PopUpAddTripState.addFreeWeightSelected({
+    required Trip? trip,
+  }) = PopUpAddTripStateAddFreeWeightSelected;
+
+  // Date of departure
+  // date departure selected
+  factory PopUpAddTripState.addDateOfDepartureSelected({
+    required Trip? trip,
+  }) = PopUpAddTripStateAddDateOfDepartureSelected;
 
   factory PopUpAddTripState.addDateOfDepartureReady({
     required Trip? trip,
   }) = PopUpAddTripStateAddDateOfDepartureReady;
+
+
+
 
   factory PopUpAddTripState.addDateOfArrivalReady({
     required Trip? trip,
@@ -61,6 +70,27 @@ class PopUpAddTripState with _$PopUpAddTripState {
   factory PopUpAddTripState.addTripReady({
     required Trip? trip,
   }) = PopUpAddTripStateAddTripReady;
+
+  // AIRPORT From
+  factory PopUpAddTripState.addAirportFromSelected({
+    required Trip? trip,
+  }) = PopUpAddTripStateAddAirportFromSelected;
+
+  factory PopUpAddTripState.addAirportFromReady({
+    required Trip? trip,
+  }) = PopUpAddTripStateAddAirportFromReady;
+
+  // AIRPORT To
+
+  factory PopUpAddTripState.addAirportToSelected({
+    required Trip? trip,
+  }) = PopUpAddTripStateAddAirportToSelected;
+
+
+  factory PopUpAddTripState.addAirportToReady({
+    required Trip? trip,
+  }) = PopUpAddTripStateAddAirportToReady;
+
 
   // get result search
   List<SearchAddressResponses>? get resultSearchAirport => maybeMap(

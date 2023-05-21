@@ -1,13 +1,17 @@
 import 'package:aero_delivery/domain/entities/trip.dart';
+import 'package:aero_delivery/domain/repositories/cloud_firestore_repository.dart';
 import 'package:aero_delivery/domain/repositories/google_place_repository.dart';
 import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
   GooglePlaceRepository googlePlaceRepository;
+  CloudFirestoreRepository cloudFirestoreRepository;
 
-  PopUpAddTripCubit({required this.googlePlaceRepository})
-      : super(PopUpAddTripStateStart(trip: null));
+  PopUpAddTripCubit({
+    required this.googlePlaceRepository,
+    required this.cloudFirestoreRepository,
+  }) : super(PopUpAddTripStateStart(trip: null));
 
   // CALL API
 
@@ -23,18 +27,27 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     }
   }
 
-  // airport from
-  Future<void> addAirportFrom(String airportName) async {
+  // AIRPORT FROM
+  Future<void> addAirportFromSelected(String airportName) async {
     emit(PopUpAddTripStateLoading(trip: state.trip));
     emit(
       PopUpAddTripStateAddAirportFromSelected(
         trip: Trip(
           airportFrom: airportName,
-          airportTo: null,
-          dateOfDeparture: null,
-          dateOfArrival: null,
-          freeWeight: null,
+          airportTo: state.trip?.airportTo,
+          dateOfDeparture: state.trip?.dateOfDeparture,
+          dateOfArrival: state.trip?.dateOfArrival,
+          freeWeight: state.trip?.freeWeight,
         ),
+      ),
+    );
+  }
+
+  Future<void> addAirportFromReady() async {
+    emit(PopUpAddTripStateLoading(trip: state.trip));
+    emit(
+      PopUpAddTripStateAddAirportFromReady(
+        trip: state.trip,
       ),
     );
   }
@@ -44,23 +57,145 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     emit(PopUpAddTripStateStart(trip: state.trip));
   }
 
-  // Add airport To
-  Future<void> addAirportTo(String airportName) async {
+  // ADD DATE OF DEPARTURE
+  Future<void> addDateOfDepartureSelected(DateTime dateTime) async {
     emit(PopUpAddTripStateLoading(trip: state.trip));
+    final today = DateTime.now();
+    if (dateTime.isBefore(today)) {
+      emit(
+        PopUpAddTripStateFailed(
+          dateTime: dateTime,
+          trip: state.trip,
+          message: 'Date of departure must be after today',
+        ),
+      );
+    } else {
+      emit(
+        PopUpAddTripStateAddDateOfDepartureSelected(
+          trip: Trip(
+            airportFrom: state.trip?.airportFrom,
+            airportTo: state.trip?.airportTo,
+            dateOfDeparture: dateTime,
+            dateOfArrival: state.trip?.dateOfArrival,
+            freeWeight: state.trip?.freeWeight,
+          ),
+        ),
+      );
+    }
   }
 
-  // Add date of departure
-  Future<void> addDateOfDeparture(String dateOfDeparture) async {
+  Future<void> addDateOfDepartureReady() async {
     emit(PopUpAddTripStateLoading(trip: state.trip));
+    emit(
+      PopUpAddTripStateAddDateOfDepartureReady(
+        trip: state.trip,
+      ),
+    );
   }
 
-  // add date of arrival
-  Future<void> addDateOfArrival(String dateOfArrival) async {
+  // AIRPORT To
+  Future<void> addAirportToSelected(String airportName) async {
     emit(PopUpAddTripStateLoading(trip: state.trip));
+    emit(
+      PopUpAddTripStateAddAirportToSelected(
+        trip: Trip(
+          airportFrom: state.trip?.airportFrom,
+          airportTo: airportName,
+          dateOfDeparture: state.trip?.dateOfDeparture,
+          dateOfArrival: state.trip?.dateOfArrival,
+          freeWeight: state.trip?.freeWeight,
+        ),
+      ),
+    );
   }
 
-  // add free weight
-  Future<void> addFreeWeight(String freeWeight) async {
+  Future<void> addAirportToReady() async {
     emit(PopUpAddTripStateLoading(trip: state.trip));
+    emit(
+      PopUpAddTripStateAddAirportToReady(
+        trip: state.trip,
+      ),
+    );
+  }
+
+  // clear airport from
+  Future<void> clearAirportTo() async {
+    emit(PopUpAddTripStateStart(trip: state.trip));
+  }
+
+  // ADD DATE OF ARRIVAL
+  Future<void> addDateOfArrivalSelected(DateTime dateTime) async {
+    emit(PopUpAddTripStateLoading(trip: state.trip));
+    final today = DateTime.now();
+    if (dateTime.isBefore(today)) {
+      emit(
+        PopUpAddTripStateFailed(
+          dateTime: dateTime,
+          trip: state.trip,
+          message: 'Date of departure must be after today',
+        ),
+      );
+    } else {
+      emit(
+        PopUpAddTripStateAddDateOfArrivalSelected(
+          trip: Trip(
+            airportFrom: state.trip?.airportFrom,
+            airportTo: state.trip?.airportTo,
+            dateOfDeparture: state.trip?.dateOfDeparture,
+            dateOfArrival: dateTime,
+            freeWeight: null,
+          ),
+        ),
+      );
+    }
+  }
+
+  Future<void> addDateOfArrivalReady() async {
+    emit(PopUpAddTripStateLoading(trip: state.trip));
+    emit(
+      PopUpAddTripStateAddDateOfArrivalReady(
+        trip: state.trip,
+      ),
+    );
+  }
+
+  // ADD FREE WEIGHT
+
+  Future<void> addFreeWeightSelected(String freeWeight) async {
+    emit(PopUpAddTripStateLoading(trip: state.trip));
+    emit(
+      PopUpAddTripStateAddFreeWeightSelected(
+        trip: Trip(
+          airportFrom: state.trip?.airportFrom,
+          airportTo: state.trip?.airportTo,
+          dateOfDeparture: state.trip?.dateOfDeparture,
+          dateOfArrival: state.trip?.dateOfArrival,
+          freeWeight: freeWeight,
+        ),
+      ),
+    );
+  }
+
+  Future<void> addFreeWeightReady() async {
+    emit(PopUpAddTripStateLoading(trip: state.trip));
+    emit(
+      PopUpAddTripStateAddFreeWeightReady(
+        trip: state.trip,
+      ),
+    );
+  }
+
+  // SAVE THE TRIP
+  Future<void> saveTrip() async {
+    emit(PopUpAddTripStateLoading(trip: state.trip));
+    /*final response = await cloudFirestoreRepository.saveTrip(state.trip!);
+    if (response) {
+      emit(PopUpAddTripStateSuccess(trip: state.trip));
+    } else {
+      emit(PopUpAddTripStateFailed(
+        trip: state.trip,
+        message: 'Failed to save trip',
+      ));
+    }*/
   }
 }
