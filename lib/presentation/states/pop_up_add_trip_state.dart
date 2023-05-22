@@ -1,5 +1,5 @@
 import 'package:aero_delivery/domain/entities/search_address_responses.dart';
-import 'package:aero_delivery/domain/entities/trip.dart';
+import 'package:aero_delivery/domain/entities/trip_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'pop_up_add_trip_state.freezed.dart';
@@ -10,26 +10,27 @@ class PopUpAddTripState with _$PopUpAddTripState {
 
   // start
   factory PopUpAddTripState.start({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateStart;
 
   // success finish
   factory PopUpAddTripState.success({
-    required Trip? trip,
+    required TripEntity? trip,
+    required String id,
   }) = PopUpAddTripStateSuccess;
 
   factory PopUpAddTripState.loading({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateLoading;
 
   factory PopUpAddTripState.failed(
       {required DateTime dateTime,
-      required Trip? trip,
+      required TripEntity? trip,
       required String message}) = PopUpAddTripStateFailed;
 
   // Airport From
   factory PopUpAddTripState.airportResultSearch({
-    required Trip? trip,
+    required TripEntity? trip,
     required DateTime dateTime,
     required List<SearchAddressResponses> resultSearch,
   }) = PopUpAddTripStateAirportResultSearch;
@@ -39,61 +40,61 @@ class PopUpAddTripState with _$PopUpAddTripState {
 
 
   factory PopUpAddTripState.addDateOfArrivalSelected({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddDateOfArrivalSelected;
 
   //PopUpAddTripStateAddFreeWeightSelected
   factory PopUpAddTripState.addFreeWeightSelected({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddFreeWeightSelected;
 
   // Date of departure
   // date departure selected
   factory PopUpAddTripState.addDateOfDepartureSelected({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddDateOfDepartureSelected;
 
   factory PopUpAddTripState.addDateOfDepartureReady({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddDateOfDepartureReady;
 
 
 
 
   factory PopUpAddTripState.addDateOfArrivalReady({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddDateOfArrivalReady;
 
   factory PopUpAddTripState.addFreeWeightReady({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddFreeWeightReady;
 
   factory PopUpAddTripState.resumeReady({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateResumeReady;
 
   factory PopUpAddTripState.addTripReady({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddTripReady;
 
   // AIRPORT From
   factory PopUpAddTripState.addAirportFromSelected({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddAirportFromSelected;
 
   factory PopUpAddTripState.addAirportFromReady({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddAirportFromReady;
 
   // AIRPORT To
 
   factory PopUpAddTripState.addAirportToSelected({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddAirportToSelected;
 
 
   factory PopUpAddTripState.addAirportToReady({
-    required Trip? trip,
+    required TripEntity? trip,
   }) = PopUpAddTripStateAddAirportToReady;
 
 
@@ -104,7 +105,7 @@ class PopUpAddTripState with _$PopUpAddTripState {
       );
 
   // get trip
-  Trip? get trip => maybeMap(
+  TripEntity? get trip => maybeMap(
         airportResultSearch: (value) => value.trip,
         addAirportFromReady: (value) => value.trip,
         addAirportToReady: (value) => value.trip,
@@ -114,5 +115,10 @@ class PopUpAddTripState with _$PopUpAddTripState {
         resumeReady: (value) => value.trip,
         addTripReady: (value) => value.trip,
         orElse: () => null,
+      );
+
+  String get id => maybeMap(
+        success: (value) => value.id,
+        orElse: () => '',
       );
 }

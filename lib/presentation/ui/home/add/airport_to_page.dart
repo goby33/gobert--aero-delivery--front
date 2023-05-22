@@ -1,4 +1,4 @@
-import 'package:aero_delivery/presentation/states/cubits/pop_up_add_trip_cubit.dart';
+import 'package:aero_delivery/presentation/states/cubits/add_trip_cubit.dart';
 import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/button_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/result_search_add_trip.dart';
@@ -13,7 +13,7 @@ class AirportToPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PopUpAddTripCubit, PopUpAddTripState>(
+    return BlocBuilder<AddTripCubit, PopUpAddTripState>(
           builder: (context, state) {
             return Scaffold(
               backgroundColor: Colors.white,
@@ -23,7 +23,7 @@ class AirportToPage extends StatelessWidget {
                 leading: IconButton(
                   icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () {
-                    context.read<PopUpAddTripCubit>().addDateOfDepartureSelected(state.trip!.dateOfDeparture!);
+                    context.read<AddTripCubit>().addDateOfDepartureSelected(state.trip!.dateOfDeparture!);
                     Navigator.of(context).pop();},
                 ),
               ),
@@ -41,9 +41,9 @@ class AirportToPage extends StatelessWidget {
                         children: [
                           TextFieldAddTrip(
                             onChanged: (value) {
-                              context.read<PopUpAddTripCubit>().searchAirport(value);
+                              context.read<AddTripCubit>().searchAirport(value);
                             },
-                            onClear: () => context.read<PopUpAddTripCubit>().clearAirportTo(),
+                            onClear: () => context.read<AddTripCubit>().clearAirportTo(),
                             hideText: (state is PopUpAddTripStateAddAirportToSelected),
                             value:
                             (state is PopUpAddTripStateAddAirportToSelected) ? state.trip?.airportFrom ?? "" : null,
@@ -57,7 +57,7 @@ class AirportToPage extends StatelessWidget {
                             ResultSearchAddTrip(
                               resultSearch: state.resultSearch,
                               onPressed: (value) {
-                                context.read<PopUpAddTripCubit>().addAirportToSelected(value);
+                                context.read<AddTripCubit>().addAirportToSelected(value);
                               },
                             )
                         ],
@@ -65,7 +65,7 @@ class AirportToPage extends StatelessWidget {
                     ),
                     ButtonAddTrip(
                       isEnable: (state is PopUpAddTripStateAddAirportToSelected),
-                      onPressed: () { context.read<PopUpAddTripCubit>().addAirportToReady(); context.push('/add_trip/date_from/airport_to/date_to');  },
+                      onPressed: () { context.read<AddTripCubit>().addAirportToReady(); context.push('/add_trip/date_from/airport_to/date_to');  },
                       text: "Add this airport",
                     ),
                   ],

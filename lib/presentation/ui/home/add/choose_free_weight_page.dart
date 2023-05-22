@@ -1,4 +1,5 @@
-import 'package:aero_delivery/presentation/states/cubits/pop_up_add_trip_cubit.dart';
+import 'package:aero_delivery/presentation/states/cubits/add_trip_cubit.dart';
+
 import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/button_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/title_add_trip.dart';
@@ -11,7 +12,7 @@ class ChooseFreeWeightPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  BlocBuilder<PopUpAddTripCubit, PopUpAddTripState>(
+    return  BlocBuilder<AddTripCubit, PopUpAddTripState>(
           builder: (context, state) {
             return Scaffold(
               backgroundColor: Colors.white,
@@ -21,7 +22,7 @@ class ChooseFreeWeightPage extends StatelessWidget {
                 leading: IconButton(
                   icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () {
-                    context.read<PopUpAddTripCubit>().addDateOfArrivalSelected(state.trip!.dateOfArrival!);
+                    context.read<AddTripCubit>().addDateOfArrivalSelected(state.trip!.dateOfArrival!);
                     Navigator.of(context).pop();},
                 ),
               ),
@@ -32,7 +33,7 @@ class ChooseFreeWeightPage extends StatelessWidget {
                   children: [
                     const TitleAddTrip(title: 'How much free weight do you have ?'),
                     InkWell(
-                      onTap: () => context.read<PopUpAddTripCubit>().addFreeWeightSelected("small"),
+                      onTap: () => context.read<AddTripCubit>().addFreeWeightSelected("small"),
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
                         width: 50,
@@ -48,7 +49,7 @@ class ChooseFreeWeightPage extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () => context.read<PopUpAddTripCubit>().addFreeWeightSelected("medium"),
+                      onTap: () => context.read<AddTripCubit>().addFreeWeightSelected("medium"),
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
                         width: 100,
@@ -64,7 +65,7 @@ class ChooseFreeWeightPage extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () => context.read<PopUpAddTripCubit>().addFreeWeightSelected("large"),
+                      onTap: () => context.read<AddTripCubit>().addFreeWeightSelected("large"),
                       child: Container(
 
                         padding: const EdgeInsets.all(8.0),
@@ -82,7 +83,8 @@ class ChooseFreeWeightPage extends StatelessWidget {
                       ),
                     ),
                     ButtonAddTrip(
-                      onPressed: ()  {context.read<PopUpAddTripCubit>().addFreeWeightReady(); context.push('/add_trip/date_from/airport_to/date_to/weight_free/resume');  },
+                      // TODO: remove this
+                      onPressed: ()  {context.read<AddTripCubit>().addFreeWeightReady(); context.push('/add_trip/date_from/airport_to/date_to/weight_free/resume');  },
                       text: 'Next',
                       isEnable: (state is PopUpAddTripStateAddFreeWeightSelected),
                     ),

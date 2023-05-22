@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     const ProfilePage()
   ];
 
-  final titlesPage = ["Search", "Add", "Messenger", "Profile"];
+  final titlesPage = ["Home", "Publish", "Messages", "Profile"];
   @override
   void initState() {
     super.initState();

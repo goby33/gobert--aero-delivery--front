@@ -1,4 +1,4 @@
-import 'package:aero_delivery/presentation/states/cubits/pop_up_add_trip_cubit.dart';
+import 'package:aero_delivery/presentation/states/cubits/add_trip_cubit.dart';
 import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/button_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/title_add_trip.dart';
@@ -11,13 +11,13 @@ class ResumeTripPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<PopUpAddTripCubit, PopUpAddTripState>(
+    return BlocConsumer<AddTripCubit, PopUpAddTripState>(
       listener: (context, state) => state.maybeMap(
-        success: (value) => context.go('/home'),
+        success: (value) => context.go('/view_trip/${state.id}'),
         orElse: () => print('ppp'),
       ),
       builder: (context, state) {
-        return BlocBuilder<PopUpAddTripCubit, PopUpAddTripState>(
+        return BlocBuilder<AddTripCubit, PopUpAddTripState>(
           builder: (context, state) {
             return Scaffold(
               backgroundColor: Colors.white,
@@ -68,7 +68,7 @@ class ResumeTripPage extends StatelessWidget {
                       ),
                       ButtonAddTrip(
                         onPressed: () {
-                          context.read<PopUpAddTripCubit>().saveTrip();
+                          context.read<AddTripCubit>().saveTrip();
                         }, text: 'yes, add this trip', isEnable: true,
                       ),
                     ]

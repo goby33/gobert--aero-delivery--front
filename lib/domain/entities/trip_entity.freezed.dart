@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'trip.dart';
+part of 'trip_entity.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$Trip {
+mixin _$TripEntity {
+  String? get uidUser => throw _privateConstructorUsedError;
   String? get airportFrom => throw _privateConstructorUsedError;
   String? get airportTo => throw _privateConstructorUsedError;
   DateTime? get dateOfDeparture => throw _privateConstructorUsedError;
@@ -23,16 +24,19 @@ mixin _$Trip {
   String? get freeWeight => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $TripCopyWith<Trip> get copyWith => throw _privateConstructorUsedError;
+  $TripEntityCopyWith<TripEntity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TripCopyWith<$Res> {
-  factory $TripCopyWith(Trip value, $Res Function(Trip) then) =
-      _$TripCopyWithImpl<$Res, Trip>;
+abstract class $TripEntityCopyWith<$Res> {
+  factory $TripEntityCopyWith(
+          TripEntity value, $Res Function(TripEntity) then) =
+      _$TripEntityCopyWithImpl<$Res, TripEntity>;
   @useResult
   $Res call(
-      {String? airportFrom,
+      {String? uidUser,
+      String? airportFrom,
       String? airportTo,
       DateTime? dateOfDeparture,
       DateTime? dateOfArrival,
@@ -40,9 +44,9 @@ abstract class $TripCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TripCopyWithImpl<$Res, $Val extends Trip>
-    implements $TripCopyWith<$Res> {
-  _$TripCopyWithImpl(this._value, this._then);
+class _$TripEntityCopyWithImpl<$Res, $Val extends TripEntity>
+    implements $TripEntityCopyWith<$Res> {
+  _$TripEntityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -52,6 +56,7 @@ class _$TripCopyWithImpl<$Res, $Val extends Trip>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? uidUser = freezed,
     Object? airportFrom = freezed,
     Object? airportTo = freezed,
     Object? dateOfDeparture = freezed,
@@ -59,6 +64,10 @@ class _$TripCopyWithImpl<$Res, $Val extends Trip>
     Object? freeWeight = freezed,
   }) {
     return _then(_value.copyWith(
+      uidUser: freezed == uidUser
+          ? _value.uidUser
+          : uidUser // ignore: cast_nullable_to_non_nullable
+              as String?,
       airportFrom: freezed == airportFrom
           ? _value.airportFrom
           : airportFrom // ignore: cast_nullable_to_non_nullable
@@ -84,13 +93,16 @@ class _$TripCopyWithImpl<$Res, $Val extends Trip>
 }
 
 /// @nodoc
-abstract class _$$_TripCopyWith<$Res> implements $TripCopyWith<$Res> {
-  factory _$$_TripCopyWith(_$_Trip value, $Res Function(_$_Trip) then) =
-      __$$_TripCopyWithImpl<$Res>;
+abstract class _$$_TripEntityCopyWith<$Res>
+    implements $TripEntityCopyWith<$Res> {
+  factory _$$_TripEntityCopyWith(
+          _$_TripEntity value, $Res Function(_$_TripEntity) then) =
+      __$$_TripEntityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {String? airportFrom,
+      {String? uidUser,
+      String? airportFrom,
       String? airportTo,
       DateTime? dateOfDeparture,
       DateTime? dateOfArrival,
@@ -98,21 +110,28 @@ abstract class _$$_TripCopyWith<$Res> implements $TripCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_TripCopyWithImpl<$Res> extends _$TripCopyWithImpl<$Res, _$_Trip>
-    implements _$$_TripCopyWith<$Res> {
-  __$$_TripCopyWithImpl(_$_Trip _value, $Res Function(_$_Trip) _then)
+class __$$_TripEntityCopyWithImpl<$Res>
+    extends _$TripEntityCopyWithImpl<$Res, _$_TripEntity>
+    implements _$$_TripEntityCopyWith<$Res> {
+  __$$_TripEntityCopyWithImpl(
+      _$_TripEntity _value, $Res Function(_$_TripEntity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? uidUser = freezed,
     Object? airportFrom = freezed,
     Object? airportTo = freezed,
     Object? dateOfDeparture = freezed,
     Object? dateOfArrival = freezed,
     Object? freeWeight = freezed,
   }) {
-    return _then(_$_Trip(
+    return _then(_$_TripEntity(
+      uidUser: freezed == uidUser
+          ? _value.uidUser
+          : uidUser // ignore: cast_nullable_to_non_nullable
+              as String?,
       airportFrom: freezed == airportFrom
           ? _value.airportFrom
           : airportFrom // ignore: cast_nullable_to_non_nullable
@@ -139,14 +158,17 @@ class __$$_TripCopyWithImpl<$Res> extends _$TripCopyWithImpl<$Res, _$_Trip>
 
 /// @nodoc
 
-class _$_Trip implements _Trip {
-  const _$_Trip(
-      {required this.airportFrom,
+class _$_TripEntity implements _TripEntity {
+  const _$_TripEntity(
+      {required this.uidUser,
+      required this.airportFrom,
       required this.airportTo,
       required this.dateOfDeparture,
       required this.dateOfArrival,
       required this.freeWeight});
 
+  @override
+  final String? uidUser;
   @override
   final String? airportFrom;
   @override
@@ -160,14 +182,15 @@ class _$_Trip implements _Trip {
 
   @override
   String toString() {
-    return 'Trip(airportFrom: $airportFrom, airportTo: $airportTo, dateOfDeparture: $dateOfDeparture, dateOfArrival: $dateOfArrival, freeWeight: $freeWeight)';
+    return 'TripEntity(uidUser: $uidUser, airportFrom: $airportFrom, airportTo: $airportTo, dateOfDeparture: $dateOfDeparture, dateOfArrival: $dateOfArrival, freeWeight: $freeWeight)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Trip &&
+            other is _$_TripEntity &&
+            (identical(other.uidUser, uidUser) || other.uidUser == uidUser) &&
             (identical(other.airportFrom, airportFrom) ||
                 other.airportFrom == airportFrom) &&
             (identical(other.airportTo, airportTo) ||
@@ -181,24 +204,27 @@ class _$_Trip implements _Trip {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, airportFrom, airportTo,
+  int get hashCode => Object.hash(runtimeType, uidUser, airportFrom, airportTo,
       dateOfDeparture, dateOfArrival, freeWeight);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TripCopyWith<_$_Trip> get copyWith =>
-      __$$_TripCopyWithImpl<_$_Trip>(this, _$identity);
+  _$$_TripEntityCopyWith<_$_TripEntity> get copyWith =>
+      __$$_TripEntityCopyWithImpl<_$_TripEntity>(this, _$identity);
 }
 
-abstract class _Trip implements Trip {
-  const factory _Trip(
-      {required final String? airportFrom,
+abstract class _TripEntity implements TripEntity {
+  const factory _TripEntity(
+      {required final String? uidUser,
+      required final String? airportFrom,
       required final String? airportTo,
       required final DateTime? dateOfDeparture,
       required final DateTime? dateOfArrival,
-      required final String? freeWeight}) = _$_Trip;
+      required final String? freeWeight}) = _$_TripEntity;
 
+  @override
+  String? get uidUser;
   @override
   String? get airportFrom;
   @override
@@ -211,5 +237,6 @@ abstract class _Trip implements Trip {
   String? get freeWeight;
   @override
   @JsonKey(ignore: true)
-  _$$_TripCopyWith<_$_Trip> get copyWith => throw _privateConstructorUsedError;
+  _$$_TripEntityCopyWith<_$_TripEntity> get copyWith =>
+      throw _privateConstructorUsedError;
 }

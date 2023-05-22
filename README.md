@@ -21,3 +21,40 @@ Colors :
 
 font : EDF4ED
 
+
+MODEL :
+===== 1 =====
+TRIP MODEL :
+    String uid_user;
+    String airportFrom;
+    Location airportFromLocation;
+    String airportTo;
+    Location airportToLocation;
+    Timestamp dateOfDeparture;
+    Timestamp dateOfArrival;
+    String freeWeight;
+
+ENTITIES :
+===== 1 =====
+TRIP ENTITY :
+    String uid_user;
+    String airportFrom;
+    Location airportFromLocation;
+    String airportTo;
+    Location airportToLocation;
+    DateTime dateOfDeparture;
+    DateTime dateOfArrival;
+    String freeWeight;
+    
+
+// je recherche un voyage 
+SearchEntity :
+    String airportFrom;
+    String airportTo;
+    DateTime dateOfDeparture;
+    DateTime dateOfArrival;
+
+===== 2 =====
+ResultSearchEntity : 
+    String trip_id;
+    TripEntity trip_entity

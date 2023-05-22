@@ -1,15 +1,15 @@
 import 'package:aero_delivery/config/api_response.dart';
-import 'package:aero_delivery/domain/entities/trip.dart';
+import 'package:aero_delivery/domain/entities/trip_entity.dart';
 import 'package:aero_delivery/domain/repositories/cloud_firestore_repository.dart';
 import 'package:aero_delivery/domain/repositories/google_place_repository.dart';
 import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
+class AddTripCubit extends Cubit<PopUpAddTripState> {
   GooglePlaceRepository googlePlaceRepository;
   CloudFirestoreRepository cloudFirestoreRepository;
 
-  PopUpAddTripCubit({
+  AddTripCubit({
     required this.googlePlaceRepository,
     required this.cloudFirestoreRepository,
   }) : super(PopUpAddTripStateStart(trip: null));
@@ -33,12 +33,13 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     emit(PopUpAddTripStateLoading(trip: state.trip));
     emit(
       PopUpAddTripStateAddAirportFromSelected(
-        trip: Trip(
+        trip: TripEntity(
           airportFrom: airportName,
           airportTo: state.trip?.airportTo,
           dateOfDeparture: state.trip?.dateOfDeparture,
           dateOfArrival: state.trip?.dateOfArrival,
           freeWeight: state.trip?.freeWeight,
+          uidUser: '',
         ),
       ),
     );
@@ -73,12 +74,13 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     } else {
       emit(
         PopUpAddTripStateAddDateOfDepartureSelected(
-          trip: Trip(
+          trip: TripEntity(
             airportFrom: state.trip?.airportFrom,
             airportTo: state.trip?.airportTo,
             dateOfDeparture: dateTime,
             dateOfArrival: state.trip?.dateOfArrival,
             freeWeight: state.trip?.freeWeight,
+            uidUser: '',
           ),
         ),
       );
@@ -99,12 +101,12 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     emit(PopUpAddTripStateLoading(trip: state.trip));
     emit(
       PopUpAddTripStateAddAirportToSelected(
-        trip: Trip(
+        trip: TripEntity(
           airportFrom: state.trip?.airportFrom,
           airportTo: airportName,
           dateOfDeparture: state.trip?.dateOfDeparture,
           dateOfArrival: state.trip?.dateOfArrival,
-          freeWeight: state.trip?.freeWeight,
+          freeWeight: state.trip?.freeWeight, uidUser: '',
         ),
       ),
     );
@@ -139,12 +141,13 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     } else {
       emit(
         PopUpAddTripStateAddDateOfArrivalSelected(
-          trip: Trip(
+          trip: TripEntity(
             airportFrom: state.trip?.airportFrom,
             airportTo: state.trip?.airportTo,
             dateOfDeparture: state.trip?.dateOfDeparture,
             dateOfArrival: dateTime,
             freeWeight: null,
+            uidUser: '',
           ),
         ),
       );
@@ -166,12 +169,13 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     emit(PopUpAddTripStateLoading(trip: state.trip));
     emit(
       PopUpAddTripStateAddFreeWeightSelected(
-        trip: Trip(
+        trip: TripEntity(
           airportFrom: state.trip?.airportFrom,
           airportTo: state.trip?.airportTo,
           dateOfDeparture: state.trip?.dateOfDeparture,
           dateOfArrival: state.trip?.dateOfArrival,
           freeWeight: freeWeight,
+          uidUser: '',
         ),
       ),
     );
@@ -191,7 +195,7 @@ class PopUpAddTripCubit extends Cubit<PopUpAddTripState> {
     emit(PopUpAddTripStateLoading(trip: state.trip));
     final response = await cloudFirestoreRepository.createTrip( trip: state.trip!);
     if (response is SuccessResponse) {
-      emit(PopUpAddTripStateSuccess(trip: state.trip));
+      emit(PopUpAddTripStateSuccess(trip: state.trip, id : response.data!));
     } else {
       emit(PopUpAddTripStateFailed(
         trip: state.trip,

@@ -1,18 +1,37 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-part 'trip_model.freezed.dart';
-part 'trip_model.g.dart';
+class TripModel {
+  String airportFrom;
+  String airportTo;
+  Timestamp dateOfDeparture;
+  Timestamp dateOfArrival;
+  String freeWeight;
 
-@freezed
-class TripModel with _$TripModel {
-  const factory TripModel({
-    required String airportFrom,
-    required String airportTo,
-    required DateTime dateOfDeparture,
-    required DateTime dateOfArrival,
-    required String freeWeight,
-  }) = _TripModel;
+  TripModel({
+    required this.airportFrom,
+    required this.airportTo,
+    required this.dateOfDeparture,
+    required this.dateOfArrival,
+    required this.freeWeight,
+  });
 
+  Map<String, dynamic> toJson() {
+    return {
+      'airportFrom': airportFrom,
+      'airportTo': airportTo,
+      'dateOfDeparture': dateOfDeparture,
+      'dateOfArrival': dateOfArrival,
+      'freeWeight': freeWeight,
+    };
+  }
 
-  factory TripModel.fromJson(Map<String, dynamic> data) => _$TripModelFromJson(data);
+  factory TripModel.fromJson(Map<String, dynamic> json) {
+    return TripModel(
+      airportFrom: json['airportFrom'],
+      airportTo: json['airportTo'],
+      dateOfDeparture: json['dateOfDeparture'],
+      dateOfArrival: json['dateOfArrival'],
+      freeWeight: json['freeWeight'],
+    );
+  }
 }
