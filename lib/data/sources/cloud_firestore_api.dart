@@ -31,8 +31,11 @@ class _CloudFirestore implements CloudFirestoreApi {
     required TripEntity trip,
   }) async {
     final document = await _tripsCollectionReference.add(TripModel(
+            uidUser: trip.uidUser ?? '',
             airportFrom: trip.airportFrom ?? '',
+            airportFromLocation: const GeoPoint(2, 3),
             airportTo: trip.airportTo ?? '',
+            airportToLocation: const GeoPoint(2, 3),
             dateOfDeparture: Timestamp.fromDate(trip.dateOfDeparture!),
             dateOfArrival: Timestamp.fromDate(trip.dateOfArrival!),
             freeWeight: trip.freeWeight ?? "small"));

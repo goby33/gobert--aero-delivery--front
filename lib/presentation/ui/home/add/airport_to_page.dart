@@ -46,7 +46,7 @@ class AirportToPage extends StatelessWidget {
                             onClear: () => context.read<AddTripCubit>().clearAirportTo(),
                             hideText: (state is PopUpAddTripStateAddAirportToSelected),
                             value:
-                            (state is PopUpAddTripStateAddAirportToSelected) ? state.trip?.airportFrom ?? "" : null,
+                            (state is PopUpAddTripStateAddAirportToSelected) ? state.trip?.airportTo ?? "" : null,
                           ),
                           if (state is PopUpAddTripStateLoading)
                             const Padding(

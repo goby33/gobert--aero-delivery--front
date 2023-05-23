@@ -26,7 +26,7 @@ mixin _$PopUpAddTripState {
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -50,7 +50,7 @@ mixin _$PopUpAddTripState {
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -74,7 +74,7 @@ mixin _$PopUpAddTripState {
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -318,7 +318,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -345,7 +345,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -372,7 +372,7 @@ class _$PopUpAddTripStateStart extends PopUpAddTripStateStart {
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -604,7 +604,7 @@ class _$PopUpAddTripStateSuccess extends PopUpAddTripStateSuccess {
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -631,7 +631,7 @@ class _$PopUpAddTripStateSuccess extends PopUpAddTripStateSuccess {
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -658,7 +658,7 @@ class _$PopUpAddTripStateSuccess extends PopUpAddTripStateSuccess {
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -883,7 +883,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -910,7 +910,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -937,7 +937,7 @@ class _$PopUpAddTripStateLoading extends PopUpAddTripStateLoading {
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -1178,7 +1178,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -1205,7 +1205,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -1232,7 +1232,7 @@ class _$PopUpAddTripStateFailed extends PopUpAddTripStateFailed {
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -1393,7 +1393,7 @@ abstract class _$$PopUpAddTripStateAirportResultSearchCopyWith<$Res>
   $Res call(
       {TripEntity? trip,
       DateTime dateTime,
-      List<SearchAddressResponses> resultSearch});
+      List<SearchAddressResponsesEntity> resultSearch});
 
   @override
   $TripEntityCopyWith<$Res>? get trip;
@@ -1428,7 +1428,7 @@ class __$$PopUpAddTripStateAirportResultSearchCopyWithImpl<$Res>
       resultSearch: null == resultSearch
           ? _value.resultSearch
           : resultSearch // ignore: cast_nullable_to_non_nullable
-              as List<SearchAddressResponses>,
+              as List<SearchAddressResponsesEntity>,
     ));
   }
 }
@@ -1446,7 +1446,7 @@ class _$PopUpAddTripStateAirportResultSearch
   @override
   final DateTime dateTime;
   @override
-  final List<SearchAddressResponses> resultSearch;
+  final List<SearchAddressResponsesEntity> resultSearch;
 
   @override
   String toString() {
@@ -1487,7 +1487,7 @@ class _$PopUpAddTripStateAirportResultSearch
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -1514,7 +1514,7 @@ class _$PopUpAddTripStateAirportResultSearch
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -1541,7 +1541,7 @@ class _$PopUpAddTripStateAirportResultSearch
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -1677,14 +1677,14 @@ abstract class PopUpAddTripStateAirportResultSearch extends PopUpAddTripState {
   factory PopUpAddTripStateAirportResultSearch(
           {required final TripEntity? trip,
           required final DateTime dateTime,
-          required final List<SearchAddressResponses> resultSearch}) =
+          required final List<SearchAddressResponsesEntity> resultSearch}) =
       _$PopUpAddTripStateAirportResultSearch;
   PopUpAddTripStateAirportResultSearch._() : super._();
 
   @override
   TripEntity? get trip;
   DateTime get dateTime;
-  List<SearchAddressResponses> get resultSearch;
+  List<SearchAddressResponsesEntity> get resultSearch;
   @override
   @JsonKey(ignore: true)
   _$$PopUpAddTripStateAirportResultSearchCopyWith<
@@ -1774,7 +1774,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -1801,7 +1801,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -1828,7 +1828,7 @@ class _$PopUpAddTripStateAddDateOfArrivalSelected
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -2058,7 +2058,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -2085,7 +2085,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -2112,7 +2112,7 @@ class _$PopUpAddTripStateAddFreeWeightSelected
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -2344,7 +2344,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -2371,7 +2371,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -2398,7 +2398,7 @@ class _$PopUpAddTripStateAddDateOfDepartureSelected
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -2628,7 +2628,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -2655,7 +2655,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -2682,7 +2682,7 @@ class _$PopUpAddTripStateAddDateOfDepartureReady
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -2912,7 +2912,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -2939,7 +2939,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -2966,7 +2966,7 @@ class _$PopUpAddTripStateAddDateOfArrivalReady
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -3196,7 +3196,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -3223,7 +3223,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -3250,7 +3250,7 @@ class _$PopUpAddTripStateAddFreeWeightReady
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -3477,7 +3477,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -3504,7 +3504,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -3531,7 +3531,7 @@ class _$PopUpAddTripStateResumeReady extends PopUpAddTripStateResumeReady {
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -3756,7 +3756,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -3783,7 +3783,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -3810,7 +3810,7 @@ class _$PopUpAddTripStateAddTripReady extends PopUpAddTripStateAddTripReady {
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -4037,7 +4037,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -4064,7 +4064,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -4091,7 +4091,7 @@ class _$PopUpAddTripStateAddAirportFromSelected
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -4321,7 +4321,7 @@ class _$PopUpAddTripStateAddAirportFromReady
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -4348,7 +4348,7 @@ class _$PopUpAddTripStateAddAirportFromReady
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -4375,7 +4375,7 @@ class _$PopUpAddTripStateAddAirportFromReady
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -4604,7 +4604,7 @@ class _$PopUpAddTripStateAddAirportToSelected
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -4631,7 +4631,7 @@ class _$PopUpAddTripStateAddAirportToSelected
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -4658,7 +4658,7 @@ class _$PopUpAddTripStateAddAirportToSelected
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,
@@ -4887,7 +4887,7 @@ class _$PopUpAddTripStateAddAirportToReady
             DateTime dateTime, TripEntity? trip, String message)
         failed,
     required TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)
+            List<SearchAddressResponsesEntity> resultSearch)
         airportResultSearch,
     required TResult Function(TripEntity? trip) addDateOfArrivalSelected,
     required TResult Function(TripEntity? trip) addFreeWeightSelected,
@@ -4914,7 +4914,7 @@ class _$PopUpAddTripStateAddAirportToReady
     TResult? Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult? Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult? Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult? Function(TripEntity? trip)? addFreeWeightSelected,
@@ -4941,7 +4941,7 @@ class _$PopUpAddTripStateAddAirportToReady
     TResult Function(DateTime dateTime, TripEntity? trip, String message)?
         failed,
     TResult Function(TripEntity? trip, DateTime dateTime,
-            List<SearchAddressResponses> resultSearch)?
+            List<SearchAddressResponsesEntity> resultSearch)?
         airportResultSearch,
     TResult Function(TripEntity? trip)? addDateOfArrivalSelected,
     TResult Function(TripEntity? trip)? addFreeWeightSelected,

@@ -34,6 +34,8 @@ class AddTripCubit extends Cubit<PopUpAddTripState> {
     emit(
       PopUpAddTripStateAddAirportFromSelected(
         trip: TripEntity(
+          airportFromLocation: state.trip?.airportFromLocation,
+          airportToLocation: state.trip?.airportToLocation,
           airportFrom: airportName,
           airportTo: state.trip?.airportTo,
           dateOfDeparture: state.trip?.dateOfDeparture,
@@ -75,6 +77,8 @@ class AddTripCubit extends Cubit<PopUpAddTripState> {
       emit(
         PopUpAddTripStateAddDateOfDepartureSelected(
           trip: TripEntity(
+            airportFromLocation: state.trip?.airportFromLocation,
+            airportToLocation: state.trip?.airportToLocation,
             airportFrom: state.trip?.airportFrom,
             airportTo: state.trip?.airportTo,
             dateOfDeparture: dateTime,
@@ -102,6 +106,8 @@ class AddTripCubit extends Cubit<PopUpAddTripState> {
     emit(
       PopUpAddTripStateAddAirportToSelected(
         trip: TripEntity(
+          airportFromLocation: state.trip?.airportFromLocation,
+          airportToLocation: state.trip?.airportToLocation,
           airportFrom: state.trip?.airportFrom,
           airportTo: airportName,
           dateOfDeparture: state.trip?.dateOfDeparture,
@@ -142,6 +148,8 @@ class AddTripCubit extends Cubit<PopUpAddTripState> {
       emit(
         PopUpAddTripStateAddDateOfArrivalSelected(
           trip: TripEntity(
+            airportFromLocation: state.trip?.airportFromLocation,
+            airportToLocation: state.trip?.airportToLocation,
             airportFrom: state.trip?.airportFrom,
             airportTo: state.trip?.airportTo,
             dateOfDeparture: state.trip?.dateOfDeparture,
@@ -170,6 +178,8 @@ class AddTripCubit extends Cubit<PopUpAddTripState> {
     emit(
       PopUpAddTripStateAddFreeWeightSelected(
         trip: TripEntity(
+          airportFromLocation: state.trip?.airportFromLocation,
+          airportToLocation: state.trip?.airportToLocation,
           airportFrom: state.trip?.airportFrom,
           airportTo: state.trip?.airportTo,
           dateOfDeparture: state.trip?.dateOfDeparture,

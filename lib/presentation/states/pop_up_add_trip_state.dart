@@ -1,4 +1,4 @@
-import 'package:aero_delivery/domain/entities/search_address_responses.dart';
+import 'package:aero_delivery/domain/entities/search_address_responses_entity.dart';
 import 'package:aero_delivery/domain/entities/trip_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -32,7 +32,7 @@ class PopUpAddTripState with _$PopUpAddTripState {
   factory PopUpAddTripState.airportResultSearch({
     required TripEntity? trip,
     required DateTime dateTime,
-    required List<SearchAddressResponses> resultSearch,
+    required List<SearchAddressResponsesEntity> resultSearch,
   }) = PopUpAddTripStateAirportResultSearch;
 
 
@@ -99,7 +99,7 @@ class PopUpAddTripState with _$PopUpAddTripState {
 
 
   // get result search
-  List<SearchAddressResponses>? get resultSearchAirport => maybeMap(
+  List<SearchAddressResponsesEntity>? get resultSearchAirport => maybeMap(
         airportResultSearch: (value) => value.resultSearch,
         orElse: () => null,
       );

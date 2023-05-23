@@ -1,5 +1,5 @@
-import 'package:aero_delivery/domain/entities/search_address_responses.dart';
+import 'package:aero_delivery/domain/entities/search_address_responses_entity.dart';
 
 mixin GooglePlaceRepository {
-  Future<List<SearchAddressResponses>> searchPlace(String search);
+  Future<List<SearchAddressResponsesEntity>> searchPlace(String search);
 }
