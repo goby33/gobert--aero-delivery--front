@@ -11,7 +11,6 @@ class TextFieldAddTrip extends StatefulWidget {
     required this.onClear,
     required this.hideText,
     required this.value,
-
   }) : super(key: key);
 
   @override

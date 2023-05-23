@@ -7,8 +7,9 @@ class ButtonSearchTrip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed:  () => context.push('/results_search_trip'),
+      onPressed: () => context.push('/results_search_trip'),
       child: Text("Search"),
-    );;
+    );
+    ;
   }
 }

@@ -3,7 +3,6 @@ import 'package:aero_delivery/data/models/user_model.dart';
 import 'package:aero_delivery/domain/entities/user_entity.dart';
 
 mixin UserCloudFirestoreRepository {
-
   Future<ApiResponse<void>> createUser({
     required String uid,
     required String firstName,
@@ -18,5 +17,4 @@ mixin UserCloudFirestoreRepository {
   });
 
   UserEntity? getUserModelData();
-
 }

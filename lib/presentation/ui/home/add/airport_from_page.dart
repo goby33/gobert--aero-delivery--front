@@ -14,53 +14,61 @@ class AirportFromPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AddTripCubit, PopUpAddTripState>(
-          builder: (context, state) {
-            //button to add a package
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  const TitleAddTrip(
-                    title: "What's your airport of departure ?",
-                  ),
-                  SizedBox(
-                    height: 300,
-                    child: Column(
-                      children: [
-                        TextFieldAddTrip(
-                          onChanged: (value) {
-                            context.read<AddTripCubit>().searchAirport(value);
-                          },
-                          onClear: () => context.read<AddTripCubit>().clearAirportFrom(),
-                          hideText: (state is PopUpAddTripStateAddAirportFromSelected),
-                          value:
-                              (state is PopUpAddTripStateAddAirportFromSelected) ? state.trip?.airportFrom ?? "" : null,
-                        ),
-                        if (state is PopUpAddTripStateLoading)
-                          const Padding(
-                            padding: EdgeInsets.only(top: 20.0),
-                            child: CircularProgressIndicator(),
-                          ),
-                        if (state is PopUpAddTripStateAirportResultSearch)
-                          ResultSearchAddTrip(
-                            resultSearch: state.resultSearch,
-                            onPressed: (value) {
-                              context.read<AddTripCubit>().addAirportFromSelected(value);
-                            },
-                          )
-                      ],
-                    ),
-                  ),
-                  ButtonAddTrip(
-                    isEnable: (state is PopUpAddTripStateAddAirportFromSelected),
-                    onPressed: () { context.read<AddTripCubit>().addAirportFromReady();context.push('/add_trip/date_from');},
-                    text: "Add this airport",
-                  ),
-                ],
+      builder: (context, state) {
+        //button to add a package
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const TitleAddTrip(
+                title: "What's your airport of departure ?",
               ),
-            );
-          },
+              SizedBox(
+                height: 300,
+                child: Column(
+                  children: [
+                    TextFieldAddTrip(
+                      onChanged: (value) {
+                        context.read<AddTripCubit>().searchAirport(value);
+                      },
+                      onClear: () =>
+                          context.read<AddTripCubit>().clearAirportFrom(),
+                      hideText:
+                          (state is PopUpAddTripStateAddAirportFromSelected),
+                      value: (state is PopUpAddTripStateAddAirportFromSelected)
+                          ? state.trip?.airportFrom ?? ""
+                          : null,
+                    ),
+                    if (state is PopUpAddTripStateLoading)
+                      const Padding(
+                        padding: EdgeInsets.only(top: 20.0),
+                        child: CircularProgressIndicator(),
+                      ),
+                    if (state is PopUpAddTripStateAirportResultSearch)
+                      ResultSearchAddTrip(
+                        resultSearch: state.resultSearch,
+                        onPressed: (value) {
+                          context
+                              .read<AddTripCubit>()
+                              .addAirportFromSelected(value);
+                        },
+                      )
+                  ],
+                ),
+              ),
+              ButtonAddTrip(
+                isEnable: (state is PopUpAddTripStateAddAirportFromSelected),
+                onPressed: () {
+                  context.read<AddTripCubit>().addAirportFromReady();
+                  context.push('/add_trip/date_from');
+                },
+                text: "Add this airport",
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

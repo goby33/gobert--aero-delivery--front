@@ -53,14 +53,16 @@ class ResumeTripPage extends StatelessWidget {
                             color: Color(0xFFF79F79)),
                       ),
                       Text(
-                        state.trip?.dateOfDeparture.toString() ?? "No airport selected",
+                        state.trip?.dateOfDeparture.toString() ??
+                            "No airport selected",
                         style: const TextStyle(
                             fontSize: 20,
                             fontFamily: 'Nunito',
                             color: Color(0xFFF79F79)),
                       ),
                       Text(
-                        state.trip?.dateOfArrival.toString() ?? "No airport selected",
+                        state.trip?.dateOfArrival.toString() ??
+                            "No airport selected",
                         style: const TextStyle(
                             fontSize: 20,
                             fontFamily: 'Nunito',
@@ -69,10 +71,11 @@ class ResumeTripPage extends StatelessWidget {
                       ButtonAddTrip(
                         onPressed: () {
                           context.read<AddTripCubit>().saveTrip();
-                        }, text: 'yes, add this trip', isEnable: true,
+                        },
+                        text: 'yes, add this trip',
+                        isEnable: true,
                       ),
-                    ]
-                ),
+                    ]),
               ),
             );
           },

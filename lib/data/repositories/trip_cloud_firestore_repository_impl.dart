@@ -23,7 +23,6 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
     }
   }
 
-
   @override
   Future<ApiResponse<List<ResultSearchTripEntity>>> searchTrip({
     required String airportFrom,
@@ -39,28 +38,28 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
         dateOfArrival: dateOfArrival,
       );
       final response = responseApi
-          ?.map(
-            (trip) => ResultSearchTripEntity(
-          tripId: trip.tripId,
-          resultsTrip: TripEntity(
-            uidUser: trip.resultsTrip.uidUser,
-            airportFrom: trip.resultsTrip.airportFrom,
-            airportFromLocation: LocationEntity(
-              latitude: trip.resultsTrip.airportFromLocation.latitude,
-              longitude: trip.resultsTrip.airportFromLocation.longitude,
-            ),
-            airportTo: trip.resultsTrip.airportTo,
-            airportToLocation: LocationEntity(
-              latitude: trip.resultsTrip.airportToLocation.latitude,
-              longitude: trip.resultsTrip.airportToLocation.longitude,
-            ),
-            dateOfDeparture: trip.resultsTrip.dateOfDeparture.toDate(),
-            dateOfArrival: trip.resultsTrip.dateOfArrival.toDate(),
-            freeWeight: trip.resultsTrip.freeWeight,
-          ),
-        ),
-      )
-          .toList() ??
+              ?.map(
+                (trip) => ResultSearchTripEntity(
+                  tripId: trip.tripId,
+                  resultsTrip: TripEntity(
+                    uidUser: trip.resultsTrip.uidUser,
+                    airportFrom: trip.resultsTrip.airportFrom,
+                    airportFromLocation: LocationEntity(
+                      latitude: trip.resultsTrip.airportFromLocation.latitude,
+                      longitude: trip.resultsTrip.airportFromLocation.longitude,
+                    ),
+                    airportTo: trip.resultsTrip.airportTo,
+                    airportToLocation: LocationEntity(
+                      latitude: trip.resultsTrip.airportToLocation.latitude,
+                      longitude: trip.resultsTrip.airportToLocation.longitude,
+                    ),
+                    dateOfDeparture: trip.resultsTrip.dateOfDeparture.toDate(),
+                    dateOfArrival: trip.resultsTrip.dateOfArrival.toDate(),
+                    freeWeight: trip.resultsTrip.freeWeight,
+                  ),
+                ),
+              )
+              .toList() ??
           [];
       return SuccessResponse(
         402.toString(),
@@ -70,5 +69,4 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
       return FailResponse(e.code, failure: e.message);
     }
   }
-
 }

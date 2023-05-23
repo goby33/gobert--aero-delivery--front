@@ -7,7 +7,8 @@ class TitleAddTrip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Text(title,
+    return Text(
+      title,
       style: const TextStyle(
         fontSize: 30,
         fontFamily: 'Nunito',

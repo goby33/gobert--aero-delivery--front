@@ -67,7 +67,6 @@ class AuthFirebaseRepositoryImpl with AuthFirebaseRepository {
     }
   }
 
-
   @override
   Future<ApiResponse> signOut() async {
     try {

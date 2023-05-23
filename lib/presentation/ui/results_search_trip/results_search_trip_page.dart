@@ -21,7 +21,11 @@ class ResultsSearchTripPage extends StatelessWidget {
       body: BlocProvider(
         create: (context) => SearchTripCubit(
           tripCloudFirestoreRepository: context.read(),
-        )..getSearchTrip(airportFrom: "pp", airportTo: "pp", dateOfDeparture: DateTime.now(), dateOfArrival: DateTime.now()),
+        )..getSearchTrip(
+            airportFrom: "pp",
+            airportTo: "pp",
+            dateOfDeparture: DateTime.now(),
+            dateOfArrival: DateTime.now()),
         child: BlocConsumer<SearchTripCubit, SearchTripState>(
           listener: (context, state) {},
           builder: (context, state) {
@@ -32,17 +36,23 @@ class ResultsSearchTripPage extends StatelessWidget {
                     color: Colors.black,
                   ),
                   itemBuilder: (context, index) => ListTile(
-                    onTap: () => context.go('/view_trip/${state.results[index].tripId}'),
-                    title: Text(state.results[index].resultsTrip.airportFrom ?? ""),
-                    subtitle: Text(state.results[index].resultsTrip.airportTo ?? ""),
+                    onTap: () =>
+                        context.go('/view_trip/${state.results[index].tripId}'),
+                    title: Text(
+                        state.results[index].resultsTrip.airportFrom ?? ""),
+                    subtitle:
+                        Text(state.results[index].resultsTrip.airportTo ?? ""),
                     leading: const CircleAvatar(
                       child: Text("05"),
                     ),
-
                   ),
                 ),
                 onRefresh: () async {
-                  await context.read<SearchTripCubit>().getSearchTrip(airportFrom: "pp", airportTo: "pp", dateOfDeparture: DateTime.now(), dateOfArrival: DateTime.now());
+                  await context.read<SearchTripCubit>().getSearchTrip(
+                      airportFrom: "pp",
+                      airportTo: "pp",
+                      dateOfDeparture: DateTime.now(),
+                      dateOfArrival: DateTime.now());
                 });
           },
         ),

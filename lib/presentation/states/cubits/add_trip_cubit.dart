@@ -112,7 +112,8 @@ class AddTripCubit extends Cubit<PopUpAddTripState> {
           airportTo: airportName,
           dateOfDeparture: state.trip?.dateOfDeparture,
           dateOfArrival: state.trip?.dateOfArrival,
-          freeWeight: state.trip?.freeWeight, uidUser: '',
+          freeWeight: state.trip?.freeWeight,
+          uidUser: '',
         ),
       ),
     );
@@ -203,9 +204,10 @@ class AddTripCubit extends Cubit<PopUpAddTripState> {
   // SAVE THE TRIP
   Future<void> saveTrip() async {
     emit(PopUpAddTripStateLoading(trip: state.trip));
-    final response = await tripCloudFirestoreRepository.createTrip( trip: state.trip!);
+    final response =
+        await tripCloudFirestoreRepository.createTrip(trip: state.trip!);
     if (response is SuccessResponse) {
-      emit(PopUpAddTripStateSuccess(trip: state.trip, id : response.data!));
+      emit(PopUpAddTripStateSuccess(trip: state.trip, id: response.data!));
     } else {
       emit(PopUpAddTripStateFailed(
         trip: state.trip,

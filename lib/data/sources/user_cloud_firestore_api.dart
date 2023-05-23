@@ -15,8 +15,10 @@ abstract class UserCloudFirestoreApi {
 }
 
 class _UserCloudFirestore implements UserCloudFirestoreApi {
-  final CollectionReference<UserModel> _tripsCollectionReference = FirebaseFirestore.instance.collection('users').withConverter<UserModel>(
-      fromFirestore: (snapshot, _) => UserModel.fromJson(snapshot.data()!), toFirestore: (object, _) => object.toJson());
+  final CollectionReference<UserModel> _tripsCollectionReference =
+      FirebaseFirestore.instance.collection('users').withConverter<UserModel>(
+          fromFirestore: (snapshot, _) => UserModel.fromJson(snapshot.data()!),
+          toFirestore: (object, _) => object.toJson());
 
   _UserCloudFirestore();
 

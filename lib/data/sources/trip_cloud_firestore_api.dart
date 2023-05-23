@@ -16,16 +16,15 @@ abstract class TripCloudFirestoreApi {
     required DateTime? dateOfDeparture,
     required DateTime? dateOfArrival,
   });
-
-
 }
 
 class _TripCloudFirestore implements TripCloudFirestoreApi {
-  final CollectionReference<TripModel> _tripsCollectionReference = FirebaseFirestore.instance.collection('trips').withConverter<TripModel>(
-      fromFirestore: (snapshot, _) => TripModel.fromJson(snapshot.data()!), toFirestore: (object, _) => object.toJson());
+  final CollectionReference<TripModel> _tripsCollectionReference =
+      FirebaseFirestore.instance.collection('trips').withConverter<TripModel>(
+          fromFirestore: (snapshot, _) => TripModel.fromJson(snapshot.data()!),
+          toFirestore: (object, _) => object.toJson());
 
   _TripCloudFirestore();
-
 
   @override
   Future<String> createTrip({
@@ -55,10 +54,10 @@ class _TripCloudFirestore implements TripCloudFirestoreApi {
     final listTrips = response.docs
         .map(
           (e) => ResultSearchTripModel(
-        tripId: e.id,
-        resultsTrip: e.data(),
-      ),
-    )
+            tripId: e.id,
+            resultsTrip: e.data(),
+          ),
+        )
         .toList();
     return listTrips;
   }

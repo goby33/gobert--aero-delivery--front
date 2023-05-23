@@ -45,7 +45,8 @@ class CreateUserCubit extends Cubit<CreateUserState> {
       return;
     }
     // call repository
-    final responseAuthRepository = await authFirebaseRepository.createAccountWithEmail(
+    final responseAuthRepository =
+        await authFirebaseRepository.createAccountWithEmail(
       email: emailValue,
       password: passwordValue,
     );

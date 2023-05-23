@@ -3,7 +3,6 @@ import 'package:aero_delivery/domain/entities/result_search_trip_entity.dart';
 import 'package:aero_delivery/domain/entities/trip_entity.dart';
 
 mixin TripCloudFirestoreRepository {
-
   Future<ApiResponse<String>> createTrip({
     required TripEntity trip,
   });

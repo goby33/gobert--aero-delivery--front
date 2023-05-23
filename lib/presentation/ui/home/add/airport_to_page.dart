@@ -14,65 +14,76 @@ class AirportToPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AddTripCubit, PopUpAddTripState>(
-          builder: (context, state) {
-            return Scaffold(
-              backgroundColor: Colors.white,
-              appBar: AppBar(
-                backgroundColor: Colors.white,
-                elevation: 0,
-                leading: IconButton(
-                  icon: const Icon(Icons.arrow_back, color: Colors.black),
-                  onPressed: () {
-                    context.read<AddTripCubit>().addDateOfDepartureSelected(state.trip!.dateOfDeparture!);
-                    Navigator.of(context).pop();},
+      builder: (context, state) {
+        return Scaffold(
+          backgroundColor: Colors.white,
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            elevation: 0,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.black),
+              onPressed: () {
+                context
+                    .read<AddTripCubit>()
+                    .addDateOfDepartureSelected(state.trip!.dateOfDeparture!);
+                Navigator.of(context).pop();
+              },
+            ),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const TitleAddTrip(
+                  title: "What's your airport of arrival ?",
                 ),
-              ),
-              body: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    const TitleAddTrip(
-                      title: "What's your airport of arrival ?",
-                    ),
-                    SizedBox(
-                      height: 300,
-                      child: Column(
-                        children: [
-                          TextFieldAddTrip(
-                            onChanged: (value) {
-                              context.read<AddTripCubit>().searchAirport(value);
-                            },
-                            onClear: () => context.read<AddTripCubit>().clearAirportTo(),
-                            hideText: (state is PopUpAddTripStateAddAirportToSelected),
-                            value:
-                            (state is PopUpAddTripStateAddAirportToSelected) ? state.trip?.airportTo ?? "" : null,
-                          ),
-                          if (state is PopUpAddTripStateLoading)
-                            const Padding(
-                              padding: EdgeInsets.only(top: 20.0),
-                              child: CircularProgressIndicator(),
-                            ),
-                          if (state is PopUpAddTripStateAirportResultSearch)
-                            ResultSearchAddTrip(
-                              resultSearch: state.resultSearch,
-                              onPressed: (value) {
-                                context.read<AddTripCubit>().addAirportToSelected(value);
-                              },
-                            )
-                        ],
+                SizedBox(
+                  height: 300,
+                  child: Column(
+                    children: [
+                      TextFieldAddTrip(
+                        onChanged: (value) {
+                          context.read<AddTripCubit>().searchAirport(value);
+                        },
+                        onClear: () =>
+                            context.read<AddTripCubit>().clearAirportTo(),
+                        hideText:
+                            (state is PopUpAddTripStateAddAirportToSelected),
+                        value: (state is PopUpAddTripStateAddAirportToSelected)
+                            ? state.trip?.airportTo ?? ""
+                            : null,
                       ),
-                    ),
-                    ButtonAddTrip(
-                      isEnable: (state is PopUpAddTripStateAddAirportToSelected),
-                      onPressed: () { context.read<AddTripCubit>().addAirportToReady(); context.push('/add_trip/date_from/airport_to/date_to');  },
-                      text: "Add this airport",
-                    ),
-                  ],
+                      if (state is PopUpAddTripStateLoading)
+                        const Padding(
+                          padding: EdgeInsets.only(top: 20.0),
+                          child: CircularProgressIndicator(),
+                        ),
+                      if (state is PopUpAddTripStateAirportResultSearch)
+                        ResultSearchAddTrip(
+                          resultSearch: state.resultSearch,
+                          onPressed: (value) {
+                            context
+                                .read<AddTripCubit>()
+                                .addAirportToSelected(value);
+                          },
+                        )
+                    ],
+                  ),
                 ),
-              ),
-            );
-          },
+                ButtonAddTrip(
+                  isEnable: (state is PopUpAddTripStateAddAirportToSelected),
+                  onPressed: () {
+                    context.read<AddTripCubit>().addAirportToReady();
+                    context.push('/add_trip/date_from/airport_to/date_to');
+                  },
+                  text: "Add this airport",
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }

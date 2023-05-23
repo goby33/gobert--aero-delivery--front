@@ -136,7 +136,8 @@ class _CreateUserState extends State<CreateUser> {
                         lastNameValue: lastNameController.text,
                         emailValue: emailController.text,
                         passwordValue: passwordController.text,
-                        passwordConfirmationValue: passwordConfirmController.text,
+                        passwordConfirmationValue:
+                            passwordConfirmController.text,
                       ),
                   child: SizedBox(
                     width: double.infinity,

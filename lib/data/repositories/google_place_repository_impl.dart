@@ -9,7 +9,8 @@ class GooglePlaceRepositoryImpl with GooglePlaceRepository {
 
   @override
   Future<List<SearchAddressResponsesEntity>> searchPlace(String search) async {
-    final searchAddressResponses = await _googlePlaceApi.searchPlace(search, "AIzaSyArdb43mThxhWz3EiubCk_qf3_EBT7U12Y", "airport");
+    final searchAddressResponses = await _googlePlaceApi.searchPlace(
+        search, "AIzaSyArdb43mThxhWz3EiubCk_qf3_EBT7U12Y", "airport");
     if (searchAddressResponses.status == "OK") {
       return [
         ...searchAddressResponses.results!.map(

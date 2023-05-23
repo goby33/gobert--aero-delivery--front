@@ -17,13 +17,13 @@ class SearchTripState with _$SearchTripState {
   // stare where failed to load
   factory SearchTripState.failed(
       {required DateTime dateTime,
-        required String message}) = SearchTripStateFailed;
+      required String message}) = SearchTripStateFailed;
 
   // state when the result search
   factory SearchTripState.searchResult(
-      {required DateTime dateTime,
-        required List<ResultSearchTripEntity> result}) = SearchTripStateSearchResult;
-
+          {required DateTime dateTime,
+          required List<ResultSearchTripEntity> result}) =
+      SearchTripStateSearchResult;
 
   // GETTERS
 
@@ -32,5 +32,4 @@ class SearchTripState with _$SearchTripState {
         searchResult: (value) => value.result,
         orElse: () => [],
       );
-
 }

@@ -53,7 +53,6 @@ class _AuthFirebase implements AuthFirebaseApi {
     return _firebaseAuthApi.currentUser;
   }
 
-
   @override
   Future<void> signOut() async {
     await _firebaseAuthApi.signOut();

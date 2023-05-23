@@ -30,9 +30,8 @@ class SplashCubit extends Cubit<SplashState> {
     // user Model
     if (user != null && userModel == null) {
       final resultUserModel =
-      await userCloudFirestoreRepository.getUserModel(uid: user.uid);
-      if (resultUserModel is SuccessResponse &&
-          resultUserModel.data != null) {
+          await userCloudFirestoreRepository.getUserModel(uid: user.uid);
+      if (resultUserModel is SuccessResponse && resultUserModel.data != null) {
         userModel = resultUserModel.data;
       }
     }

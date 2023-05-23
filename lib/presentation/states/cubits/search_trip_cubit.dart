@@ -15,7 +15,7 @@ class SearchTripCubit extends Cubit<SearchTripState> {
     required String airportTo,
     required DateTime dateOfDeparture,
     required DateTime dateOfArrival,
-}) async {
+  }) async {
     // loading
     emit(SearchTripStateLoading());
     final searchTrip = await tripCloudFirestoreRepository.searchTrip(
@@ -25,7 +25,10 @@ class SearchTripCubit extends Cubit<SearchTripState> {
       dateOfArrival: dateOfArrival,
     );
     if (searchTrip is SuccessResponse) {
-      emit(SearchTripStateSearchResult(dateTime: DateTime.now(), result: searchTrip.data ?? [],));
+      emit(SearchTripStateSearchResult(
+        dateTime: DateTime.now(),
+        result: searchTrip.data ?? [],
+      ));
     } else {
       emit(SearchTripStateFailed(dateTime: DateTime.now(), message: 'Failed'));
     }

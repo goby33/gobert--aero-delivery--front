@@ -13,11 +13,16 @@ class TripListener extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<AddTripCubit, PopUpAddTripState>(
         listener: (context, state) => state.maybeMap(
-              addAirportFromReady: (value) => context.push('/add_trip/date_from'),
-              addDateOfDepartureReady: (value) => context.push('/add_trip/date_from/airport_to'),
-              addAirportToReady: (value) => context.push('/add_trip/date_from/airport_to/date_to'),
-              addDateOfArrivalReady: (value) => context.push('/add_trip/date_from/airport_to/date_to/weight_free'),
-              addFreeWeightReady: (value) => context.push('/add_trip/date_from/airport_to/date_to/weight_free/resume'),
+              addAirportFromReady: (value) =>
+                  context.push('/add_trip/date_from'),
+              addDateOfDepartureReady: (value) =>
+                  context.push('/add_trip/date_from/airport_to'),
+              addAirportToReady: (value) =>
+                  context.push('/add_trip/date_from/airport_to/date_to'),
+              addDateOfArrivalReady: (value) => context
+                  .push('/add_trip/date_from/airport_to/date_to/weight_free'),
+              addFreeWeightReady: (value) => context.push(
+                  '/add_trip/date_from/airport_to/date_to/weight_free/resume'),
               orElse: () => debugPrintDone,
             ),
         child: child);

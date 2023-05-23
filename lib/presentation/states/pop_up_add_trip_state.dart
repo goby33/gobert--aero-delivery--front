@@ -35,10 +35,6 @@ class PopUpAddTripState with _$PopUpAddTripState {
     required List<SearchAddressResponsesEntity> resultSearch,
   }) = PopUpAddTripStateAirportResultSearch;
 
-
-
-
-
   factory PopUpAddTripState.addDateOfArrivalSelected({
     required TripEntity? trip,
   }) = PopUpAddTripStateAddDateOfArrivalSelected;
@@ -57,9 +53,6 @@ class PopUpAddTripState with _$PopUpAddTripState {
   factory PopUpAddTripState.addDateOfDepartureReady({
     required TripEntity? trip,
   }) = PopUpAddTripStateAddDateOfDepartureReady;
-
-
-
 
   factory PopUpAddTripState.addDateOfArrivalReady({
     required TripEntity? trip,
@@ -92,11 +85,9 @@ class PopUpAddTripState with _$PopUpAddTripState {
     required TripEntity? trip,
   }) = PopUpAddTripStateAddAirportToSelected;
 
-
   factory PopUpAddTripState.addAirportToReady({
     required TripEntity? trip,
   }) = PopUpAddTripStateAddAirportToReady;
-
 
   // get result search
   List<SearchAddressResponsesEntity>? get resultSearchAirport => maybeMap(

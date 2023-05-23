@@ -18,7 +18,9 @@ class SearchPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             decoration: const BoxDecoration(
               color: Color(0xFFF79F79),
-              borderRadius: BorderRadius.all(Radius.circular(20),),
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
+              ),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey,
@@ -31,21 +33,21 @@ class SearchPage extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:  [
+                  children: [
                     const Text("Departure :"),
                     TextFieldSearchTrip(),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:  [
+                  children: [
                     const Text("Arrival :"),
                     TextFieldSearchTrip(),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:  [
+                  children: [
                     const Text("Date :"),
                     TextFieldSearchTrip(),
                   ],

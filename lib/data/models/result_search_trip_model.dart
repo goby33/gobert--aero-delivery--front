@@ -4,13 +4,10 @@ class ResultSearchTripModel {
   String tripId;
   TripModel resultsTrip;
 
-
-
   ResultSearchTripModel({
     required this.tripId,
     required this.resultsTrip,
   });
-
 
   Map<String, dynamic> toJson() {
     return {
@@ -23,7 +20,6 @@ class ResultSearchTripModel {
     return ResultSearchTripModel(
       tripId: json['tripId'],
       resultsTrip: json['resultsTrip'],
-
     );
   }
 }
