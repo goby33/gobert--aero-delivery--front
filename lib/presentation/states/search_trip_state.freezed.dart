@@ -21,7 +21,8 @@ mixin _$SearchTripState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(DateTime dateTime, String message) failed,
-    required TResult Function(DateTime dateTime, List<TripModel> result)
+    required TResult Function(
+            DateTime dateTime, List<ResultSearchTripEntity> result)
         searchResult,
   }) =>
       throw _privateConstructorUsedError;
@@ -30,7 +31,8 @@ mixin _$SearchTripState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(DateTime dateTime, String message)? failed,
-    TResult? Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult? Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,7 +40,8 @@ mixin _$SearchTripState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(DateTime dateTime, String message)? failed,
-    TResult Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,7 +131,8 @@ class _$SearchTripStateInitial extends SearchTripStateInitial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(DateTime dateTime, String message) failed,
-    required TResult Function(DateTime dateTime, List<TripModel> result)
+    required TResult Function(
+            DateTime dateTime, List<ResultSearchTripEntity> result)
         searchResult,
   }) {
     return initial();
@@ -140,7 +144,8 @@ class _$SearchTripStateInitial extends SearchTripStateInitial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(DateTime dateTime, String message)? failed,
-    TResult? Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult? Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
   }) {
     return initial?.call();
   }
@@ -151,7 +156,8 @@ class _$SearchTripStateInitial extends SearchTripStateInitial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(DateTime dateTime, String message)? failed,
-    TResult Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -244,7 +250,8 @@ class _$SearchTripStateLoading extends SearchTripStateLoading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(DateTime dateTime, String message) failed,
-    required TResult Function(DateTime dateTime, List<TripModel> result)
+    required TResult Function(
+            DateTime dateTime, List<ResultSearchTripEntity> result)
         searchResult,
   }) {
     return loading();
@@ -256,7 +263,8 @@ class _$SearchTripStateLoading extends SearchTripStateLoading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(DateTime dateTime, String message)? failed,
-    TResult? Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult? Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
   }) {
     return loading?.call();
   }
@@ -267,7 +275,8 @@ class _$SearchTripStateLoading extends SearchTripStateLoading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(DateTime dateTime, String message)? failed,
-    TResult Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -397,7 +406,8 @@ class _$SearchTripStateFailed extends SearchTripStateFailed {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(DateTime dateTime, String message) failed,
-    required TResult Function(DateTime dateTime, List<TripModel> result)
+    required TResult Function(
+            DateTime dateTime, List<ResultSearchTripEntity> result)
         searchResult,
   }) {
     return failed(dateTime, message);
@@ -409,7 +419,8 @@ class _$SearchTripStateFailed extends SearchTripStateFailed {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(DateTime dateTime, String message)? failed,
-    TResult? Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult? Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
   }) {
     return failed?.call(dateTime, message);
   }
@@ -420,7 +431,8 @@ class _$SearchTripStateFailed extends SearchTripStateFailed {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(DateTime dateTime, String message)? failed,
-    TResult Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -487,7 +499,7 @@ abstract class _$$SearchTripStateSearchResultCopyWith<$Res> {
           $Res Function(_$SearchTripStateSearchResult) then) =
       __$$SearchTripStateSearchResultCopyWithImpl<$Res>;
   @useResult
-  $Res call({DateTime dateTime, List<TripModel> result});
+  $Res call({DateTime dateTime, List<ResultSearchTripEntity> result});
 }
 
 /// @nodoc
@@ -513,7 +525,7 @@ class __$$SearchTripStateSearchResultCopyWithImpl<$Res>
       result: null == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as List<TripModel>,
+              as List<ResultSearchTripEntity>,
     ));
   }
 }
@@ -527,7 +539,7 @@ class _$SearchTripStateSearchResult extends SearchTripStateSearchResult {
   @override
   final DateTime dateTime;
   @override
-  final List<TripModel> result;
+  final List<ResultSearchTripEntity> result;
 
   @override
   String toString() {
@@ -561,7 +573,8 @@ class _$SearchTripStateSearchResult extends SearchTripStateSearchResult {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(DateTime dateTime, String message) failed,
-    required TResult Function(DateTime dateTime, List<TripModel> result)
+    required TResult Function(
+            DateTime dateTime, List<ResultSearchTripEntity> result)
         searchResult,
   }) {
     return searchResult(dateTime, result);
@@ -573,7 +586,8 @@ class _$SearchTripStateSearchResult extends SearchTripStateSearchResult {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(DateTime dateTime, String message)? failed,
-    TResult? Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult? Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
   }) {
     return searchResult?.call(dateTime, result);
   }
@@ -584,7 +598,8 @@ class _$SearchTripStateSearchResult extends SearchTripStateSearchResult {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(DateTime dateTime, String message)? failed,
-    TResult Function(DateTime dateTime, List<TripModel> result)? searchResult,
+    TResult Function(DateTime dateTime, List<ResultSearchTripEntity> result)?
+        searchResult,
     required TResult orElse(),
   }) {
     if (searchResult != null) {
@@ -633,12 +648,13 @@ class _$SearchTripStateSearchResult extends SearchTripStateSearchResult {
 
 abstract class SearchTripStateSearchResult extends SearchTripState {
   factory SearchTripStateSearchResult(
-      {required final DateTime dateTime,
-      required final List<TripModel> result}) = _$SearchTripStateSearchResult;
+          {required final DateTime dateTime,
+          required final List<ResultSearchTripEntity> result}) =
+      _$SearchTripStateSearchResult;
   SearchTripStateSearchResult._() : super._();
 
   DateTime get dateTime;
-  List<TripModel> get result;
+  List<ResultSearchTripEntity> get result;
   @JsonKey(ignore: true)
   _$$SearchTripStateSearchResultCopyWith<_$SearchTripStateSearchResult>
       get copyWith => throw _privateConstructorUsedError;

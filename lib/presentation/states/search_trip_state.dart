@@ -1,4 +1,5 @@
 import 'package:aero_delivery/data/models/trip_model.dart';
+import 'package:aero_delivery/domain/entities/result_search_trip_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'search_trip_state.freezed.dart';
@@ -21,13 +22,13 @@ class SearchTripState with _$SearchTripState {
   // state when the result search
   factory SearchTripState.searchResult(
       {required DateTime dateTime,
-        required List<TripModel> result}) = SearchTripStateSearchResult;
+        required List<ResultSearchTripEntity> result}) = SearchTripStateSearchResult;
 
 
   // GETTERS
 
 //get result
-  List<TripModel> get results => maybeMap(
+  List<ResultSearchTripEntity> get results => maybeMap(
         searchResult: (value) => value.result,
         orElse: () => [],
       );

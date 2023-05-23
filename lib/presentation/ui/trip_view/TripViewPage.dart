@@ -12,13 +12,14 @@ class TripViewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => context.go('/'),
         ),
         title: Text('TripViewPage'),
       ),
-      body: Center(child: Text('TripViewPage')),
+      body: Center(child: Text(id)),
     );
   }
 }

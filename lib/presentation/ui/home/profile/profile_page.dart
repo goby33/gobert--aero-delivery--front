@@ -11,7 +11,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => ProfileCubit(
-        authRepository: context.read(),
+        authFirebaseRepository: context.read(),
       )..getProfile(),
       child: BlocListener<ProfileCubit, ProfileState>(
         listener: (context, state) => state.maybeMap(
@@ -22,11 +22,20 @@ class ProfilePage extends StatelessWidget {
           builder: (context, state) {
             if (state is ProfileStateSignIn) {
               return RefreshIndicator(
-                onRefresh: () async {
-                  context.read<ProfileCubit>().getProfile();
-                },
-                child: Text(state.user.uid),
-              );
+                  onRefresh: () async {
+                    context.read<ProfileCubit>().getProfile();
+                  },
+                  child: Column(
+                    children: [
+                      Text(state.user.uid),
+                      ElevatedButton(
+                        onPressed: () {
+                          context.read<ProfileCubit>().signOut();
+                        },
+                        child: const Text('Sign Out'),
+                      )
+                    ],
+                  ));
             } else {
               return const Center(
                 child: CircularProgressIndicator(),

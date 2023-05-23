@@ -20,7 +20,7 @@ class ResultsSearchTripPage extends StatelessWidget {
       ),
       body: BlocProvider(
         create: (context) => SearchTripCubit(
-          cloudFirestoreRepository: context.read(),
+          tripCloudFirestoreRepository: context.read(),
         )..getSearchTrip(airportFrom: "pp", airportTo: "pp", dateOfDeparture: DateTime.now(), dateOfArrival: DateTime.now()),
         child: BlocConsumer<SearchTripCubit, SearchTripState>(
           listener: (context, state) {},
@@ -32,11 +32,10 @@ class ResultsSearchTripPage extends StatelessWidget {
                     color: Colors.black,
                   ),
                   itemBuilder: (context, index) => ListTile(
-                    //TODO: add onTap
-                    onTap: () => context.go('/view_trip/${state.results[index]}'),
-                    title: Text(state.results[index].airportFrom),
-                    subtitle: Text(state.results[index].airportTo),
-                    leading: CircleAvatar(
+                    onTap: () => context.go('/view_trip/${state.results[index].tripId}'),
+                    title: Text(state.results[index].resultsTrip.airportFrom ?? ""),
+                    subtitle: Text(state.results[index].resultsTrip.airportTo ?? ""),
+                    leading: const CircleAvatar(
                       child: Text("05"),
                     ),
 

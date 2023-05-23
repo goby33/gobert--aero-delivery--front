@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$ResultSearchTripEntity {
   String get tripId => throw _privateConstructorUsedError;
-  List<TripEntity> get resultsTrip => throw _privateConstructorUsedError;
+  TripEntity get resultsTrip => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ResultSearchTripEntityCopyWith<ResultSearchTripEntity> get copyWith =>
@@ -30,7 +30,9 @@ abstract class $ResultSearchTripEntityCopyWith<$Res> {
           $Res Function(ResultSearchTripEntity) then) =
       _$ResultSearchTripEntityCopyWithImpl<$Res, ResultSearchTripEntity>;
   @useResult
-  $Res call({String tripId, List<TripEntity> resultsTrip});
+  $Res call({String tripId, TripEntity resultsTrip});
+
+  $TripEntityCopyWith<$Res> get resultsTrip;
 }
 
 /// @nodoc
@@ -58,8 +60,16 @@ class _$ResultSearchTripEntityCopyWithImpl<$Res,
       resultsTrip: null == resultsTrip
           ? _value.resultsTrip
           : resultsTrip // ignore: cast_nullable_to_non_nullable
-              as List<TripEntity>,
+              as TripEntity,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TripEntityCopyWith<$Res> get resultsTrip {
+    return $TripEntityCopyWith<$Res>(_value.resultsTrip, (value) {
+      return _then(_value.copyWith(resultsTrip: value) as $Val);
+    });
   }
 }
 
@@ -71,7 +81,10 @@ abstract class _$$_ResultSearchTripEntityCopyWith<$Res>
       __$$_ResultSearchTripEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String tripId, List<TripEntity> resultsTrip});
+  $Res call({String tripId, TripEntity resultsTrip});
+
+  @override
+  $TripEntityCopyWith<$Res> get resultsTrip;
 }
 
 /// @nodoc
@@ -95,9 +108,9 @@ class __$$_ResultSearchTripEntityCopyWithImpl<$Res>
           : tripId // ignore: cast_nullable_to_non_nullable
               as String,
       resultsTrip: null == resultsTrip
-          ? _value._resultsTrip
+          ? _value.resultsTrip
           : resultsTrip // ignore: cast_nullable_to_non_nullable
-              as List<TripEntity>,
+              as TripEntity,
     ));
   }
 }
@@ -106,18 +119,12 @@ class __$$_ResultSearchTripEntityCopyWithImpl<$Res>
 
 class _$_ResultSearchTripEntity implements _ResultSearchTripEntity {
   const _$_ResultSearchTripEntity(
-      {required this.tripId, required final List<TripEntity> resultsTrip})
-      : _resultsTrip = resultsTrip;
+      {required this.tripId, required this.resultsTrip});
 
   @override
   final String tripId;
-  final List<TripEntity> _resultsTrip;
   @override
-  List<TripEntity> get resultsTrip {
-    if (_resultsTrip is EqualUnmodifiableListView) return _resultsTrip;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_resultsTrip);
-  }
+  final TripEntity resultsTrip;
 
   @override
   String toString() {
@@ -130,13 +137,12 @@ class _$_ResultSearchTripEntity implements _ResultSearchTripEntity {
         (other.runtimeType == runtimeType &&
             other is _$_ResultSearchTripEntity &&
             (identical(other.tripId, tripId) || other.tripId == tripId) &&
-            const DeepCollectionEquality()
-                .equals(other._resultsTrip, _resultsTrip));
+            (identical(other.resultsTrip, resultsTrip) ||
+                other.resultsTrip == resultsTrip));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, tripId, const DeepCollectionEquality().hash(_resultsTrip));
+  int get hashCode => Object.hash(runtimeType, tripId, resultsTrip);
 
   @JsonKey(ignore: true)
   @override
@@ -149,12 +155,12 @@ class _$_ResultSearchTripEntity implements _ResultSearchTripEntity {
 abstract class _ResultSearchTripEntity implements ResultSearchTripEntity {
   const factory _ResultSearchTripEntity(
       {required final String tripId,
-      required final List<TripEntity> resultsTrip}) = _$_ResultSearchTripEntity;
+      required final TripEntity resultsTrip}) = _$_ResultSearchTripEntity;
 
   @override
   String get tripId;
   @override
-  List<TripEntity> get resultsTrip;
+  TripEntity get resultsTrip;
   @override
   @JsonKey(ignore: true)
   _$$_ResultSearchTripEntityCopyWith<_$_ResultSearchTripEntity> get copyWith =>

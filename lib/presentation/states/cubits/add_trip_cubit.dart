@@ -1,17 +1,17 @@
 import 'package:aero_delivery/config/api_response.dart';
 import 'package:aero_delivery/domain/entities/trip_entity.dart';
-import 'package:aero_delivery/domain/repositories/cloud_firestore_repository.dart';
 import 'package:aero_delivery/domain/repositories/google_place_repository.dart';
+import 'package:aero_delivery/domain/repositories/trip_cloud_firestore_repository.dart';
 import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AddTripCubit extends Cubit<PopUpAddTripState> {
   GooglePlaceRepository googlePlaceRepository;
-  CloudFirestoreRepository cloudFirestoreRepository;
+  TripCloudFirestoreRepository tripCloudFirestoreRepository;
 
   AddTripCubit({
     required this.googlePlaceRepository,
-    required this.cloudFirestoreRepository,
+    required this.tripCloudFirestoreRepository,
   }) : super(PopUpAddTripStateStart(trip: null));
 
   // CALL API
@@ -203,7 +203,7 @@ class AddTripCubit extends Cubit<PopUpAddTripState> {
   // SAVE THE TRIP
   Future<void> saveTrip() async {
     emit(PopUpAddTripStateLoading(trip: state.trip));
-    final response = await cloudFirestoreRepository.createTrip( trip: state.trip!);
+    final response = await tripCloudFirestoreRepository.createTrip( trip: state.trip!);
     if (response is SuccessResponse) {
       emit(PopUpAddTripStateSuccess(trip: state.trip, id : response.data!));
     } else {
