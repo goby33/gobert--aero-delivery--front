@@ -34,6 +34,7 @@ class UserCloudFirestoreRepositoryImpl with UserCloudFirestoreRepository {
   }) async {
     try {
       final response = await _userCloudFirestoreApi.getUserModel(uid: uid);
+      if (response == null) return FailResponse('401', failure: 'User not found');
       _user = response;
       return SuccessResponse('402', getUserModelData()!);
     } on FirebaseAuthException catch (e) {

@@ -20,7 +20,7 @@ mixin _$ProfileState {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function() noSignIn,
-    required TResult Function(User user) signIn,
+    required TResult Function(UserEntity user) signIn,
     required TResult Function(DateTime dateTime, String message) failed,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$ProfileState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function()? noSignIn,
-    TResult? Function(User user)? signIn,
+    TResult? Function(UserEntity user)? signIn,
     TResult? Function(DateTime dateTime, String message)? failed,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$ProfileState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function()? noSignIn,
-    TResult Function(User user)? signIn,
+    TResult Function(UserEntity user)? signIn,
     TResult Function(DateTime dateTime, String message)? failed,
     required TResult orElse(),
   }) =>
@@ -126,7 +126,7 @@ class _$ProfileStateLoading extends ProfileStateLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function() noSignIn,
-    required TResult Function(User user) signIn,
+    required TResult Function(UserEntity user) signIn,
     required TResult Function(DateTime dateTime, String message) failed,
   }) {
     return loading();
@@ -137,7 +137,7 @@ class _$ProfileStateLoading extends ProfileStateLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function()? noSignIn,
-    TResult? Function(User user)? signIn,
+    TResult? Function(UserEntity user)? signIn,
     TResult? Function(DateTime dateTime, String message)? failed,
   }) {
     return loading?.call();
@@ -148,7 +148,7 @@ class _$ProfileStateLoading extends ProfileStateLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function()? noSignIn,
-    TResult Function(User user)? signIn,
+    TResult Function(UserEntity user)? signIn,
     TResult Function(DateTime dateTime, String message)? failed,
     required TResult orElse(),
   }) {
@@ -241,7 +241,7 @@ class _$ProfileStateNoSignIn extends ProfileStateNoSignIn {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function() noSignIn,
-    required TResult Function(User user) signIn,
+    required TResult Function(UserEntity user) signIn,
     required TResult Function(DateTime dateTime, String message) failed,
   }) {
     return noSignIn();
@@ -252,7 +252,7 @@ class _$ProfileStateNoSignIn extends ProfileStateNoSignIn {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function()? noSignIn,
-    TResult? Function(User user)? signIn,
+    TResult? Function(UserEntity user)? signIn,
     TResult? Function(DateTime dateTime, String message)? failed,
   }) {
     return noSignIn?.call();
@@ -263,7 +263,7 @@ class _$ProfileStateNoSignIn extends ProfileStateNoSignIn {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function()? noSignIn,
-    TResult Function(User user)? signIn,
+    TResult Function(UserEntity user)? signIn,
     TResult Function(DateTime dateTime, String message)? failed,
     required TResult orElse(),
   }) {
@@ -322,7 +322,9 @@ abstract class _$$ProfileStateSignInCopyWith<$Res> {
           $Res Function(_$ProfileStateSignIn) then) =
       __$$ProfileStateSignInCopyWithImpl<$Res>;
   @useResult
-  $Res call({User user});
+  $Res call({UserEntity user});
+
+  $UserEntityCopyWith<$Res> get user;
 }
 
 /// @nodoc
@@ -342,8 +344,16 @@ class __$$ProfileStateSignInCopyWithImpl<$Res>
       user: null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as User,
+              as UserEntity,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserEntityCopyWith<$Res> get user {
+    return $UserEntityCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
   }
 }
 
@@ -353,7 +363,7 @@ class _$ProfileStateSignIn extends ProfileStateSignIn {
   _$ProfileStateSignIn({required this.user}) : super._();
 
   @override
-  final User user;
+  final UserEntity user;
 
   @override
   String toString() {
@@ -383,7 +393,7 @@ class _$ProfileStateSignIn extends ProfileStateSignIn {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function() noSignIn,
-    required TResult Function(User user) signIn,
+    required TResult Function(UserEntity user) signIn,
     required TResult Function(DateTime dateTime, String message) failed,
   }) {
     return signIn(user);
@@ -394,7 +404,7 @@ class _$ProfileStateSignIn extends ProfileStateSignIn {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function()? noSignIn,
-    TResult? Function(User user)? signIn,
+    TResult? Function(UserEntity user)? signIn,
     TResult? Function(DateTime dateTime, String message)? failed,
   }) {
     return signIn?.call(user);
@@ -405,7 +415,7 @@ class _$ProfileStateSignIn extends ProfileStateSignIn {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function()? noSignIn,
-    TResult Function(User user)? signIn,
+    TResult Function(UserEntity user)? signIn,
     TResult Function(DateTime dateTime, String message)? failed,
     required TResult orElse(),
   }) {
@@ -454,10 +464,11 @@ class _$ProfileStateSignIn extends ProfileStateSignIn {
 }
 
 abstract class ProfileStateSignIn extends ProfileState {
-  factory ProfileStateSignIn({required final User user}) = _$ProfileStateSignIn;
+  factory ProfileStateSignIn({required final UserEntity user}) =
+      _$ProfileStateSignIn;
   ProfileStateSignIn._() : super._();
 
-  User get user;
+  UserEntity get user;
   @JsonKey(ignore: true)
   _$$ProfileStateSignInCopyWith<_$ProfileStateSignIn> get copyWith =>
       throw _privateConstructorUsedError;
@@ -540,7 +551,7 @@ class _$ProfileStateFailed extends ProfileStateFailed {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function() noSignIn,
-    required TResult Function(User user) signIn,
+    required TResult Function(UserEntity user) signIn,
     required TResult Function(DateTime dateTime, String message) failed,
   }) {
     return failed(dateTime, message);
@@ -551,7 +562,7 @@ class _$ProfileStateFailed extends ProfileStateFailed {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function()? noSignIn,
-    TResult? Function(User user)? signIn,
+    TResult? Function(UserEntity user)? signIn,
     TResult? Function(DateTime dateTime, String message)? failed,
   }) {
     return failed?.call(dateTime, message);
@@ -562,7 +573,7 @@ class _$ProfileStateFailed extends ProfileStateFailed {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function()? noSignIn,
-    TResult Function(User user)? signIn,
+    TResult Function(UserEntity user)? signIn,
     TResult Function(DateTime dateTime, String message)? failed,
     required TResult orElse(),
   }) {

@@ -12,7 +12,7 @@ import 'package:aero_delivery/presentation/ui/welcome/welcome_page.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/welcome/toto',
+  initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
@@ -25,7 +25,12 @@ final GoRouter appRouter = GoRouter(
         GoRoute(
           path: 'auth',
           builder: (context, state) => const AuthPage(),
-          routes: []
+          routes: [
+            GoRoute(
+              path: 'welcome/:name',
+              builder: (context, state) =>  WelcomePage(name: state.pathParameters['name']!,),
+            ),
+          ]
         ),
       ],
     ),
@@ -34,10 +39,6 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => TripViewPage(
         id: state.pathParameters['id']!,
       ),
-    ),
-    GoRoute(
-      path: '/welcome/:name',
-      builder: (context, state) =>  WelcomePage(name: state.pathParameters['name']!,),
     ),
     GoRoute(
       path: '/results_search_trip',
