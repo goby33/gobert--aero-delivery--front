@@ -27,7 +27,7 @@ class _CreateUserState extends State<CreateUser> {
       ),
       child: BlocConsumer<CreateUserCubit, CreateUserState>(
         listener: (context, state) => state.maybeMap(
-          success: (value) => context.push('/home'),
+          success: (value) => context.push('/auth/welcome/ppp'),
           register: (value) => context.push('/home'),
           orElse: () => null,
         ),

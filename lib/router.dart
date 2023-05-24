@@ -8,10 +8,11 @@ import 'package:aero_delivery/presentation/ui/home/home_page.dart';
 import 'package:aero_delivery/presentation/ui/results_search_trip/results_search_trip_page.dart';
 import 'package:aero_delivery/presentation/ui/splash/splash_page.dart';
 import 'package:aero_delivery/presentation/ui/trip_view/TripViewPage.dart';
+import 'package:aero_delivery/presentation/ui/welcome/welcome_page.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/welcome/toto',
   routes: [
     GoRoute(
       path: '/',
@@ -24,6 +25,7 @@ final GoRouter appRouter = GoRouter(
         GoRoute(
           path: 'auth',
           builder: (context, state) => const AuthPage(),
+          routes: []
         ),
       ],
     ),
@@ -32,6 +34,10 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => TripViewPage(
         id: state.pathParameters['id']!,
       ),
+    ),
+    GoRoute(
+      path: '/welcome/:name',
+      builder: (context, state) =>  WelcomePage(name: state.pathParameters['name']!,),
     ),
     GoRoute(
       path: '/results_search_trip',

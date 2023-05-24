@@ -4,10 +4,10 @@ import 'package:aero_delivery/domain/repositories/picker_photo_repository.dart';
 import 'package:image_picker/image_picker.dart';
 
 class PickerPhotoRepositoryImpl with PickerPhotoRepository {
-  final PickerPhotoTools _pickerPhotoTools;
+  final PickerPhotoTools _pickerPhotoTools = PickerPhotoTools.getInstance();
   static XFile? _imageFileList;
 
-  PickerPhotoRepositoryImpl._(this._pickerPhotoTools);
+  PickerPhotoRepositoryImpl();
 
   @override
   Future<ApiResponse<String>> getImage({

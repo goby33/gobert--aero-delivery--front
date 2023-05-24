@@ -1,5 +1,4 @@
 import 'package:aero_delivery/config/api_response.dart';
-import 'package:aero_delivery/data/models/user_model.dart';
 import 'package:aero_delivery/domain/entities/user_entity.dart';
 
 mixin UserCloudFirestoreRepository {
@@ -17,4 +16,11 @@ mixin UserCloudFirestoreRepository {
   });
 
   UserEntity? getUserModelData();
+
+  Future<ApiResponse<void>> updateUserUrlImage({
+    required String uid,
+    required String urlImage,
+  });
+
+
 }

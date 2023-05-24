@@ -26,6 +26,8 @@ class UserCloudFirestoreRepositoryImpl with UserCloudFirestoreRepository {
     );
   }
 
+
+
   @override
   Future<ApiResponse<UserEntity>> getUserModel({
     required String uid,
@@ -66,4 +68,22 @@ class UserCloudFirestoreRepositoryImpl with UserCloudFirestoreRepository {
       return FailResponse(e.code, failure: e.message);
     }
   }
+
+  //update urlImage
+  @override
+  Future<ApiResponse<void>> updateUserUrlImage({
+    required String uid,
+    required String urlImage,
+  }) async {
+    try {
+      await _userCloudFirestoreApi.updateUserUrlImage(
+        uid: uid,
+        urlImage: urlImage,
+      );
+      return SuccessResponse(1.toString(), null);
+    } on FirebaseAuthException catch (e) {
+      return FailResponse(e.code, failure: e.message);
+    }
+  }
+
 }

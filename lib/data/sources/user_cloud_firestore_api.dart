@@ -12,6 +12,11 @@ abstract class UserCloudFirestoreApi {
   Future<UserModel?> getUserModel({
     required String uid,
   });
+
+  Future<void> updateUserUrlImage({
+    required String uid,
+    required String urlImage,
+  });
 }
 
 class _UserCloudFirestore implements UserCloudFirestoreApi {
@@ -30,6 +35,16 @@ class _UserCloudFirestore implements UserCloudFirestoreApi {
     required String uid,
   }) async {
     await _tripsCollectionReference.doc(uid).set(userModel);
+  }
+
+  @override
+  //updateUserUrlImage
+  @override
+  Future<void> updateUserUrlImage({
+    required String uid,
+    required String urlImage,
+  }) async {
+    await _tripsCollectionReference.doc(uid).update({'urlImage': urlImage});
   }
 
   // GETTERS
