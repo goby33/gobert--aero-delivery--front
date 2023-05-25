@@ -24,6 +24,39 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
   }
 
   @override
+  Future<ApiResponse<ResultSearchTripEntity?>> getTrip({
+    required String idTrip,
+  }) async {
+    try {
+      final responseApi = await _cloudFirestoreApi.getTrip(idTrip: idTrip);
+      final response = responseApi != null
+          ? ResultSearchTripEntity(
+              tripId: responseApi.tripId,
+              resultsTrip: TripEntity(
+                uidUser: responseApi.resultsTrip.uidUser,
+                airportFrom: responseApi.resultsTrip.airportFrom,
+                airportFromLocation: LocationEntity(
+                  latitude: responseApi.resultsTrip.airportFromLocation.latitude,
+                  longitude: responseApi.resultsTrip.airportFromLocation.longitude,
+                ),
+                airportTo: responseApi.resultsTrip.airportTo,
+                airportToLocation: LocationEntity(
+                  latitude: responseApi.resultsTrip.airportToLocation.latitude,
+                  longitude: responseApi.resultsTrip.airportToLocation.longitude,
+                ),
+                dateOfDeparture: responseApi.resultsTrip.dateOfDeparture.toDate(),
+                dateOfArrival: responseApi.resultsTrip.dateOfArrival.toDate(),
+                freeWeight: responseApi.resultsTrip.freeWeight,
+              ),
+            )
+          : null;
+      return SuccessResponse(401.toString(), response);
+    } on FirebaseAuthException catch (e) {
+      return FailResponse(e.code, failure: e.message);
+    }
+  }
+
+  @override
   Future<ApiResponse<List<ResultSearchTripEntity>>> searchTrip({
     required String airportFrom,
     required String airportTo,
@@ -31,7 +64,7 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
     required DateTime dateOfArrival,
   }) async {
     try {
-      final responseApi = await _cloudFirestoreApi.getTrips(
+      final responseApi = await _cloudFirestoreApi.searchTrips(
         airportFrom: airportFrom,
         airportTo: airportTo,
         dateOfDeparture: dateOfDeparture,

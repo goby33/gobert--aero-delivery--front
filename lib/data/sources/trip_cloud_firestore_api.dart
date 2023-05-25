@@ -10,11 +10,15 @@ abstract class TripCloudFirestoreApi {
     required TripEntity trip,
   });
 
-  Future<List<ResultSearchTripModel>?> getTrips({
+  Future<List<ResultSearchTripModel>?> searchTrips({
     required String? airportFrom,
     required String? airportTo,
     required DateTime? dateOfDeparture,
     required DateTime? dateOfArrival,
+  });
+
+  Future<ResultSearchTripModel?> getTrip({
+    required String idTrip,
   });
 }
 
@@ -44,7 +48,7 @@ class _TripCloudFirestore implements TripCloudFirestoreApi {
   }
 
   @override
-  Future<List<ResultSearchTripModel>?> getTrips({
+  Future<List<ResultSearchTripModel>?> searchTrips({
     required String? airportFrom,
     required String? airportTo,
     required DateTime? dateOfDeparture,
@@ -60,5 +64,19 @@ class _TripCloudFirestore implements TripCloudFirestoreApi {
         )
         .toList();
     return listTrips;
+  }
+
+
+  @override
+  Future<ResultSearchTripModel?> getTrip({
+    required String idTrip,
+}) async {
+    final response = await _tripsCollectionReference.doc(idTrip).get();
+    if (!response.exists) return null;
+    final trip = ResultSearchTripModel(
+      tripId: response.id,
+      resultsTrip: response.data()!,
+    );
+    return trip;
   }
 }

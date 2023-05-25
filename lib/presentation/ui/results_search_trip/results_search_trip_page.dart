@@ -37,7 +37,7 @@ class ResultsSearchTripPage extends StatelessWidget {
                   ),
                   itemBuilder: (context, index) => ListTile(
                     onTap: () =>
-                        context.go('/view_trip/${state.results[index].tripId}'),
+                        context.push('/view_trip/${state.results[index].tripId}'),
                     title: Text(
                         state.results[index].resultsTrip.airportFrom ?? ""),
                     subtitle:

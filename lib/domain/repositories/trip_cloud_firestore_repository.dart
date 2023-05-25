@@ -13,4 +13,8 @@ mixin TripCloudFirestoreRepository {
     required DateTime dateOfDeparture,
     required DateTime dateOfArrival,
   });
+
+  Future<ApiResponse<ResultSearchTripEntity?>> getTrip({
+    required String idTrip,
+  });
 }

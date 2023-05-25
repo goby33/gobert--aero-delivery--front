@@ -13,7 +13,9 @@ class ResumeTripPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<AddTripCubit, PopUpAddTripState>(
       listener: (context, state) => state.maybeMap(
-        success: (value) => context.go('/view_trip/${state.id}'),
+        success: (value) {
+          // clear history navigation
+          context.go('/view_trip/${state.id}'); },
         orElse: () => print('ppp'),
       ),
       builder: (context, state) {
