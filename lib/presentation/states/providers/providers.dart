@@ -9,6 +9,7 @@ import 'package:aero_delivery/data/sources/google_place_api.dart';
 import 'package:aero_delivery/data/sources/picture_cloud_storage_api.dart';
 import 'package:aero_delivery/data/sources/trip_cloud_firestore_api.dart';
 import 'package:aero_delivery/data/sources/user_cloud_firestore_api.dart';
+import 'package:aero_delivery/domain/entities/trip_entity.dart';
 import 'package:aero_delivery/domain/repositories/auth_firebase_repository.dart';
 import 'package:aero_delivery/domain/repositories/google_place_repository.dart';
 import 'package:aero_delivery/domain/repositories/picker_photo_repository.dart';
@@ -99,6 +100,7 @@ final blocs = <BlocProvider>[
     create: (context) => AddTripCubit(
       googlePlaceRepository: context.read(),
       tripCloudFirestoreRepository: context.read(),
+      trip: null,
     ),
   ),
   BlocProvider<SearchTripCubit>(

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TextFieldAddTrip extends StatefulWidget {
+class TextFieldSearchTrip extends StatefulWidget {
   final Function(String) onChanged;
   final Function() onClear;
   final bool hideText;
   final String? value;
-  const TextFieldAddTrip({
+  const TextFieldSearchTrip({
     Key? key,
     required this.onChanged,
     required this.onClear,
@@ -14,10 +14,10 @@ class TextFieldAddTrip extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<TextFieldAddTrip> createState() => _TextFieldAddTripState();
+  State<TextFieldSearchTrip> createState() => _TextFieldSearchTripState();
 }
 
-class _TextFieldAddTripState extends State<TextFieldAddTrip> {
+class _TextFieldSearchTripState extends State<TextFieldSearchTrip> {
   final TextEditingController _searchAirportController =
       TextEditingController();
 

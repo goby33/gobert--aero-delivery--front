@@ -1,5 +1,5 @@
+import 'package:aero_delivery/presentation/states/add_trip_state.dart';
 import 'package:aero_delivery/presentation/states/cubits/add_trip_cubit.dart';
-import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/button_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/title_add_trip.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ class ResumeTripPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AddTripCubit, PopUpAddTripState>(
+    return BlocConsumer<AddTripCubit, AddTripState>(
       listener: (context, state) => state.maybeMap(
         success: (value) {
           // clear history navigation
@@ -19,7 +19,7 @@ class ResumeTripPage extends StatelessWidget {
         orElse: () => print('ppp'),
       ),
       builder: (context, state) {
-        return BlocBuilder<AddTripCubit, PopUpAddTripState>(
+        return BlocBuilder<AddTripCubit, AddTripState>(
           builder: (context, state) {
             return Scaffold(
               backgroundColor: Colors.white,
@@ -41,14 +41,14 @@ class ResumeTripPage extends StatelessWidget {
                       //roadmap
                       const TitleAddTrip(title: "Resume your trip : "),
                       Text(
-                        state.trip?.airportFrom ?? "No airport selected",
+                        "No airport selected",
                         style: const TextStyle(
                             fontSize: 20,
                             fontFamily: 'Nunito',
                             color: Color(0xFFF79F79)),
                       ),
                       Text(
-                        state.trip?.airportTo ?? "No airport selected",
+                        "No airport selected",
                         style: const TextStyle(
                             fontSize: 20,
                             fontFamily: 'Nunito',

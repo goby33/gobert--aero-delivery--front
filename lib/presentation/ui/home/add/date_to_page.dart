@@ -1,5 +1,5 @@
+import 'package:aero_delivery/presentation/states/add_trip_state.dart';
 import 'package:aero_delivery/presentation/states/cubits/add_trip_cubit.dart';
-import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/button_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/title_add_trip.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +12,7 @@ class DateToPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AddTripCubit, PopUpAddTripState>(
+    return BlocBuilder<AddTripCubit, AddTripState>(
       builder: (context, state) {
         return Scaffold(
           backgroundColor: Colors.white,
@@ -22,9 +22,6 @@ class DateToPage extends StatelessWidget {
             leading: IconButton(
               icon: const Icon(Icons.arrow_back, color: Colors.black),
               onPressed: () {
-                context
-                    .read<AddTripCubit>()
-                    .addAirportToSelected(state.trip!.airportTo!);
                 Navigator.of(context).pop();
               },
             ),
@@ -47,7 +44,7 @@ class DateToPage extends StatelessWidget {
                       firstDay: DateTime.utc(2010, 10, 16),
                       lastDay: DateTime.utc(2030, 3, 14),
                       focusedDay:
-                          (state is PopUpAddTripStateAddDateOfArrivalSelected)
+                          (state is AddTripStateDateOfArrivalSelected)
                               ? state.trip?.dateOfArrival ?? DateTime.now()
                               : DateTime.now(),
                       selectedDayPredicate: (day) => isSameDay(
@@ -60,13 +57,12 @@ class DateToPage extends StatelessWidget {
                 ),
                 ButtonAddTrip(
                   onPressed: () {
-                    context.read<AddTripCubit>().addDateOfArrivalReady();
                     context.push(
                         '/add_trip/date_from/airport_to/date_to/weight_free');
                   },
                   text: 'Next',
                   isEnable:
-                      (state is PopUpAddTripStateAddDateOfArrivalSelected),
+                      (state is AddTripStateDateOfArrivalSelected),
                 ),
               ],
             ),

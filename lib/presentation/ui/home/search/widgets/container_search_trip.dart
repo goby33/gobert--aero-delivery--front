@@ -1,5 +1,5 @@
-import 'package:aero_delivery/presentation/states/cubits/pop_up_search_trip_cubit.dart';
-import 'package:aero_delivery/presentation/states/pop_up_search_trip_state.dart';
+import 'package:aero_delivery/presentation/states/cubits/search_place_cubit.dart';
+import 'package:aero_delivery/presentation/states/search_place_state.dart';
 import 'package:aero_delivery/presentation/ui/home/search/widgets/result_search_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/search/widgets/textField_search_trip.dart';
 import 'package:flutter/material.dart';
@@ -31,10 +31,10 @@ class ContainerFieldSearchTrip extends StatelessWidget {
               context: context,
               builder: (BuildContext context) {
                 return BlocProvider(
-                  create: (context) => PopUpSearchTripCubit(
+                  create: (context) => SearchPlaceCubit(
                     googlePlaceRepository: context.read(),
                   ),
-                  child: BlocBuilder<PopUpSearchTripCubit, PopUpSearchTripState>(
+                  child: BlocBuilder<SearchPlaceCubit, SearchPlaceState>(
                     builder: (context, state) {
                       return SizedBox(
                         height: 600,
@@ -51,11 +51,11 @@ class ContainerFieldSearchTrip extends StatelessWidget {
                                   children: [
                                     TextFieldSearchTrip(
                                         onChanged: (value) {
-                                          context.read<PopUpSearchTripCubit>().searchAirport(value);
+                                          context.read<SearchPlaceCubit>().searchAirport(value);
                                         },
                                         onClear: () {},
                                         hideText: false),
-                                    if (state is PopUpSearchTripStateResult)
+                                    if (state is SearchPlaceStateResult)
                                       ResultSearchTrip(
                                         onPressed: (String) {
                                           onChanged(String);

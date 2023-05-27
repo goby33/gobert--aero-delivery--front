@@ -35,14 +35,14 @@ class _TripCloudFirestore implements TripCloudFirestoreApi {
     required TripEntity trip,
   }) async {
     final document = await _tripsCollectionReference.add(TripModel(
-        uidUser: trip.uidUser ?? '',
-        airportFrom: trip.airportFrom ?? '',
-        airportFromLocation: const GeoPoint(2, 3),
-        airportTo: trip.airportTo ?? '',
-        airportToLocation: const GeoPoint(2, 3),
+        uidUser: trip.uidUser ?? "",
+        airportFrom: trip.airportFrom!.name!,
+        airportFromLocation:  GeoPoint(trip.airportFrom!.location!.latitude, trip.airportFrom!.location!.longitude),
+        airportTo: trip.airportTo!.name!,
+        airportToLocation: GeoPoint(trip.airportTo!.location!.latitude, trip.airportTo!.location!.longitude),
         dateOfDeparture: Timestamp.fromDate(trip.dateOfDeparture!),
         dateOfArrival: Timestamp.fromDate(trip.dateOfArrival!),
-        freeWeight: trip.freeWeight ?? "small"));
+        freeWeight: trip.freeWeight!));
     final docSnap = await document.get();
     return docSnap.reference.id;
   }

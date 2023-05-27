@@ -10,10 +10,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 
 class PickerImageCubit extends Cubit<PickerImageState> {
-  AuthFirebaseRepository authFirebaseRepository;
-  PickerPhotoRepository pickerPhotoRepository;
-  PictureCloudStorageRepository pictureCloudStorageRepository;
-  UserCloudFirestoreRepository userCloudFirestoreRepository;
+  final AuthFirebaseRepository authFirebaseRepository;
+  final PickerPhotoRepository pickerPhotoRepository;
+  final PictureCloudStorageRepository pictureCloudStorageRepository;
+  final UserCloudFirestoreRepository userCloudFirestoreRepository;
 
 
 

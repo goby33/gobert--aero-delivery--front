@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'search_address_responses_entity.dart';
+part of 'place_entity.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,24 +15,22 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$SearchAddressResponsesEntity {
+mixin _$PlaceEntity {
   String? get name => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get iconBackground => throw _privateConstructorUsedError;
   LocationEntity? get location => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SearchAddressResponsesEntityCopyWith<SearchAddressResponsesEntity>
-      get copyWith => throw _privateConstructorUsedError;
+  $PlaceEntityCopyWith<PlaceEntity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SearchAddressResponsesEntityCopyWith<$Res> {
-  factory $SearchAddressResponsesEntityCopyWith(
-          SearchAddressResponsesEntity value,
-          $Res Function(SearchAddressResponsesEntity) then) =
-      _$SearchAddressResponsesEntityCopyWithImpl<$Res,
-          SearchAddressResponsesEntity>;
+abstract class $PlaceEntityCopyWith<$Res> {
+  factory $PlaceEntityCopyWith(
+          PlaceEntity value, $Res Function(PlaceEntity) then) =
+      _$PlaceEntityCopyWithImpl<$Res, PlaceEntity>;
   @useResult
   $Res call(
       {String? name,
@@ -44,10 +42,9 @@ abstract class $SearchAddressResponsesEntityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchAddressResponsesEntityCopyWithImpl<$Res,
-        $Val extends SearchAddressResponsesEntity>
-    implements $SearchAddressResponsesEntityCopyWith<$Res> {
-  _$SearchAddressResponsesEntityCopyWithImpl(this._value, this._then);
+class _$PlaceEntityCopyWithImpl<$Res, $Val extends PlaceEntity>
+    implements $PlaceEntityCopyWith<$Res> {
+  _$PlaceEntityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -96,12 +93,11 @@ class _$SearchAddressResponsesEntityCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SearchAddressResponsesEntityCopyWith<$Res>
-    implements $SearchAddressResponsesEntityCopyWith<$Res> {
-  factory _$$_SearchAddressResponsesEntityCopyWith(
-          _$_SearchAddressResponsesEntity value,
-          $Res Function(_$_SearchAddressResponsesEntity) then) =
-      __$$_SearchAddressResponsesEntityCopyWithImpl<$Res>;
+abstract class _$$_PlaceEntityCopyWith<$Res>
+    implements $PlaceEntityCopyWith<$Res> {
+  factory _$$_PlaceEntityCopyWith(
+          _$_PlaceEntity value, $Res Function(_$_PlaceEntity) then) =
+      __$$_PlaceEntityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -115,13 +111,11 @@ abstract class _$$_SearchAddressResponsesEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SearchAddressResponsesEntityCopyWithImpl<$Res>
-    extends _$SearchAddressResponsesEntityCopyWithImpl<$Res,
-        _$_SearchAddressResponsesEntity>
-    implements _$$_SearchAddressResponsesEntityCopyWith<$Res> {
-  __$$_SearchAddressResponsesEntityCopyWithImpl(
-      _$_SearchAddressResponsesEntity _value,
-      $Res Function(_$_SearchAddressResponsesEntity) _then)
+class __$$_PlaceEntityCopyWithImpl<$Res>
+    extends _$PlaceEntityCopyWithImpl<$Res, _$_PlaceEntity>
+    implements _$$_PlaceEntityCopyWith<$Res> {
+  __$$_PlaceEntityCopyWithImpl(
+      _$_PlaceEntity _value, $Res Function(_$_PlaceEntity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -132,7 +126,7 @@ class __$$_SearchAddressResponsesEntityCopyWithImpl<$Res>
     Object? iconBackground = freezed,
     Object? location = freezed,
   }) {
-    return _then(_$_SearchAddressResponsesEntity(
+    return _then(_$_PlaceEntity(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -155,8 +149,8 @@ class __$$_SearchAddressResponsesEntityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SearchAddressResponsesEntity implements _SearchAddressResponsesEntity {
-  const _$_SearchAddressResponsesEntity(
+class _$_PlaceEntity implements _PlaceEntity {
+  const _$_PlaceEntity(
       {required this.name,
       required this.icon,
       required this.iconBackground,
@@ -173,14 +167,14 @@ class _$_SearchAddressResponsesEntity implements _SearchAddressResponsesEntity {
 
   @override
   String toString() {
-    return 'SearchAddressResponsesEntity(name: $name, icon: $icon, iconBackground: $iconBackground, location: $location)';
+    return 'PlaceEntity(name: $name, icon: $icon, iconBackground: $iconBackground, location: $location)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchAddressResponsesEntity &&
+            other is _$_PlaceEntity &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.iconBackground, iconBackground) ||
@@ -196,19 +190,16 @@ class _$_SearchAddressResponsesEntity implements _SearchAddressResponsesEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchAddressResponsesEntityCopyWith<_$_SearchAddressResponsesEntity>
-      get copyWith => __$$_SearchAddressResponsesEntityCopyWithImpl<
-          _$_SearchAddressResponsesEntity>(this, _$identity);
+  _$$_PlaceEntityCopyWith<_$_PlaceEntity> get copyWith =>
+      __$$_PlaceEntityCopyWithImpl<_$_PlaceEntity>(this, _$identity);
 }
 
-abstract class _SearchAddressResponsesEntity
-    implements SearchAddressResponsesEntity {
-  const factory _SearchAddressResponsesEntity(
-          {required final String? name,
-          required final String? icon,
-          required final String? iconBackground,
-          required final LocationEntity? location}) =
-      _$_SearchAddressResponsesEntity;
+abstract class _PlaceEntity implements PlaceEntity {
+  const factory _PlaceEntity(
+      {required final String? name,
+      required final String? icon,
+      required final String? iconBackground,
+      required final LocationEntity? location}) = _$_PlaceEntity;
 
   @override
   String? get name;
@@ -220,6 +211,6 @@ abstract class _SearchAddressResponsesEntity
   LocationEntity? get location;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchAddressResponsesEntityCopyWith<_$_SearchAddressResponsesEntity>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_PlaceEntityCopyWith<_$_PlaceEntity> get copyWith =>
+      throw _privateConstructorUsedError;
 }

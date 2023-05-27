@@ -1,6 +1,5 @@
+import 'package:aero_delivery/presentation/states/add_trip_state.dart';
 import 'package:aero_delivery/presentation/states/cubits/add_trip_cubit.dart';
-
-import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/button_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/title_add_trip.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +11,7 @@ class ChooseFreeWeightPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AddTripCubit, PopUpAddTripState>(
+    return BlocBuilder<AddTripCubit, AddTripState>(
       builder: (context, state) {
         return Scaffold(
           backgroundColor: Colors.white,
@@ -98,12 +97,11 @@ class ChooseFreeWeightPage extends StatelessWidget {
                 ButtonAddTrip(
                   // TODO: remove this
                   onPressed: () {
-                    context.read<AddTripCubit>().addFreeWeightReady();
                     context.push(
                         '/add_trip/date_from/airport_to/date_to/weight_free/resume');
                   },
                   text: 'Next',
-                  isEnable: (state is PopUpAddTripStateAddFreeWeightSelected),
+                  isEnable: (state is AddTripStateFreeWeightSelected),
                 ),
               ],
             ),

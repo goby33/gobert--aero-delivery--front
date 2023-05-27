@@ -45,13 +45,13 @@ class TripViewPage extends StatelessWidget {
                           ),
                         ),
                         TripLineTile(
-                          title: state.searchTripEntity!.resultsTrip.airportFrom!,
+                          title: state.searchTripEntity!.resultsTrip.airportFrom!.name!,
                           icon: Icons.flight_takeoff,
                           isFirst: true,
                           isLast: false,
                         ),
                         TripLineTile(
-                          title: state.searchTripEntity!.resultsTrip.airportTo!,
+                          title: state.searchTripEntity!.resultsTrip.airportTo!.name!,
                           icon: Icons.flight_land,
                           isFirst: false,
                           isLast: true,

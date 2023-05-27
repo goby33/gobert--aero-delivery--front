@@ -1,10 +1,10 @@
-import 'package:aero_delivery/domain/entities/search_address_responses_entity.dart';
+import 'package:aero_delivery/domain/entities/place_entity.dart';
 import 'package:aero_delivery/presentation/ui/commons/avatar.dart';
 import 'package:flutter/material.dart';
 
 class ResultSearchTrip extends StatefulWidget {
   final Function(String) onPressed;
-  final List<SearchAddressResponsesEntity> resultSearch;
+  final List<PlaceEntity> resultSearch;
   const ResultSearchTrip({
     Key? key,
     required this.onPressed,

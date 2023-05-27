@@ -1,6 +1,8 @@
 import 'package:aero_delivery/config/api_response.dart';
+import 'package:aero_delivery/data/models/result_search_trip_model.dart';
 import 'package:aero_delivery/data/sources/trip_cloud_firestore_api.dart';
 import 'package:aero_delivery/domain/entities/location_entity.dart';
+import 'package:aero_delivery/domain/entities/place_entity.dart';
 import 'package:aero_delivery/domain/entities/result_search_trip_entity.dart';
 import 'package:aero_delivery/domain/entities/trip_entity.dart';
 import 'package:aero_delivery/domain/repositories/trip_cloud_firestore_repository.dart';
@@ -24,33 +26,14 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
   }
 
   @override
-  Future<ApiResponse<ResultSearchTripEntity?>> getTrip({
+  Future<ApiResponse<ResultSearchTripEntity>> getTrip({
     required String idTrip,
   }) async {
     try {
       final responseApi = await _cloudFirestoreApi.getTrip(idTrip: idTrip);
-      final response = responseApi != null
-          ? ResultSearchTripEntity(
-              tripId: responseApi.tripId,
-              resultsTrip: TripEntity(
-                uidUser: responseApi.resultsTrip.uidUser,
-                airportFrom: responseApi.resultsTrip.airportFrom,
-                airportFromLocation: LocationEntity(
-                  latitude: responseApi.resultsTrip.airportFromLocation.latitude,
-                  longitude: responseApi.resultsTrip.airportFromLocation.longitude,
-                ),
-                airportTo: responseApi.resultsTrip.airportTo,
-                airportToLocation: LocationEntity(
-                  latitude: responseApi.resultsTrip.airportToLocation.latitude,
-                  longitude: responseApi.resultsTrip.airportToLocation.longitude,
-                ),
-                dateOfDeparture: responseApi.resultsTrip.dateOfDeparture.toDate(),
-                dateOfArrival: responseApi.resultsTrip.dateOfArrival.toDate(),
-                freeWeight: responseApi.resultsTrip.freeWeight,
-              ),
-            )
-          : null;
-      return SuccessResponse(401.toString(), response);
+      if (responseApi == null) return FailResponse(404.toString(), failure: 'Trip not found');
+      final response = _mapResultSearchTripModelToResultSearchTripEntity([responseApi]);
+      return SuccessResponse(401.toString(), response.first);
     } on FirebaseAuthException catch (e) {
       return FailResponse(e.code, failure: e.message);
     }
@@ -70,36 +53,47 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
         dateOfDeparture: dateOfDeparture,
         dateOfArrival: dateOfArrival,
       );
-      final response = responseApi
-              ?.map(
-                (trip) => ResultSearchTripEntity(
-                  tripId: trip.tripId,
-                  resultsTrip: TripEntity(
-                    uidUser: trip.resultsTrip.uidUser,
-                    airportFrom: trip.resultsTrip.airportFrom,
-                    airportFromLocation: LocationEntity(
-                      latitude: trip.resultsTrip.airportFromLocation.latitude,
-                      longitude: trip.resultsTrip.airportFromLocation.longitude,
-                    ),
-                    airportTo: trip.resultsTrip.airportTo,
-                    airportToLocation: LocationEntity(
-                      latitude: trip.resultsTrip.airportToLocation.latitude,
-                      longitude: trip.resultsTrip.airportToLocation.longitude,
-                    ),
-                    dateOfDeparture: trip.resultsTrip.dateOfDeparture.toDate(),
-                    dateOfArrival: trip.resultsTrip.dateOfArrival.toDate(),
-                    freeWeight: trip.resultsTrip.freeWeight,
-                  ),
-                ),
-              )
-              .toList() ??
-          [];
+      final response = (responseApi == null) ? [] : _mapResultSearchTripModelToResultSearchTripEntity(responseApi);
       return SuccessResponse(
         402.toString(),
-        response,
+        [...response],
       );
     } on FirebaseAuthException catch (e) {
       return FailResponse(e.code, failure: e.message);
     }
+  }
+
+  List<ResultSearchTripEntity> _mapResultSearchTripModelToResultSearchTripEntity(List<ResultSearchTripModel> response) {
+    return response
+        .map(
+          (trip) => ResultSearchTripEntity(
+            tripId: trip.tripId,
+            resultsTrip: TripEntity(
+              uidUser: trip.resultsTrip.uidUser,
+              airportFrom: PlaceEntity(
+                name: trip.resultsTrip.airportFrom,
+                icon: null,
+                iconBackground: null,
+                location: LocationEntity(
+                  latitude: trip.resultsTrip.airportFromLocation.latitude,
+                  longitude: trip.resultsTrip.airportFromLocation.longitude,
+                ),
+              ),
+              airportTo: PlaceEntity(
+                name: trip.resultsTrip.airportTo,
+                icon: null,
+                iconBackground: null,
+                location: LocationEntity(
+                  latitude: trip.resultsTrip.airportToLocation.latitude,
+                  longitude: trip.resultsTrip.airportToLocation.longitude,
+                ),
+              ),
+              dateOfDeparture: trip.resultsTrip.dateOfDeparture.toDate(),
+              dateOfArrival: trip.resultsTrip.dateOfArrival.toDate(),
+              freeWeight: trip.resultsTrip.freeWeight,
+            ),
+          ),
+        )
+        .toList();
   }
 }
