@@ -18,7 +18,11 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     //sign in
-    return BlocConsumer<SignInCubit, SignInState>(
+    return BlocProvider<SignInCubit>(
+      create: (context) => SignInCubit(
+        authFirebaseRepository: context.read(),
+      ),
+      child: BlocConsumer<SignInCubit, SignInState>(
         listener: (context, state) => state.maybeMap(
             signIn: (value) => context.push('/home'),
             success: (value) => context.push('/home'),
@@ -113,6 +117,7 @@ class _SignInState extends State<SignIn> {
             ),
           );
         },
+      ),
     );
   }
 }

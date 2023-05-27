@@ -14,6 +14,8 @@ abstract class AuthFirebaseApi {
   });
 
   Future<User?> getCurrentUser();
+
+  Future<void> signOut();
 }
 
 class _AuthFirebase implements AuthFirebaseApi {
@@ -49,5 +51,10 @@ class _AuthFirebase implements AuthFirebaseApi {
   @override
   Future<User?> getCurrentUser() async {
     return _firebaseAuthApi.currentUser;
+  }
+
+  @override
+  Future<void> signOut() async {
+    await _firebaseAuthApi.signOut();
   }
 }

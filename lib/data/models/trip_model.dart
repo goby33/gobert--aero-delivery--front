@@ -10,9 +10,6 @@ class TripModel {
   Timestamp dateOfArrival;
   String freeWeight;
 
-
-
-
   TripModel({
     required this.uidUser,
     required this.airportFrom,
@@ -22,7 +19,6 @@ class TripModel {
     required this.dateOfDeparture,
     required this.dateOfArrival,
     required this.freeWeight,
-
   });
 
   Map<String, dynamic> toJson() {

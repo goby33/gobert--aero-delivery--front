@@ -1,8 +1,7 @@
+import 'package:aero_delivery/presentation/states/add_trip_state.dart';
 import 'package:aero_delivery/presentation/states/cubits/add_trip_cubit.dart';
-import 'package:aero_delivery/presentation/states/pop_up_add_trip_state.dart';
+import 'package:aero_delivery/presentation/ui/commons/search_place/search_place_widget.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/button_add_trip.dart';
-import 'package:aero_delivery/presentation/ui/home/add/widgets/result_search_add_trip.dart';
-import 'package:aero_delivery/presentation/ui/home/add/widgets/textField_add_trip.dart';
 import 'package:aero_delivery/presentation/ui/home/add/widgets/title_add_trip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,54 +12,33 @@ class AirportFromPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AddTripCubit, PopUpAddTripState>(
-          builder: (context, state) {
-            //button to add a package
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  const TitleAddTrip(
-                    title: "What's your airport of departure ?",
-                  ),
-                  SizedBox(
-                    height: 300,
-                    child: Column(
-                      children: [
-                        TextFieldAddTrip(
-                          onChanged: (value) {
-                            context.read<AddTripCubit>().searchAirport(value);
-                          },
-                          onClear: () => context.read<AddTripCubit>().clearAirportFrom(),
-                          hideText: (state is PopUpAddTripStateAddAirportFromSelected),
-                          value:
-                              (state is PopUpAddTripStateAddAirportFromSelected) ? state.trip?.airportFrom ?? "" : null,
-                        ),
-                        if (state is PopUpAddTripStateLoading)
-                          const Padding(
-                            padding: EdgeInsets.only(top: 20.0),
-                            child: CircularProgressIndicator(),
-                          ),
-                        if (state is PopUpAddTripStateAirportResultSearch)
-                          ResultSearchAddTrip(
-                            resultSearch: state.resultSearch,
-                            onPressed: (value) {
-                              context.read<AddTripCubit>().addAirportFromSelected(value);
-                            },
-                          )
-                      ],
-                    ),
-                  ),
-                  ButtonAddTrip(
-                    isEnable: (state is PopUpAddTripStateAddAirportFromSelected),
-                    onPressed: () { context.read<AddTripCubit>().addAirportFromReady();context.push('/add_trip/date_from');},
-                    text: "Add this airport",
-                  ),
-                ],
+    final bloc = context.read<AddTripCubit>();
+    return BlocBuilder<AddTripCubit, AddTripState>(
+      builder: (context, state) {
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const TitleAddTrip(
+                title: "What's your airport of Departed ?",
               ),
-            );
-          },
+              SearchPlaceWidget(
+                onclick: (value) {
+                  bloc.addAirportFromSelected(value);
+                },
+              ),
+              ButtonAddTrip(
+                isEnable: (state is AddTripStateAirportFromSelected),
+                onPressed: () {
+                  GoRouter.of(context).push('/add_trip/date_from');
+                },
+                text: "Add this airport",
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

@@ -1,14 +1,14 @@
 import 'package:aero_delivery/config/api_response.dart';
-import 'package:aero_delivery/domain/repositories/auth_repository.dart';
+import 'package:aero_delivery/domain/repositories/auth_firebase_repository.dart';
 import 'package:aero_delivery/presentation/states/sign_in_state.dart';
 import 'package:bloc/bloc.dart';
 
 class SignInCubit extends Cubit<SignInState> {
-  final AuthRepository authRepository;
+  final AuthFirebaseRepository authFirebaseRepository;
 
   // call repository
   SignInCubit({
-    required this.authRepository,
+    required this.authFirebaseRepository,
   }) : super(SignInStateNoSignIn());
 
   // method to sign in user
@@ -22,7 +22,7 @@ class SignInCubit extends Cubit<SignInState> {
     emailValue = emailValue.trim();
     passwordValue = passwordValue.trim();
     // call authRepository
-    final responseAuthRepository = await authRepository.signInWithEmail(
+    final responseAuthRepository = await authFirebaseRepository.signInWithEmail(
       email: emailValue,
       password: passwordValue,
     );

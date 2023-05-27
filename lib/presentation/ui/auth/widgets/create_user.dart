@@ -12,6 +12,8 @@ class CreateUser extends StatefulWidget {
 }
 
 class _CreateUserState extends State<CreateUser> {
+  final firstNameController = TextEditingController();
+  final lastNameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final passwordConfirmController = TextEditingController();
@@ -20,11 +22,13 @@ class _CreateUserState extends State<CreateUser> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => CreateUserCubit(
-        authRepository: context.read(),
+        authFirebaseRepository: context.read(),
+        userFirebaseRepository: context.read(),
       ),
       child: BlocConsumer<CreateUserCubit, CreateUserState>(
         listener: (context, state) => state.maybeMap(
-          success: (value) => context.push('/home'),
+          success: (value) =>
+              context.push('/auth/welcome/${firstNameController.text}'),
           register: (value) => context.push('/home'),
           orElse: () => null,
         ),
@@ -38,6 +42,32 @@ class _CreateUserState extends State<CreateUser> {
                 Text(
                   "Register : ",
                   style: Theme.of(context).textTheme.headline5,
+                ),
+                SizedBox(
+                  height: 40,
+                  child: TextField(
+                    controller: firstNameController,
+                    decoration: const InputDecoration(
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red),
+                      ),
+                      border: OutlineInputBorder(),
+                      labelText: 'First name',
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                  child: TextField(
+                    controller: lastNameController,
+                    decoration: const InputDecoration(
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red),
+                      ),
+                      border: OutlineInputBorder(),
+                      labelText: 'last name',
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 40,
@@ -103,6 +133,8 @@ class _CreateUserState extends State<CreateUser> {
                     ),
                   ),
                   onPressed: () => context.read<CreateUserCubit>().createUser(
+                        firstNameValue: firstNameController.text,
+                        lastNameValue: lastNameController.text,
                         emailValue: emailController.text,
                         passwordValue: passwordController.text,
                         passwordConfirmationValue:

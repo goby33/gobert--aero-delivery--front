@@ -10,4 +10,3 @@ class SearchTripEntity with _$SearchTripEntity {
     required DateTime dateOfDeparture,
   }) = _SearchTripEntity;
 }
-

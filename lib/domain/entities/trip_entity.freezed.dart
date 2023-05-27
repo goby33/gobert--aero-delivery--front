@@ -17,10 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$TripEntity {
   String? get uidUser => throw _privateConstructorUsedError;
-  String? get airportFrom => throw _privateConstructorUsedError;
-  LocationEntity? get airportFromLocation => throw _privateConstructorUsedError;
-  String? get airportTo => throw _privateConstructorUsedError;
-  LocationEntity? get airportToLocation => throw _privateConstructorUsedError;
+  PlaceEntity? get airportFrom => throw _privateConstructorUsedError;
+  PlaceEntity? get airportTo => throw _privateConstructorUsedError;
   DateTime? get dateOfDeparture => throw _privateConstructorUsedError;
   DateTime? get dateOfArrival => throw _privateConstructorUsedError;
   String? get freeWeight => throw _privateConstructorUsedError;
@@ -38,16 +36,14 @@ abstract class $TripEntityCopyWith<$Res> {
   @useResult
   $Res call(
       {String? uidUser,
-      String? airportFrom,
-      LocationEntity? airportFromLocation,
-      String? airportTo,
-      LocationEntity? airportToLocation,
+      PlaceEntity? airportFrom,
+      PlaceEntity? airportTo,
       DateTime? dateOfDeparture,
       DateTime? dateOfArrival,
       String? freeWeight});
 
-  $LocationEntityCopyWith<$Res>? get airportFromLocation;
-  $LocationEntityCopyWith<$Res>? get airportToLocation;
+  $PlaceEntityCopyWith<$Res>? get airportFrom;
+  $PlaceEntityCopyWith<$Res>? get airportTo;
 }
 
 /// @nodoc
@@ -65,9 +61,7 @@ class _$TripEntityCopyWithImpl<$Res, $Val extends TripEntity>
   $Res call({
     Object? uidUser = freezed,
     Object? airportFrom = freezed,
-    Object? airportFromLocation = freezed,
     Object? airportTo = freezed,
-    Object? airportToLocation = freezed,
     Object? dateOfDeparture = freezed,
     Object? dateOfArrival = freezed,
     Object? freeWeight = freezed,
@@ -80,19 +74,11 @@ class _$TripEntityCopyWithImpl<$Res, $Val extends TripEntity>
       airportFrom: freezed == airportFrom
           ? _value.airportFrom
           : airportFrom // ignore: cast_nullable_to_non_nullable
-              as String?,
-      airportFromLocation: freezed == airportFromLocation
-          ? _value.airportFromLocation
-          : airportFromLocation // ignore: cast_nullable_to_non_nullable
-              as LocationEntity?,
+              as PlaceEntity?,
       airportTo: freezed == airportTo
           ? _value.airportTo
           : airportTo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      airportToLocation: freezed == airportToLocation
-          ? _value.airportToLocation
-          : airportToLocation // ignore: cast_nullable_to_non_nullable
-              as LocationEntity?,
+              as PlaceEntity?,
       dateOfDeparture: freezed == dateOfDeparture
           ? _value.dateOfDeparture
           : dateOfDeparture // ignore: cast_nullable_to_non_nullable
@@ -110,25 +96,25 @@ class _$TripEntityCopyWithImpl<$Res, $Val extends TripEntity>
 
   @override
   @pragma('vm:prefer-inline')
-  $LocationEntityCopyWith<$Res>? get airportFromLocation {
-    if (_value.airportFromLocation == null) {
+  $PlaceEntityCopyWith<$Res>? get airportFrom {
+    if (_value.airportFrom == null) {
       return null;
     }
 
-    return $LocationEntityCopyWith<$Res>(_value.airportFromLocation!, (value) {
-      return _then(_value.copyWith(airportFromLocation: value) as $Val);
+    return $PlaceEntityCopyWith<$Res>(_value.airportFrom!, (value) {
+      return _then(_value.copyWith(airportFrom: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LocationEntityCopyWith<$Res>? get airportToLocation {
-    if (_value.airportToLocation == null) {
+  $PlaceEntityCopyWith<$Res>? get airportTo {
+    if (_value.airportTo == null) {
       return null;
     }
 
-    return $LocationEntityCopyWith<$Res>(_value.airportToLocation!, (value) {
-      return _then(_value.copyWith(airportToLocation: value) as $Val);
+    return $PlaceEntityCopyWith<$Res>(_value.airportTo!, (value) {
+      return _then(_value.copyWith(airportTo: value) as $Val);
     });
   }
 }
@@ -143,18 +129,16 @@ abstract class _$$_TripEntityCopyWith<$Res>
   @useResult
   $Res call(
       {String? uidUser,
-      String? airportFrom,
-      LocationEntity? airportFromLocation,
-      String? airportTo,
-      LocationEntity? airportToLocation,
+      PlaceEntity? airportFrom,
+      PlaceEntity? airportTo,
       DateTime? dateOfDeparture,
       DateTime? dateOfArrival,
       String? freeWeight});
 
   @override
-  $LocationEntityCopyWith<$Res>? get airportFromLocation;
+  $PlaceEntityCopyWith<$Res>? get airportFrom;
   @override
-  $LocationEntityCopyWith<$Res>? get airportToLocation;
+  $PlaceEntityCopyWith<$Res>? get airportTo;
 }
 
 /// @nodoc
@@ -170,9 +154,7 @@ class __$$_TripEntityCopyWithImpl<$Res>
   $Res call({
     Object? uidUser = freezed,
     Object? airportFrom = freezed,
-    Object? airportFromLocation = freezed,
     Object? airportTo = freezed,
-    Object? airportToLocation = freezed,
     Object? dateOfDeparture = freezed,
     Object? dateOfArrival = freezed,
     Object? freeWeight = freezed,
@@ -185,19 +167,11 @@ class __$$_TripEntityCopyWithImpl<$Res>
       airportFrom: freezed == airportFrom
           ? _value.airportFrom
           : airportFrom // ignore: cast_nullable_to_non_nullable
-              as String?,
-      airportFromLocation: freezed == airportFromLocation
-          ? _value.airportFromLocation
-          : airportFromLocation // ignore: cast_nullable_to_non_nullable
-              as LocationEntity?,
+              as PlaceEntity?,
       airportTo: freezed == airportTo
           ? _value.airportTo
           : airportTo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      airportToLocation: freezed == airportToLocation
-          ? _value.airportToLocation
-          : airportToLocation // ignore: cast_nullable_to_non_nullable
-              as LocationEntity?,
+              as PlaceEntity?,
       dateOfDeparture: freezed == dateOfDeparture
           ? _value.dateOfDeparture
           : dateOfDeparture // ignore: cast_nullable_to_non_nullable
@@ -218,25 +192,19 @@ class __$$_TripEntityCopyWithImpl<$Res>
 
 class _$_TripEntity implements _TripEntity {
   const _$_TripEntity(
-      {required this.uidUser,
-      required this.airportFrom,
-      required this.airportFromLocation,
-      required this.airportTo,
-      required this.airportToLocation,
-      required this.dateOfDeparture,
-      required this.dateOfArrival,
-      required this.freeWeight});
+      {this.uidUser,
+      this.airportFrom,
+      this.airportTo,
+      this.dateOfDeparture,
+      this.dateOfArrival,
+      this.freeWeight});
 
   @override
   final String? uidUser;
   @override
-  final String? airportFrom;
+  final PlaceEntity? airportFrom;
   @override
-  final LocationEntity? airportFromLocation;
-  @override
-  final String? airportTo;
-  @override
-  final LocationEntity? airportToLocation;
+  final PlaceEntity? airportTo;
   @override
   final DateTime? dateOfDeparture;
   @override
@@ -246,7 +214,7 @@ class _$_TripEntity implements _TripEntity {
 
   @override
   String toString() {
-    return 'TripEntity(uidUser: $uidUser, airportFrom: $airportFrom, airportFromLocation: $airportFromLocation, airportTo: $airportTo, airportToLocation: $airportToLocation, dateOfDeparture: $dateOfDeparture, dateOfArrival: $dateOfArrival, freeWeight: $freeWeight)';
+    return 'TripEntity(uidUser: $uidUser, airportFrom: $airportFrom, airportTo: $airportTo, dateOfDeparture: $dateOfDeparture, dateOfArrival: $dateOfArrival, freeWeight: $freeWeight)';
   }
 
   @override
@@ -257,12 +225,8 @@ class _$_TripEntity implements _TripEntity {
             (identical(other.uidUser, uidUser) || other.uidUser == uidUser) &&
             (identical(other.airportFrom, airportFrom) ||
                 other.airportFrom == airportFrom) &&
-            (identical(other.airportFromLocation, airportFromLocation) ||
-                other.airportFromLocation == airportFromLocation) &&
             (identical(other.airportTo, airportTo) ||
                 other.airportTo == airportTo) &&
-            (identical(other.airportToLocation, airportToLocation) ||
-                other.airportToLocation == airportToLocation) &&
             (identical(other.dateOfDeparture, dateOfDeparture) ||
                 other.dateOfDeparture == dateOfDeparture) &&
             (identical(other.dateOfArrival, dateOfArrival) ||
@@ -272,16 +236,8 @@ class _$_TripEntity implements _TripEntity {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      uidUser,
-      airportFrom,
-      airportFromLocation,
-      airportTo,
-      airportToLocation,
-      dateOfDeparture,
-      dateOfArrival,
-      freeWeight);
+  int get hashCode => Object.hash(runtimeType, uidUser, airportFrom, airportTo,
+      dateOfDeparture, dateOfArrival, freeWeight);
 
   @JsonKey(ignore: true)
   @override
@@ -292,25 +248,19 @@ class _$_TripEntity implements _TripEntity {
 
 abstract class _TripEntity implements TripEntity {
   const factory _TripEntity(
-      {required final String? uidUser,
-      required final String? airportFrom,
-      required final LocationEntity? airportFromLocation,
-      required final String? airportTo,
-      required final LocationEntity? airportToLocation,
-      required final DateTime? dateOfDeparture,
-      required final DateTime? dateOfArrival,
-      required final String? freeWeight}) = _$_TripEntity;
+      {final String? uidUser,
+      final PlaceEntity? airportFrom,
+      final PlaceEntity? airportTo,
+      final DateTime? dateOfDeparture,
+      final DateTime? dateOfArrival,
+      final String? freeWeight}) = _$_TripEntity;
 
   @override
   String? get uidUser;
   @override
-  String? get airportFrom;
+  PlaceEntity? get airportFrom;
   @override
-  LocationEntity? get airportFromLocation;
-  @override
-  String? get airportTo;
-  @override
-  LocationEntity? get airportToLocation;
+  PlaceEntity? get airportTo;
   @override
   DateTime? get dateOfDeparture;
   @override

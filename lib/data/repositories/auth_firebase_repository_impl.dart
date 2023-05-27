@@ -1,13 +1,13 @@
 import 'package:aero_delivery/config/api_response.dart';
 import 'package:aero_delivery/data/sources/auth_firebase_api.dart';
-import 'package:aero_delivery/domain/repositories/auth_repository.dart';
+import 'package:aero_delivery/domain/repositories/auth_firebase_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class AuthRepositoryImpl with AuthRepository {
+class AuthFirebaseRepositoryImpl with AuthFirebaseRepository {
   final AuthFirebaseApi _authFirebase;
   static User? _user;
 
-  AuthRepositoryImpl(this._authFirebase);
+  AuthFirebaseRepositoryImpl(this._authFirebase);
 
   @override
   Future<ApiResponse<User>> createAccountWithEmail({
@@ -63,6 +63,17 @@ class AuthRepositoryImpl with AuthRepository {
       }
     } on FirebaseAuthException catch (e) {
       _user = null;
+      return FailResponse(e.code, failure: e.message);
+    }
+  }
+
+  @override
+  Future<ApiResponse> signOut() async {
+    try {
+      await _authFirebase.signOut();
+      _user = null;
+      return SuccessResponse(1.toString(), null);
+    } on FirebaseAuthException catch (e) {
       return FailResponse(e.code, failure: e.message);
     }
   }

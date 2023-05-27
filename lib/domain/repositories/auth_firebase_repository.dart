@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:aero_delivery/config/api_response.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-mixin AuthRepository {
+mixin AuthFirebaseRepository {
   Future<ApiResponse> createAccountWithEmail(
       {required String email, required String password});
 
@@ -14,10 +14,6 @@ mixin AuthRepository {
 
   Future<ApiResponse> getCurrentUser();
   User? get user;
-}
 
-//TODO
-//LOGIN
-//LOGOUT
-//DELETE ACCOUNT
-//FORGOT PASSWORD
+  Future<ApiResponse> signOut();
+}

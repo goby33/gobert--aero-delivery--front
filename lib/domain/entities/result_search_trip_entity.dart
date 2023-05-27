@@ -7,6 +7,6 @@ part 'result_search_trip_entity.freezed.dart';
 class ResultSearchTripEntity with _$ResultSearchTripEntity {
   const factory ResultSearchTripEntity({
     required String tripId,
-    required List<TripEntity> resultsTrip,
+    required TripEntity resultsTrip,
   }) = _ResultSearchTripEntity;
 }

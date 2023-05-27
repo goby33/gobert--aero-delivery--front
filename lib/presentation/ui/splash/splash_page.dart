@@ -11,7 +11,8 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => SplashCubit(
-        authRepository: context.read(),
+        authFirebaseRepository: context.read(),
+        userCloudFirestoreRepository: context.read(),
       ),
       child: BlocListener<SplashCubit, SplashState>(
         listener: (context, state) => state.maybeMap(

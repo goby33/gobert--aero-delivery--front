@@ -16,8 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LocationEntity {
-  double? get longitude => throw _privateConstructorUsedError;
-  double? get latitude => throw _privateConstructorUsedError;
+  double get longitude => throw _privateConstructorUsedError;
+  double get latitude => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LocationEntityCopyWith<LocationEntity> get copyWith =>
@@ -30,7 +30,7 @@ abstract class $LocationEntityCopyWith<$Res> {
           LocationEntity value, $Res Function(LocationEntity) then) =
       _$LocationEntityCopyWithImpl<$Res, LocationEntity>;
   @useResult
-  $Res call({double? longitude, double? latitude});
+  $Res call({double longitude, double latitude});
 }
 
 /// @nodoc
@@ -46,18 +46,18 @@ class _$LocationEntityCopyWithImpl<$Res, $Val extends LocationEntity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? longitude = freezed,
-    Object? latitude = freezed,
+    Object? longitude = null,
+    Object? latitude = null,
   }) {
     return _then(_value.copyWith(
-      longitude: freezed == longitude
+      longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
-              as double?,
-      latitude: freezed == latitude
+              as double,
+      latitude: null == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
     ) as $Val);
   }
 }
@@ -70,7 +70,7 @@ abstract class _$$_LocationEntityCopyWith<$Res>
       __$$_LocationEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double? longitude, double? latitude});
+  $Res call({double longitude, double latitude});
 }
 
 /// @nodoc
@@ -84,18 +84,18 @@ class __$$_LocationEntityCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? longitude = freezed,
-    Object? latitude = freezed,
+    Object? longitude = null,
+    Object? latitude = null,
   }) {
     return _then(_$_LocationEntity(
-      longitude: freezed == longitude
+      longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
-              as double?,
-      latitude: freezed == latitude
+              as double,
+      latitude: null == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
     ));
   }
 }
@@ -106,9 +106,9 @@ class _$_LocationEntity implements _LocationEntity {
   const _$_LocationEntity({required this.longitude, required this.latitude});
 
   @override
-  final double? longitude;
+  final double longitude;
   @override
-  final double? latitude;
+  final double latitude;
 
   @override
   String toString() {
@@ -138,13 +138,13 @@ class _$_LocationEntity implements _LocationEntity {
 
 abstract class _LocationEntity implements LocationEntity {
   const factory _LocationEntity(
-      {required final double? longitude,
-      required final double? latitude}) = _$_LocationEntity;
+      {required final double longitude,
+      required final double latitude}) = _$_LocationEntity;
 
   @override
-  double? get longitude;
+  double get longitude;
   @override
-  double? get latitude;
+  double get latitude;
   @override
   @JsonKey(ignore: true)
   _$$_LocationEntityCopyWith<_$_LocationEntity> get copyWith =>

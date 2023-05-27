@@ -19,7 +19,7 @@ class Avatar extends StatelessWidget {
     } else {
       return CircleAvatar(
         backgroundImage: Image.asset(
-          'assets/images/trivial-pursuit-logo.png',
+          'assets/images/aero-delivery-high.png',
           width: 200,
         ).image,
       );
