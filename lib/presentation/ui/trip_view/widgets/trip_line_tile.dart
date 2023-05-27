@@ -40,20 +40,19 @@ class TripLineTile extends StatelessWidget {
       endChild: Padding(
         padding: const EdgeInsets.only(bottom: 20.0),
         child: Container(
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          constraints: const BoxConstraints(
-            minHeight: 120,
-          ),
-          color: Colors.transparent,
-          child: Text(
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            constraints: const BoxConstraints(
+              minHeight: 120,
+            ),
+            color: Colors.transparent,
+            child: Text(
               title,
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
-            )
-          ),
+            )),
       ),
     );
   }

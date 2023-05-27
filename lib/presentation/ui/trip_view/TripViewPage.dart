@@ -25,9 +25,8 @@ class TripViewPage extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Theme.of(context).primaryColor,
               leading: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.black),
-                onPressed: () => Navigator.of(context).pop()
-              ),
+                  icon: const Icon(Icons.arrow_back, color: Colors.black),
+                  onPressed: () => Navigator.of(context).pop()),
               title: Text('TripViewPage'),
             ),
             body: (state is TripViewStateLoading)
@@ -45,13 +44,15 @@ class TripViewPage extends StatelessWidget {
                           ),
                         ),
                         TripLineTile(
-                          title: state.searchTripEntity!.resultsTrip.airportFrom!.name!,
+                          title: state
+                              .searchTripEntity!.resultsTrip.airportFrom!.name!,
                           icon: Icons.flight_takeoff,
                           isFirst: true,
                           isLast: false,
                         ),
                         TripLineTile(
-                          title: state.searchTripEntity!.resultsTrip.airportTo!.name!,
+                          title: state
+                              .searchTripEntity!.resultsTrip.airportTo!.name!,
                           icon: Icons.flight_land,
                           isFirst: false,
                           isLast: true,
@@ -63,7 +64,8 @@ class TripViewPage extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {},
-                          child: Text('Contact ${state.searchTripEntity!.resultsTrip.uidUser!}'),
+                          child: Text(
+                              'Contact ${state.searchTripEntity!.resultsTrip.uidUser!}'),
                         ),
                       ],
                     ),

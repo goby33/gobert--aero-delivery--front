@@ -30,30 +30,30 @@ class SearchTripCubit extends Cubit<SearchTripState> {
     }
   }
 
-
   void dateSelected(DateTime dateTime) {
     emit(SearchTripState.dateSelected(
       searchTripEntity: state.searchTripEntity?.copyWith(
-        dateOfDeparture: dateTime,
-      ) ?? SearchTripEntity(
-        airportFrom: '',
-        airportTo: '',
-        dateOfDeparture: dateTime,
-      ),
+            dateOfDeparture: dateTime,
+          ) ??
+          SearchTripEntity(
+            airportFrom: '',
+            airportTo: '',
+            dateOfDeparture: dateTime,
+          ),
     ));
   }
-
 
   // airport from selected
   void airportFromSelected(String airportFrom) {
     emit(SearchTripState.airportFromSelected(
       searchTripEntity: state.searchTripEntity?.copyWith(
-        airportFrom: airportFrom,
-      ) ?? SearchTripEntity(
-        airportFrom: airportFrom,
-        airportTo: '',
-        dateOfDeparture: DateTime.now(),
-      ),
+            airportFrom: airportFrom,
+          ) ??
+          SearchTripEntity(
+            airportFrom: airportFrom,
+            airportTo: '',
+            dateOfDeparture: DateTime.now(),
+          ),
     ));
   }
 
@@ -61,12 +61,13 @@ class SearchTripCubit extends Cubit<SearchTripState> {
   void airportToSelected(String airportTo) {
     emit(SearchTripState.airportToSelected(
       searchTripEntity: state.searchTripEntity?.copyWith(
-        airportTo: airportTo,
-      ) ?? SearchTripEntity(
-        airportFrom: '',
-        airportTo: airportTo,
-        dateOfDeparture: DateTime.now(),
-      ),
+            airportTo: airportTo,
+          ) ??
+          SearchTripEntity(
+            airportFrom: '',
+            airportTo: airportTo,
+            dateOfDeparture: DateTime.now(),
+          ),
     ));
   }
 
@@ -74,12 +75,13 @@ class SearchTripCubit extends Cubit<SearchTripState> {
   void flexibilitySelected(int flexibility) {
     emit(SearchTripState.flexibilitySelected(
       searchTripEntity: state.searchTripEntity?.copyWith(
-        //TODO: add flexibility
-      ) ?? SearchTripEntity(
-        airportFrom: '',
-        airportTo: '',
-        dateOfDeparture: DateTime.now(),
-      ),
+              //TODO: add flexibility
+              ) ??
+          SearchTripEntity(
+            airportFrom: '',
+            airportTo: '',
+            dateOfDeparture: DateTime.now(),
+          ),
     ));
   }
 

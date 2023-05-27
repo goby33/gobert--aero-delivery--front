@@ -37,9 +37,11 @@ class _TripCloudFirestore implements TripCloudFirestoreApi {
     final document = await _tripsCollectionReference.add(TripModel(
         uidUser: trip.uidUser ?? "",
         airportFrom: trip.airportFrom!.name!,
-        airportFromLocation:  GeoPoint(trip.airportFrom!.location!.latitude, trip.airportFrom!.location!.longitude),
+        airportFromLocation: GeoPoint(trip.airportFrom!.location!.latitude,
+            trip.airportFrom!.location!.longitude),
         airportTo: trip.airportTo!.name!,
-        airportToLocation: GeoPoint(trip.airportTo!.location!.latitude, trip.airportTo!.location!.longitude),
+        airportToLocation: GeoPoint(trip.airportTo!.location!.latitude,
+            trip.airportTo!.location!.longitude),
         dateOfDeparture: Timestamp.fromDate(trip.dateOfDeparture!),
         dateOfArrival: Timestamp.fromDate(trip.dateOfArrival!),
         freeWeight: trip.freeWeight!));
@@ -54,7 +56,9 @@ class _TripCloudFirestore implements TripCloudFirestoreApi {
     required DateTime? dateOfDeparture,
     required DateTime? dateOfArrival,
   }) async {
-    final response = await _tripsCollectionReference.where("dateOfDeparture", isGreaterThanOrEqualTo: dateOfDeparture).get();
+    final response = await _tripsCollectionReference
+        .where("dateOfDeparture", isGreaterThanOrEqualTo: dateOfDeparture)
+        .get();
     final listTrips = response.docs
         .map(
           (e) => ResultSearchTripModel(
@@ -66,11 +70,10 @@ class _TripCloudFirestore implements TripCloudFirestoreApi {
     return listTrips;
   }
 
-
   @override
   Future<ResultSearchTripModel?> getTrip({
     required String idTrip,
-}) async {
+  }) async {
     final response = await _tripsCollectionReference.doc(idTrip).get();
     if (!response.exists) return null;
     final trip = ResultSearchTripModel(

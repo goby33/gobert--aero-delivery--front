@@ -5,18 +5,13 @@ import 'package:aero_delivery/domain/repositories/google_place_repository.dart';
 import 'package:aero_delivery/presentation/states/search_place_state.dart';
 import 'package:bloc/bloc.dart';
 
-
-
-
 class SearchPlaceCubit extends Cubit<SearchPlaceState> {
   final GooglePlaceRepository googlePlaceRepository;
-   PlaceEntity? searchPlaceResponsesEntity;
-
+  PlaceEntity? searchPlaceResponsesEntity;
 
   SearchPlaceCubit({
     required this.googlePlaceRepository,
-}) : super(SearchPlaceStateInitial());
-
+  }) : super(SearchPlaceStateInitial());
 
   Future<void> searchAirport(String query) async {
     if (query.isNotEmpty && query.length >= 4) {
@@ -34,6 +29,7 @@ class SearchPlaceCubit extends Cubit<SearchPlaceState> {
       airportSelected: airportSelected,
     ));
   }
+
   void airportClear() {
     searchPlaceResponsesEntity = null;
     emit(SearchPlaceStateInitial());

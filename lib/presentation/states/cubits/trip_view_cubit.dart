@@ -12,10 +12,9 @@ class TripViewCubit extends Cubit<TripViewState> {
     required this.tripCloudFirestoreRepository,
   }) : super(TripViewStateNoTrip());
 
-
   Future<void> getTrip({
     required String idTrip,
-}) async {
+  }) async {
     emit(TripViewState.loading());
     final result = await tripCloudFirestoreRepository.getTrip(idTrip: idTrip);
     if (result is SuccessResponse && result.data != null) {
@@ -27,5 +26,4 @@ class TripViewCubit extends Cubit<TripViewState> {
       ));
     }
   }
-
 }

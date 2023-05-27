@@ -8,7 +8,6 @@ import 'package:aero_delivery/presentation/ui/home/profile/widgets/pop_up/pop_up
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 class CirclePhoto extends StatelessWidget {
   final String urlPhoto;
 
@@ -80,8 +79,10 @@ class CirclePhoto extends StatelessWidget {
         create: (context) => PickerImageCubit(
           authFirebaseRepository: context.read<AuthFirebaseRepository>(),
           pickerPhotoRepository: context.read<PickerPhotoRepository>(),
-          pictureCloudStorageRepository: context.read<PictureCloudStorageRepository>(),
-          userCloudFirestoreRepository: context.read<UserCloudFirestoreRepository>(),
+          pictureCloudStorageRepository:
+              context.read<PictureCloudStorageRepository>(),
+          userCloudFirestoreRepository:
+              context.read<UserCloudFirestoreRepository>(),
         ),
         child: const PopUpProfilePhoto(),
       ),

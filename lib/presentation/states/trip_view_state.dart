@@ -22,13 +22,12 @@ class TripViewState with _$TripViewState {
   // success state
   factory TripViewState.success({
     required ResultSearchTripEntity resultSearchTripEntity,
-}) = TripViewStateSuccess;
+  }) = TripViewStateSuccess;
 
   // getTrip state
 
   ResultSearchTripEntity? get searchTripEntity => maybeMap(
-    success: (value) => value.resultSearchTripEntity,
-    orElse: () => null,
-  );
-
+        success: (value) => value.resultSearchTripEntity,
+        orElse: () => null,
+      );
 }

@@ -13,7 +13,8 @@ class ProfileProvider extends StatelessWidget {
     return BlocProvider(
       create: (context) => ProfileCubit(
         authFirebaseRepository: context.read<AuthFirebaseRepository>(),
-        userCloudFirestoreRepository: context.read<UserCloudFirestoreRepository>(),
+        userCloudFirestoreRepository:
+            context.read<UserCloudFirestoreRepository>(),
       )..getProfile(),
       child: child,
     );

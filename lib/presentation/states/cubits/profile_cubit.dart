@@ -18,8 +18,10 @@ class ProfileCubit extends Cubit<ProfileState> {
   Future<void> getProfile() async {
     final user = authFirebaseRepository.user;
     if (user != null) {
-      final userCloudFirestoreResponse = await userCloudFirestoreRepository.getUserModel(uid: user.uid);
-      if (userCloudFirestoreResponse is SuccessResponse && userCloudFirestoreResponse.data != null) {
+      final userCloudFirestoreResponse =
+          await userCloudFirestoreRepository.getUserModel(uid: user.uid);
+      if (userCloudFirestoreResponse is SuccessResponse &&
+          userCloudFirestoreResponse.data != null) {
         UserEntity userModel = userCloudFirestoreResponse.data!;
         emit(ProfileStateSignIn(user: userModel));
       } else {

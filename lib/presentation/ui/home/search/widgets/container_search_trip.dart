@@ -21,8 +21,10 @@ class ContainerFieldSearchTrip extends StatelessWidget {
       width: 300,
       child: OutlinedButton(
         style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all<Color>(const Color(0xFF618985)),
-          backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFFEDF4ED)),
+          foregroundColor:
+              MaterialStateProperty.all<Color>(const Color(0xFF618985)),
+          backgroundColor:
+              MaterialStateProperty.all<Color>(const Color(0xFFEDF4ED)),
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         ),
         onPressed: () {
@@ -51,7 +53,9 @@ class ContainerFieldSearchTrip extends StatelessWidget {
                                   children: [
                                     TextFieldSearchTrip(
                                         onChanged: (value) {
-                                          context.read<SearchPlaceCubit>().searchAirport(value);
+                                          context
+                                              .read<SearchPlaceCubit>()
+                                              .searchAirport(value);
                                         },
                                         onClear: () {},
                                         hideText: false),

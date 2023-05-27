@@ -26,15 +26,14 @@ class UserCloudFirestoreRepositoryImpl with UserCloudFirestoreRepository {
     );
   }
 
-
-
   @override
   Future<ApiResponse<UserEntity>> getUserModel({
     required String uid,
   }) async {
     try {
       final response = await _userCloudFirestoreApi.getUserModel(uid: uid);
-      if (response == null) return FailResponse('401', failure: 'User not found');
+      if (response == null)
+        return FailResponse('401', failure: 'User not found');
       _user = response;
       return SuccessResponse('402', getUserModelData()!);
     } on FirebaseAuthException catch (e) {
@@ -86,5 +85,4 @@ class UserCloudFirestoreRepositoryImpl with UserCloudFirestoreRepository {
       return FailResponse(e.code, failure: e.message);
     }
   }
-
 }

@@ -27,9 +27,12 @@ class ResultsSearchTripPage extends StatelessWidget {
                 color: Colors.black,
               ),
               itemBuilder: (context, index) => ListTile(
-                onTap: () => context.push('/view_trip/${state.results[index].tripId}'),
-                title: Text(state.results[index].resultsTrip.airportFrom?.name ?? ""),
-                subtitle: Text(state.results[index].resultsTrip.airportTo?.name ?? ""),
+                onTap: () =>
+                    context.push('/view_trip/${state.results[index].tripId}'),
+                title: Text(
+                    state.results[index].resultsTrip.airportFrom?.name ?? ""),
+                subtitle: Text(
+                    state.results[index].resultsTrip.airportTo?.name ?? ""),
                 leading: const CircleAvatar(
                   child: Text("05"),
                 ),

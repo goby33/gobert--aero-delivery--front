@@ -5,7 +5,6 @@ part 'search_place_state.freezed.dart';
 
 @Freezed(makeCollectionsUnmodifiable: false)
 class SearchPlaceState with _$SearchPlaceState {
-
   const SearchPlaceState._();
 
   // initial
@@ -17,21 +16,20 @@ class SearchPlaceState with _$SearchPlaceState {
   // selected
   factory SearchPlaceState.selected({
     required PlaceEntity airportSelected,
-}) = SearchPlaceStateSelected;
+  }) = SearchPlaceStateSelected;
 
   // result
   factory SearchPlaceState.result({
     required List<PlaceEntity> resultSearch,
-}) = SearchPlaceStateResult;
+  }) = SearchPlaceStateResult;
 
   // failed
   factory SearchPlaceState.failed() = SearchPlaceStateFailed;
 
-
   // getters
 
-  PlaceEntity get  airportSelected => maybeMap(
-    selected: (value) => value.airportSelected,
-      orElse: () => throw Exception("No airport selected"),
-  );
+  PlaceEntity get airportSelected => maybeMap(
+        selected: (value) => value.airportSelected,
+        orElse: () => throw Exception("No airport selected"),
+      );
 }

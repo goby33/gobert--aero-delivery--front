@@ -43,7 +43,8 @@ class AirportToPage extends StatelessWidget {
                 ButtonAddTrip(
                   isEnable: (state is AddTripStateAirportToSelected),
                   onPressed: () {
-                    GoRouter.of(context).push('/add_trip/date_from/airport_to/date_to/');
+                    GoRouter.of(context)
+                        .push('/add_trip/date_from/airport_to/date_to/');
                   },
                   text: "Add this airport",
                 ),

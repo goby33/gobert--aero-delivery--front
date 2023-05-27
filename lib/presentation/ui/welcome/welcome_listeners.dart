@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-
 class WelcomeListeners extends StatelessWidget {
   final Widget child;
   const WelcomeListeners({Key? key, required this.child}) : super(key: key);

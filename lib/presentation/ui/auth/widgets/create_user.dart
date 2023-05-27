@@ -27,7 +27,8 @@ class _CreateUserState extends State<CreateUser> {
       ),
       child: BlocConsumer<CreateUserCubit, CreateUserState>(
         listener: (context, state) => state.maybeMap(
-          success: (value) => context.push('/auth/welcome/${firstNameController.text}'),
+          success: (value) =>
+              context.push('/auth/welcome/${firstNameController.text}'),
           register: (value) => context.push('/home'),
           orElse: () => null,
         ),

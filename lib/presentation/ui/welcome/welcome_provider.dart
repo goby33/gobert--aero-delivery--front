@@ -16,8 +16,10 @@ class WelcomeProvider extends StatelessWidget {
       create: (context) => PickerImageCubit(
         authFirebaseRepository: context.read<AuthFirebaseRepository>(),
         pickerPhotoRepository: context.read<PickerPhotoRepository>(),
-        pictureCloudStorageRepository: context.read<PictureCloudStorageRepository>(),
-        userCloudFirestoreRepository: context.read<UserCloudFirestoreRepository>(),
+        pictureCloudStorageRepository:
+            context.read<PictureCloudStorageRepository>(),
+        userCloudFirestoreRepository:
+            context.read<UserCloudFirestoreRepository>(),
       ),
       child: child,
     );

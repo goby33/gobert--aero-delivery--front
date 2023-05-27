@@ -23,15 +23,16 @@ final GoRouter appRouter = GoRouter(
           builder: (context, state) => const HomePage(),
         ),
         GoRoute(
-          path: 'auth',
-          builder: (context, state) => const AuthPage(),
-          routes: [
-            GoRoute(
-              path: 'welcome/:name',
-              builder: (context, state) =>  WelcomePage(name: state.pathParameters['name']!,),
-            ),
-          ]
-        ),
+            path: 'auth',
+            builder: (context, state) => const AuthPage(),
+            routes: [
+              GoRoute(
+                path: 'welcome/:name',
+                builder: (context, state) => WelcomePage(
+                  name: state.pathParameters['name']!,
+                ),
+              ),
+            ]),
       ],
     ),
     GoRoute(

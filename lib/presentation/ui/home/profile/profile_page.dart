@@ -22,7 +22,7 @@ class ProfilePage extends StatelessWidget {
                 },
                 child: ListView(
                   padding: const EdgeInsets.only(bottom: 20),
-                  children:  [
+                  children: [
                     ProfilePageHeader(
                       name: state.user.firstName,
                       uid: "unknown",

@@ -43,10 +43,9 @@ class DateToPage extends StatelessWidget {
                       availableGestures: AvailableGestures.all,
                       firstDay: DateTime.utc(2010, 10, 16),
                       lastDay: DateTime.utc(2030, 3, 14),
-                      focusedDay:
-                          (state is AddTripStateDateOfArrivalSelected)
-                              ? state.trip?.dateOfArrival ?? DateTime.now()
-                              : DateTime.now(),
+                      focusedDay: (state is AddTripStateDateOfArrivalSelected)
+                          ? state.trip?.dateOfArrival ?? DateTime.now()
+                          : DateTime.now(),
                       selectedDayPredicate: (day) => isSameDay(
                           day, state.trip?.dateOfArrival ?? DateTime.now()),
                       onDaySelected: (selectedDay, focusedDay) {
@@ -61,8 +60,7 @@ class DateToPage extends StatelessWidget {
                         '/add_trip/date_from/airport_to/date_to/weight_free');
                   },
                   text: 'Next',
-                  isEnable:
-                      (state is AddTripStateDateOfArrivalSelected),
+                  isEnable: (state is AddTripStateDateOfArrivalSelected),
                 ),
               ],
             ),

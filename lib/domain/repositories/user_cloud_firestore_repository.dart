@@ -21,6 +21,4 @@ mixin UserCloudFirestoreRepository {
     required String uid,
     required String urlImage,
   });
-
-
 }

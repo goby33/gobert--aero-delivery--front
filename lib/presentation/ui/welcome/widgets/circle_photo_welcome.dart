@@ -7,7 +7,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class CirclePhotoWelcome extends StatelessWidget {
   final String urlPhoto;
   final bool loading;
-  const CirclePhotoWelcome({Key? key, required this.urlPhoto, required this.loading})
+  const CirclePhotoWelcome(
+      {Key? key, required this.urlPhoto, required this.loading})
       : super(key: key);
 
   @override

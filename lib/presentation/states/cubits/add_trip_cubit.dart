@@ -54,7 +54,8 @@ class AddTripCubit extends Cubit<AddTripState> {
         ),
       );
     } else {
-      trip = trip?.copyWith(dateOfDeparture: dateTime) ?? TripEntity(dateOfDeparture: dateTime);
+      trip = trip?.copyWith(dateOfDeparture: dateTime) ??
+          TripEntity(dateOfDeparture: dateTime);
       emit(
         AddTripStateDateOfDepartureSelected(
           trip: trip,
@@ -62,7 +63,6 @@ class AddTripCubit extends Cubit<AddTripState> {
       );
     }
   }
-
 
   // ADD DATE OF ARRIVAL
   void addDateOfArrivalSelected(DateTime dateTime) {
@@ -86,11 +86,9 @@ class AddTripCubit extends Cubit<AddTripState> {
     }
   }
 
-
-
   // ADD FREE WEIGHT
 // TODO : add enum for free weight
-  void addFreeWeightSelected(String freeWeight)  {
+  void addFreeWeightSelected(String freeWeight) {
     trip = trip?.copyWith(freeWeight: freeWeight) ??
         TripEntity(
           freeWeight: freeWeight,
@@ -101,7 +99,6 @@ class AddTripCubit extends Cubit<AddTripState> {
       ),
     );
   }
-
 
   // SAVE THE TRIP
   Future<void> saveTrip() async {

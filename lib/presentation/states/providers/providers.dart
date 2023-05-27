@@ -92,7 +92,6 @@ final repositories = [
       context.read(),
     ),
   ),
-
 ];
 
 final blocs = <BlocProvider>[
@@ -109,4 +108,3 @@ final blocs = <BlocProvider>[
     ),
   ),
 ];
-

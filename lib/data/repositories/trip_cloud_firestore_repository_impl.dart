@@ -31,8 +31,10 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
   }) async {
     try {
       final responseApi = await _cloudFirestoreApi.getTrip(idTrip: idTrip);
-      if (responseApi == null) return FailResponse(404.toString(), failure: 'Trip not found');
-      final response = _mapResultSearchTripModelToResultSearchTripEntity([responseApi]);
+      if (responseApi == null)
+        return FailResponse(404.toString(), failure: 'Trip not found');
+      final response =
+          _mapResultSearchTripModelToResultSearchTripEntity([responseApi]);
       return SuccessResponse(401.toString(), response.first);
     } on FirebaseAuthException catch (e) {
       return FailResponse(e.code, failure: e.message);
@@ -53,7 +55,9 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
         dateOfDeparture: dateOfDeparture,
         dateOfArrival: dateOfArrival,
       );
-      final response = (responseApi == null) ? [] : _mapResultSearchTripModelToResultSearchTripEntity(responseApi);
+      final response = (responseApi == null)
+          ? []
+          : _mapResultSearchTripModelToResultSearchTripEntity(responseApi);
       return SuccessResponse(
         402.toString(),
         [...response],
@@ -63,7 +67,9 @@ class TripCloudFirestoreRepositoryImpl with TripCloudFirestoreRepository {
     }
   }
 
-  List<ResultSearchTripEntity> _mapResultSearchTripModelToResultSearchTripEntity(List<ResultSearchTripModel> response) {
+  List<ResultSearchTripEntity>
+      _mapResultSearchTripModelToResultSearchTripEntity(
+          List<ResultSearchTripModel> response) {
     return response
         .map(
           (trip) => ResultSearchTripEntity(

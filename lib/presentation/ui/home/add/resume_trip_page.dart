@@ -15,7 +15,8 @@ class ResumeTripPage extends StatelessWidget {
       listener: (context, state) => state.maybeMap(
         success: (value) {
           // clear history navigation
-          context.go('/view_trip/${state.id}'); },
+          context.go('/view_trip/${state.id}');
+        },
         orElse: () => print('ppp'),
       ),
       builder: (context, state) {

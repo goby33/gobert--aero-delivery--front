@@ -26,9 +26,6 @@ class SearchTripState with _$SearchTripState {
           required List<ResultSearchTripEntity> result}) =
       SearchTripStateSearchResult;
 
-
-
-
   // airport from is selected
   factory SearchTripState.airportFromSelected({
     required SearchTripEntity searchTripEntity,
@@ -49,8 +46,6 @@ class SearchTripState with _$SearchTripState {
     required SearchTripEntity searchTripEntity,
   }) = SearchTripStateFlexibilitySelected;
 
-
-
   // GETTERS
 
 //get result
@@ -59,12 +54,11 @@ class SearchTripState with _$SearchTripState {
         orElse: () => [],
       );
 
-
   SearchTripEntity? get searchTripEntity => maybeMap(
-    airportFromSelected: (state) => state.searchTripEntity,
-    airportToSelected: (state) => state.searchTripEntity,
-    dateSelected: (state) => state.searchTripEntity,
-    flexibilitySelected: (state) => state.searchTripEntity,
-    orElse: () => null,
-  );
+        airportFromSelected: (state) => state.searchTripEntity,
+        airportToSelected: (state) => state.searchTripEntity,
+        dateSelected: (state) => state.searchTripEntity,
+        flexibilitySelected: (state) => state.searchTripEntity,
+        orElse: () => null,
+      );
 }

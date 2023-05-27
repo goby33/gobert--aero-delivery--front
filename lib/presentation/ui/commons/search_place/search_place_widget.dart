@@ -27,11 +27,14 @@ class SearchPlaceWidget extends StatelessWidget {
                   onChanged: (value) {
                     context.read<SearchPlaceCubit>().searchAirport(value);
                   },
-                  onClear: () { context.read<SearchPlaceCubit>().airportClear();
-                  onclick(null);
-                    },
+                  onClear: () {
+                    context.read<SearchPlaceCubit>().airportClear();
+                    onclick(null);
+                  },
                   hideText: (state is SearchPlaceStateSelected),
-                  value: (state is SearchPlaceStateSelected) ? state.airportSelected.name : null),
+                  value: (state is SearchPlaceStateSelected)
+                      ? state.airportSelected.name
+                      : null),
               if (state is SearchPlaceStateLoading)
                 const Padding(
                   padding: EdgeInsets.only(top: 20.0),

@@ -10,13 +10,12 @@ class TextFieldCalendarTrip extends StatefulWidget {
     required this.onChanged,
   }) : super(key: key);
 
-
   @override
   State<TextFieldCalendarTrip> createState() => _TextFieldCalendarTripState();
 }
 
-class _TextFieldCalendarTripState extends State<TextFieldCalendarTrip> with RestorationMixin  {
-
+class _TextFieldCalendarTripState extends State<TextFieldCalendarTrip>
+    with RestorationMixin {
   @override
   String? get restorationId => 'text_field_calendar_trip';
 
@@ -29,12 +28,13 @@ class _TextFieldCalendarTripState extends State<TextFieldCalendarTrip> with Rest
   @override
   void restoreState(RestorationBucket? oldBucket, bool initialRestore) {
     registerForRestoration(_selectedDate, 'selected_date');
-    registerForRestoration(_restorableDatePickerRouteFuture, 'date_picker_route_future');
+    registerForRestoration(
+        _restorableDatePickerRouteFuture, 'date_picker_route_future');
   }
 
-
   final RestorableDateTime _selectedDate = RestorableDateTime(DateTime.now());
-  late final RestorableRouteFuture<DateTime?> _restorableDatePickerRouteFuture = RestorableRouteFuture<DateTime?>(
+  late final RestorableRouteFuture<DateTime?> _restorableDatePickerRouteFuture =
+      RestorableRouteFuture<DateTime?>(
     onComplete: _selectDate,
     onPresent: (NavigatorState navigator, Object? arguments) {
       return navigator.restorablePush(
@@ -77,7 +77,6 @@ class _TextFieldCalendarTripState extends State<TextFieldCalendarTrip> with Rest
     );
   }
 
-
   void _selectDate(DateTime? newSelectedDate) {
     if (newSelectedDate != null) {
       onChanged(newSelectedDate);
@@ -90,8 +89,10 @@ class _TextFieldCalendarTripState extends State<TextFieldCalendarTrip> with Rest
       width: 300,
       child: OutlinedButton(
         style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all<Color>(const Color(0xFF618985)),
-          backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFFEDF4ED)),
+          foregroundColor:
+              MaterialStateProperty.all<Color>(const Color(0xFF618985)),
+          backgroundColor:
+              MaterialStateProperty.all<Color>(const Color(0xFFEDF4ED)),
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         ),
         onPressed: () {
@@ -101,5 +102,4 @@ class _TextFieldCalendarTripState extends State<TextFieldCalendarTrip> with Rest
       ),
     );
   }
-
 }

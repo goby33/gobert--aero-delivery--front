@@ -15,8 +15,6 @@ class PickerImageCubit extends Cubit<PickerImageState> {
   final PictureCloudStorageRepository pictureCloudStorageRepository;
   final UserCloudFirestoreRepository userCloudFirestoreRepository;
 
-
-
   PickerImageCubit({
     required this.authFirebaseRepository,
     required this.pickerPhotoRepository,
@@ -29,8 +27,7 @@ class PickerImageCubit extends Cubit<PickerImageState> {
   Future<void> pickImage({
     required ImageSource source,
   }) async {
-    final response_photo =
-        await pickerPhotoRepository.getImage(source: source);
+    final response_photo = await pickerPhotoRepository.getImage(source: source);
     if (response_photo is SuccessResponse) {
       emit(PickerImageStateChoosen(path: response_photo.data!));
     } else {
@@ -45,11 +42,11 @@ class PickerImageCubit extends Cubit<PickerImageState> {
     File image = File(path);
     final user = await authFirebaseRepository.user;
     if (user != null) {
-      final response_upload =
-          await pictureCloudStorageRepository.uploadPicture(file: image, uid: user.uid);
+      final response_upload = await pictureCloudStorageRepository.uploadPicture(
+          file: image, uid: user.uid);
       if (response_upload is SuccessResponse) {
-        final response_user = await userCloudFirestoreRepository.updateUserUrlImage(
-            uid: user.uid, urlImage:response_upload.data!);
+        final response_user = await userCloudFirestoreRepository
+            .updateUserUrlImage(uid: user.uid, urlImage: response_upload.data!);
         if (response_user is SuccessResponse) {
           emit(PickerImageStateUploaded());
         } else {
