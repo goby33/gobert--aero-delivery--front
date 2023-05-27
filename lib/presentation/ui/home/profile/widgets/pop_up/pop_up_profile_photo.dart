@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 
 class PopUpProfilePhoto extends StatelessWidget {
-  PopUpProfilePhoto({Key? key}) : super(key: key);
+  const PopUpProfilePhoto({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

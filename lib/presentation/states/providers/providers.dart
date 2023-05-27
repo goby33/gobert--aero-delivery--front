@@ -16,6 +16,7 @@ import 'package:aero_delivery/domain/repositories/picture_cloud_storage_reposito
 import 'package:aero_delivery/domain/repositories/trip_cloud_firestore_repository.dart';
 import 'package:aero_delivery/domain/repositories/user_cloud_firestore_repository.dart';
 import 'package:aero_delivery/presentation/states/cubits/add_trip_cubit.dart';
+import 'package:aero_delivery/presentation/states/cubits/search_trip_cubit.dart';
 import 'package:aero_delivery/presentation/states/cubits/sign_in_cubit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
@@ -97,6 +98,11 @@ final blocs = <BlocProvider>[
   BlocProvider<AddTripCubit>(
     create: (context) => AddTripCubit(
       googlePlaceRepository: context.read(),
+      tripCloudFirestoreRepository: context.read(),
+    ),
+  ),
+  BlocProvider<SearchTripCubit>(
+    create: (context) => SearchTripCubit(
       tripCloudFirestoreRepository: context.read(),
     ),
   ),

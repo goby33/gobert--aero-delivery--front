@@ -54,7 +54,7 @@ class _TripCloudFirestore implements TripCloudFirestoreApi {
     required DateTime? dateOfDeparture,
     required DateTime? dateOfArrival,
   }) async {
-    final response = await _tripsCollectionReference.get();
+    final response = await _tripsCollectionReference.where("dateOfDeparture", isGreaterThanOrEqualTo: dateOfDeparture).get();
     final listTrips = response.docs
         .map(
           (e) => ResultSearchTripModel(

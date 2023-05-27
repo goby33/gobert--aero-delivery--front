@@ -83,7 +83,7 @@ class CirclePhoto extends StatelessWidget {
           pictureCloudStorageRepository: context.read<PictureCloudStorageRepository>(),
           userCloudFirestoreRepository: context.read<UserCloudFirestoreRepository>(),
         ),
-        child: PopUpProfilePhoto(),
+        child: const PopUpProfilePhoto(),
       ),
     ).then((value) async {
       if (value != null) {

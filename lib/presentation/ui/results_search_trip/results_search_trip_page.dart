@@ -18,44 +18,28 @@ class ResultsSearchTripPage extends StatelessWidget {
         ),
         title: const Text('ResultsSearchTripPage'),
       ),
-      body: BlocProvider(
-        create: (context) => SearchTripCubit(
-          tripCloudFirestoreRepository: context.read(),
-        )..getSearchTrip(
-            airportFrom: "pp",
-            airportTo: "pp",
-            dateOfDeparture: DateTime.now(),
-            dateOfArrival: DateTime.now()),
-        child: BlocConsumer<SearchTripCubit, SearchTripState>(
-          listener: (context, state) {},
-          builder: (context, state) {
-            return RefreshIndicator(
-                child: ListView.separated(
-                  itemCount: state.results.length,
-                  separatorBuilder: (context, index) => const Divider(
-                    color: Colors.black,
-                  ),
-                  itemBuilder: (context, index) => ListTile(
-                    onTap: () =>
-                        context.push('/view_trip/${state.results[index].tripId}'),
-                    title: Text(
-                        state.results[index].resultsTrip.airportFrom ?? ""),
-                    subtitle:
-                        Text(state.results[index].resultsTrip.airportTo ?? ""),
-                    leading: const CircleAvatar(
-                      child: Text("05"),
-                    ),
-                  ),
+      body: BlocBuilder<SearchTripCubit, SearchTripState>(
+        builder: (context, state) {
+          return RefreshIndicator(
+            child: ListView.separated(
+              itemCount: state.results.length,
+              separatorBuilder: (context, index) => const Divider(
+                color: Colors.black,
+              ),
+              itemBuilder: (context, index) => ListTile(
+                onTap: () => context.push('/view_trip/${state.results[index].tripId}'),
+                title: Text(state.results[index].resultsTrip.airportFrom ?? ""),
+                subtitle: Text(state.results[index].resultsTrip.airportTo ?? ""),
+                leading: const CircleAvatar(
+                  child: Text("05"),
                 ),
-                onRefresh: () async {
-                  await context.read<SearchTripCubit>().getSearchTrip(
-                      airportFrom: "pp",
-                      airportTo: "pp",
-                      dateOfDeparture: DateTime.now(),
-                      dateOfArrival: DateTime.now());
-                });
-          },
-        ),
+              ),
+            ),
+            onRefresh: () async {
+              await context.read<SearchTripCubit>().getSearchTrip();
+            },
+          );
+        },
       ),
     );
   }
