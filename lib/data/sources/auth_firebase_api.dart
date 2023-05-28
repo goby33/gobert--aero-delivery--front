@@ -16,6 +16,35 @@ abstract class AuthFirebaseApi {
   Future<User?> getCurrentUser();
 
   Future<void> signOut();
+
+  Future<bool> reauthenticate({
+    required String email,
+    required String password,
+  });
+
+  Future<void> updateProfile({
+    required String name,
+  });
+
+
+  Future<void> updatePassword({
+    required String password,
+  });
+
+  Future<void> updateEmail({
+    required String email,
+  });
+
+  Future<bool> emailExists({
+    required String email,
+  });
+
+  Future<void> sendPasswordResetEmail({
+    required String email,
+  });
+
+  Future<void> deleteUser();
+
 }
 
 class _AuthFirebase implements AuthFirebaseApi {
@@ -28,8 +57,7 @@ class _AuthFirebase implements AuthFirebaseApi {
     required String email,
     required String password,
   }) async {
-    UserCredential result =
-        await _firebaseAuthApi.createUserWithEmailAndPassword(
+    UserCredential result = await _firebaseAuthApi.createUserWithEmailAndPassword(
       email: email,
       password: password,
     );
@@ -57,4 +85,78 @@ class _AuthFirebase implements AuthFirebaseApi {
   Future<void> signOut() async {
     await _firebaseAuthApi.signOut();
   }
+
+  @override
+  Future<void> sendPasswordResetEmail({
+    required String email,
+  }) async {
+    await _firebaseAuthApi.sendPasswordResetEmail(email: email);
+  }
+
+  // email exists
+  @override
+  Future<bool> emailExists({
+    required String email,
+  }) async {
+    bool exists = false;
+    try {
+      final response = await _firebaseAuthApi.fetchSignInMethodsForEmail(email);
+      return response.length > 0;
+    } catch (e) {
+      exists = false;
+    }
+    return exists;
+  }
+
+  //update email
+  @override
+  Future<void> updateEmail({
+    required String email,
+  }) async {
+    await _firebaseAuthApi.currentUser!.updateEmail(email);
+  }
+
+  // update password
+  @override
+  Future<void> updatePassword({
+    required String password,
+  }) async {
+    await _firebaseAuthApi.currentUser!.updatePassword(password);
+  }
+
+  // update profile
+  @override
+  Future<void> updateProfile({
+    required String name,
+  }) async {
+    await _firebaseAuthApi.currentUser!.updateDisplayName(name);
+  }
+
+  // string password is equal to old password
+  @override
+  Future<bool> reauthenticate({
+    required String email,
+    required String password,
+  }) async {
+    bool isEqual = false;
+    try {
+      await _firebaseAuthApi.currentUser!.reauthenticateWithCredential(
+        EmailAuthProvider.credential(
+          email: _firebaseAuthApi.currentUser!.email!,
+          password: password,
+        ),
+      );
+      isEqual = true;
+    } catch (e) {
+      isEqual = false;
+    }
+    return isEqual;
+  }
+
+  @override
+  Future<void> deleteUser() async {
+    await _firebaseAuthApi.currentUser!.delete();
+  }
+
+
 }

@@ -15,8 +15,7 @@ class AuthFirebaseRepositoryImpl with AuthFirebaseRepository {
     required String password,
   }) async {
     try {
-      final responseAuth =
-          await _authFirebase.createUserEmail(email: email, password: password);
+      final responseAuth = await _authFirebase.createUserEmail(email: email, password: password);
       if (responseAuth == null) {
         return FailResponse(0.toString(), failure: "Error user null");
       } else {
@@ -34,8 +33,7 @@ class AuthFirebaseRepositoryImpl with AuthFirebaseRepository {
     required String password,
   }) async {
     try {
-      final responseAuth =
-          await _authFirebase.signInWithEmail(email: email, password: password);
+      final responseAuth = await _authFirebase.signInWithEmail(email: email, password: password);
       if (responseAuth == null) {
         return FailResponse(0.toString(), failure: "Error user null");
       } else {
@@ -77,4 +75,91 @@ class AuthFirebaseRepositoryImpl with AuthFirebaseRepository {
       return FailResponse(e.code, failure: e.message);
     }
   }
+
+  @override
+  Future<ApiResponse<void>> resetPassword({
+    required String email,
+  }) async {
+    try {
+      await _authFirebase.sendPasswordResetEmail(email: email);
+      return SuccessResponse(402.toString(), null);
+    } on FirebaseAuthException catch (e) {
+      return FailResponse(e.code, failure: e.message);
+    }
+  }
+
+  //update name
+  @override
+  Future<ApiResponse<void>> updateName({
+    required String name,
+  }) async {
+    try {
+      await _authFirebase.updateProfile(name: name);
+      return SuccessResponse(402.toString(), null);
+    } on FirebaseAuthException catch (e) {
+      return FailResponse(e.code, failure: e.message);
+    }
+  }
+
+  //update email
+  @override
+  Future<ApiResponse<String>> updateEmail({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final responseConnexionUser = await _authFirebase.reauthenticate(email: _user!.email!, password: password);
+      if (responseConnexionUser == true) {
+        final responseEmailExists = await _authFirebase.emailExists(email: email);
+        if (!responseEmailExists) {
+          await _authFirebase.updateEmail(email: email);
+          return SuccessResponse(402.toString(), email);
+        } else {
+          return FailResponse(0.toString(), failure: "Email already exists");
+        }
+      } else {
+        return FailResponse(0.toString(), failure: "Error user null");
+      }
+    } on FirebaseAuthException catch (e) {
+      return FailResponse(e.code, failure: e.message);
+    }
+  }
+
+  //update password
+  @override
+  Future<ApiResponse<String>> updatePassword({
+    required String password,
+    required String oldPassword,
+  }) async {
+    try {
+      final responseOldPassword = await _authFirebase.reauthenticate(email: _user!.email!, password: oldPassword);
+      if (responseOldPassword == true) {
+        await _authFirebase.updatePassword(password: password);
+        return SuccessResponse(402.toString(), "ok");
+      } else {
+        return FailResponse(0.toString(), failure: "Password is the same");
+      }
+    } on FirebaseAuthException catch (e) {
+      return FailResponse(e.code, failure: e.message);
+    }
+  }
+
+  // delete account
+  @override
+  Future<ApiResponse<String>> deleteAccount({
+    required String password,
+  }) async {
+    try {
+      final responseOldPassword = await _authFirebase.reauthenticate(email: _user!.email!, password: password);
+      if (responseOldPassword == true) {
+        await _authFirebase.deleteUser();
+        return SuccessResponse(402.toString(), "ok");
+      } else {
+        return FailResponse(0.toString(), failure: "Password failed");
+      }
+    } on FirebaseAuthException catch (e) {
+      return FailResponse(e.code, failure: e.message);
+    }
+  }
+
 }

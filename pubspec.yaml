@@ -93,6 +93,7 @@ flutter:
     - assets/images/package_600.png
     - assets/images/aero-delivery-low.png
     - assets/images/aero-delivery-high.png
+    - assets/images/background.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -17,6 +17,20 @@ abstract class UserCloudFirestoreApi {
     required String uid,
     required String urlImage,
   });
+
+  Future<void> updateName({
+    required String uid,
+    required String name,
+  });
+
+  Future<void> updateEmail({
+    required String uid,
+    required String email,
+  });
+
+  Future<void> deleteUser({
+    required String uid,
+  });
 }
 
 class _UserCloudFirestore implements UserCloudFirestoreApi {
@@ -55,5 +69,28 @@ class _UserCloudFirestore implements UserCloudFirestoreApi {
   }) async {
     final response = await _tripsCollectionReference.doc(uid).get();
     return response.data();
+  }
+
+  @override
+  Future<void> updateName({
+    required String uid,
+    required String name,
+  }) async {
+    await _tripsCollectionReference.doc(uid).update({"firstName": name});
+  }
+
+  @override
+  Future<void> updateEmail({
+    required String uid,
+    required String email,
+  }) async {
+    await _tripsCollectionReference.doc(uid).update({"email": email});
+  }
+
+  @override
+  Future<void> deleteUser({
+    required String uid,
+  }) async {
+    await _tripsCollectionReference.doc(uid).delete();
   }
 }

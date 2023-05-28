@@ -21,4 +21,18 @@ mixin UserCloudFirestoreRepository {
     required String uid,
     required String urlImage,
   });
+
+  Future<ApiResponse<void>> updateNameUserModel({
+    required String name,
+    required String uid,
+  });
+
+  Future<ApiResponse<void>> updateEmailUserModel({
+    required String email,
+    required String uid,
+  });
+
+  Future<ApiResponse<String>> deleteUser({
+    required String uid,
+  });
 }

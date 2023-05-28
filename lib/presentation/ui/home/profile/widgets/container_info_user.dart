@@ -1,4 +1,5 @@
 import 'package:aero_delivery/presentation/states/cubits/profile_cubit.dart';
+import 'package:aero_delivery/presentation/ui/settings/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,9 +18,7 @@ class ContainerInfoUser extends StatelessWidget {
     final bloc = context.read<ProfileCubit>();
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      decoration: BoxDecoration(
-          color: const Color(0xFFF79F79),
-          borderRadius: BorderRadius.circular(30)),
+      decoration: BoxDecoration(color: const Color(0xFFF79F79), borderRadius: BorderRadius.circular(30)),
       height: 230,
       width: 270,
       child: Column(
@@ -37,10 +36,7 @@ class ContainerInfoUser extends StatelessWidget {
                 children: <TextSpan>[
                   TextSpan(
                     text: name,
-                    style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
+                    style: const TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -55,16 +51,13 @@ class ContainerInfoUser extends StatelessWidget {
                     fontSize: 15,
                   )),
               Flexible(
-                child: Text(uid,
-                    style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold)),
+                child: Text(uid, style: const TextStyle(color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold)),
               ),
             ],
           ),
           ElevatedButton.icon(
-            onPressed: () {},
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsPage()))
+                .then((value) async => await context.read<ProfileCubit>().getProfile()),
             icon: const Icon(
               Icons.settings,
               size: 24.0,

@@ -39,13 +39,13 @@ class ContainerFieldSearchTrip extends StatelessWidget {
                   child: BlocBuilder<SearchPlaceCubit, SearchPlaceState>(
                     builder: (context, state) {
                       return SizedBox(
-                        height: 600,
+                        height: 400,
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Text('Modal BottomSheet'),
+                              const Text('Search Your Place'),
                               SizedBox(
                                 width: 350,
                                 height: 300,
@@ -69,10 +69,6 @@ class ContainerFieldSearchTrip extends StatelessWidget {
                                       ),
                                   ],
                                 ),
-                              ),
-                              ElevatedButton(
-                                child: const Text('Close BottomSheet'),
-                                onPressed: () => Navigator.pop(context),
                               ),
                             ],
                           ),

@@ -6,6 +6,7 @@ import 'package:aero_delivery/presentation/ui/home/add/date_to_page.dart';
 import 'package:aero_delivery/presentation/ui/home/add/resume_trip_page.dart';
 import 'package:aero_delivery/presentation/ui/home/home_page.dart';
 import 'package:aero_delivery/presentation/ui/results_search_trip/results_search_trip_page.dart';
+import 'package:aero_delivery/presentation/ui/settings/settings_page.dart';
 import 'package:aero_delivery/presentation/ui/splash/splash_page.dart';
 import 'package:aero_delivery/presentation/ui/trip_view/TripViewPage.dart';
 import 'package:aero_delivery/presentation/ui/welcome/welcome_page.dart';
@@ -21,6 +22,20 @@ final GoRouter appRouter = GoRouter(
         GoRoute(
           path: 'home',
           builder: (context, state) => const HomePage(),
+          routes: [
+            GoRoute(
+              path: 'settings',
+              builder: (context, state) => const HomePage(),
+              routes: [
+                GoRoute(
+                  name: 'settings',
+                  path: 'settings',
+                  builder: (context, state) => const SettingsPage(),
+                  routes: const [],
+                ),
+              ],
+            ),
+          ]
         ),
         GoRoute(
             path: 'auth',
