@@ -50,7 +50,7 @@ dependencies:
   firebase_core_platform_interface: ^4.8.0
   retrofit: ^4.0.1
   retrofit_generator: ^7.0.0
-  dio: ^5.1.2
+  dio: ^5.2.1
   table_calendar: ^3.0.9
   json_annotation: ^4.8.1
 
